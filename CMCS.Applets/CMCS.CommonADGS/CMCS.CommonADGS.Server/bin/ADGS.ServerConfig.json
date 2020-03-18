@@ -1,0 +1,1 @@
+﻿{"AppIdentifier":"化验设备数据接收程序","Startup":false,"IsSecretRunning":false,"VerifyBeforeClose":false,"ServerPortSets":[{"MachineCode":"#1定硫仪","Port":8000,"SavePath":"D:\\#1定硫仪","Enabled":true},{"MachineCode":"#2定硫仪","Port":8001,"SavePath":"D:\\#2定硫仪","Enabled":true},{"MachineCode":"#3定硫仪","Port":8002,"SavePath":"D:\\#3定硫仪","Enabled":false}]}

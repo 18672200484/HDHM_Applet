@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <!--程序唯一标识-->
+  <AppIdentifier>化验设备通用取数</AppIdentifier>
+  <!--Oracle数据库连接字符串-->
+  <SelfConnStr>Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=10.36.0.37)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=ORCL)));User Id=cmcs_base_7;Password=1234;</SelfConnStr>
+  <!--提取间隔 单位：分钟-->
+  <GrabInterval>5</GrabInterval>
+  <!--Oracle关键字,多个使用“|”分割-->
+  <OracleKeywords>DATE|NUMBER|INDEX</OracleKeywords>
+  <!--开机启动-->
+  <Startup>False</Startup>
+  <!--需要提取数据的化验设备-->
+  <Instruments>
+
+    <!--
+    
+    注意事项：
+    1、设备编号不能重复
+    
+    
+    [内置抓取]  
+    <ByoGraber></ByoGraber>
+    必要参数:
+    MachineCode:设备编号
+    TableName:存储表名
+    PrimaryKeys:主键名,多个使用“|”分割
+    ConnStr:数据库连接字符串
+    DbType:数据库类型：Access、SqlServer、SQLite
+    SQL:数据查询语句
+    Enabled:是否启用
+    
+    
+    [自定义抓取]  
+    <CustomGraber></CustomGraber>
+    必要参数:
+    MachineCode:设备编号
+    TableName:存储表名
+    PrimaryKeys:主键名,多个使用“|”分割
+    ConnStr:数据库连接字符串
+    DbType:数据库类型：Access、SqlServer、SQLite
+    SQL:数据查询语句
+    DayRange:提取范围 单位：天
+    Enabled:是否启用
+    
+    -->
+
+    <!--[内置抓取] 长沙开元.量热仪 型号：5E-C5500A双控-->
+    <ByoGraber>
+      <!--设备编号-->
+      <Param Key="MachineCode" Value="#1量热仪" />
+      <!--存储表名-->
+      <Param Key="TableName" Value="HYTBLry_5EC5500A" />
+      <!--主键名,多个使用“|”分割-->
+      <Param Key="PrimaryKeys" Value="Number" />
+      <!--数据库连接字符串-->
+      <Param Key="ConnStr" Value="Provider=Microsoft.Jet.OLEDB.4.0;Persist Security Info =true;Data Source=F:\项目资料\化验资料\开元\自动量热仪_5E-C5500A双控\win5e.mdb;jet oledb:Database Password=CSKY" />
+      <!--数据库类型：Access、SqlServer、SQLite-->
+      <Param Key="DbType" Value="Access" />
+      <!--数据查询语句-->
+      <Param Key="SQL" Value="select * from win5emdb where Testtime > Date()-2000 order by TestTime asc" />
+      <!--是否启用-->
+      <Param Key="Enabled" Value="True" />
+    </ByoGraber>
+
+    <!--[内置抓取] 长沙开元.测硫仪 型号：5E-8SAII-->
+    <ByoGraber>
+      <!--设备编号-->
+      <Param Key="MachineCode" Value="#1测硫仪" />
+      <!--存储表名-->
+      <Param Key="TableName" Value="HYTBCly_5E8SAII" />
+      <!--主键名,多个使用“|”分割-->
+      <Param Key="PrimaryKeys" Value="nID" />
+      <!--数据库连接字符串-->
+      <Param Key="ConnStr" Value="Provider=Microsoft.Jet.OLEDB.4.0;Persist Security Info =true;Data Source=F:\项目资料\化验资料\开元\自动测硫仪_5E-8SAII\5E-8SA\KY8SA.mdb;" />
+      <!--数据库类型：Access、SqlServer、SQLite-->
+      <Param Key="DbType" Value="Access" />
+      <!--数据查询语句-->
+      <Param Key="SQL" Value="select nID,试样编号 as SYBH,试样名称 as SHYM,坩埚重 as GGZ,试样重量 as SYZL,空干基水分 as KGJSF,空干基全硫 as KGJQL,干基全硫 as GJQL,化验员 as HYY,测试日期 as CSRQ from AnalysisData where 测试日期 > Date()-2000 order by 测试日期 asc" />
+      <!--是否启用-->
+      <Param Key="Enabled" Value="True" />
+    </ByoGraber>
+
+    <!--[自定义抓取] 长沙开元.水分仪 型号：5E-MW6510-->
+    <CustomGraber>
+      <!--提取类-->
+      <Param Key="GaberType" Value="CMCS.ADGS.Core.CustomGraber.KaiYuan.Sfy_5EMW6510_Graber" />
+      <!--设备编号-->
+      <Param Key="MachineCode" Value="#1水分仪" />
+      <!--存储表名-->
+      <Param Key="TableName" Value="HYTBSfy_5EMW6510" />
+      <!--主键名,多个使用“|”分割-->
+      <Param Key="PrimaryKeys" Value="Index" />
+      <!--数据库连接字符串-->
+      <Param Key="ConnStr" Value="Provider=Microsoft.Jet.OLEDB.4.0;Persist Security Info =true;Data Source=F:\项目资料\化验资料\开元\光波水分测试仪_5E-MW6510\MW6510.MDB;jet oledb:Database Password=CSKY" />
+      <!--提取范围 单位：天-->
+      <Param Key="DayRange" Value="2000" />
+      <!--是否启用-->
+      <Param Key="Enabled" Value="True" />
+    </CustomGraber>
+
+  </Instruments>
+</root>

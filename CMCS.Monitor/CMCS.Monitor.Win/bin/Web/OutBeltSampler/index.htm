@@ -1,0 +1,582 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Untitled Page</title>
+    <script type="text/javascript" src="../Resources/plugins/jquery/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../Resources/plugins/layer/layer.min.js"></script>
+    <script type="text/javascript" src="../Resources/plugins/svg/svg.js"></script>
+    <script type="text/javascript" src="../Resources/js/svgHelper.js"></script>
+    <script type="text/javascript">
+
+        $(function ($) {
+
+
+        });
+
+        // 获取SVG jquery对象
+        function getSVGjQuery(id) {
+            return $(document.getElementById(id).getSVGDocument())
+        }
+
+        // 获取 svgCanvas1 SVG jquery对象
+        function getCanvas1() {
+            return getSVGjQuery("svgCanvas1");
+        }
+
+        // 请求数据 - 后台调用
+        function requestData(datas) {
+            for (var i = 0; i < datas.length; i++) {
+                dataHandler(datas[i]);
+            }
+        }
+
+        // 处理数据
+        function dataHandler(data) {
+            // key_value
+            if (data.Type == 0)
+                if (data.Tag == "Set")
+                    loadConfig(data);
+                else
+                    $("#" + data.Key).html(data.Value);
+            // json_data
+                else if (data.Type == 1) {
+                    if (data.Key == "皮带采样机3_底卸集样罐" || data.Key == "皮带采样机3_密码集样罐" || data.Key == "皮带采样机4_底卸集样罐" || data.Key == "皮带采样机4_密码集样罐") {
+                loadBarrels(data);
+            }
+            }
+            // svg_text
+            else if (data.Type == 2) {
+                getCanvas1().find("*[inkscape\\:label=" + data.Key + "]").html(data.Value);
+            }
+            // svg_color
+            else if (data.Type == 3) {
+                changeColor1(getCanvas1().find("*[inkscape\\:label=" + data.Key + "]"), data.Value);
+            }
+        }
+
+        // 加载集样罐
+        function loadBarrels(data) {
+            var barrels = eval(data.Value);
+            $ulsvgbarrel = null;
+
+            if (data.Key == "皮带采样机3_底卸集样罐")
+                $ulsvgbarrel = $("#ulSampler1Barrel_DX");
+            else if (data.Key == "皮带采样机3_密码集样罐")
+                $ulsvgbarrel = $("#ulSampler1Barrel_MM");
+            else if (data.Key == "皮带采样机4_底卸集样罐")
+                $ulsvgbarrel = $("#ulSampler2Barrel_DX");
+            else if (data.Key == "皮带采样机4_密码集样罐")
+                $ulsvgbarrel = $("#ulSampler2Barrel_MM");
+
+            // 清空集样罐
+            $ulsvgbarrel.empty();
+           
+            for (var i = 0; i < barrels.length; i++) {
+                var barrel = barrels[i],
+                $li = $("<li/>"),
+                imgSrc = "Resources/images/barrel-empty.png";
+               
+                if (barrel.BarrelStatus == "已满")
+                    imgSrc = "Resources/images/barrel-full.png";
+                else if (barrel.BarrelStatus == "未满")
+                    imgSrc = "Resources/images/barrel-notfull.png";
+
+                $li.append($("<img/>").attr("src", imgSrc));
+                $li.append($("<label class=\"labelSampleCount\">&nbsp;&nbsp;" + barrel.SampleCount + "</label>"))
+
+                // 当前进料罐
+                if (barrel.IsCurrent == 1)
+                   changeColor1(getCanvas1().find("*[inkscape\\:label=" + data.Key + (i + 1) + "]"), "Red");
+                   //getCanvas1().find("*[inkscape\\:label=" + data.Key + "]").css({ "fill": "Red" });
+                else
+                    changeColor1(getCanvas1().find("*[inkscape\\:label=" + data.Key + (i + 1) + "]"), "#808080");
+                // $li.append($("<div/>").addClass("div-inbarrel-arrow"));
+
+                $ulsvgbarrel.append($li);
+            }
+        }
+
+        function loadConfig(data) {
+            $("input:radio[name='" + data.Key + "'][value=" + data.Value + "]").attr("checked", 'checked');
+        }
+
+        // 测试
+        function test1() {
+            dataHandler({ Key: "皮带采样机3_缩分器皮带", Type: 3, Value: "Red", Tag: "皮带" });
+        }
+
+        function SubmitSet(param1, param2) {
+            var res = TrainBeltSamplerV8Cef.SubmitSet(param1, param2);
+
+            if (res == "True")
+                ShowAlert(1, "设置成功");
+            else
+                ShowAlert(8, "设置失败");
+        }
+
+        // 加载异常信息
+        function LoadHitchs(datas) {
+            $("#createtable").empty();
+            var table = $("<table class=\"table\" border=\"1\">");
+            table.appendTo($("#createtable"));
+            //创建表头
+            var trTitle = $("<tr class=\"trTitle\"></tr>");
+            trTitle.appendTo(table);
+            var tdTitle = $("<td style=\"width: 180px;\">设备名称</td>");
+            tdTitle.appendTo(trTitle);
+            tdTitle = $("<td style=\"width: 140px;\">异常时间</td>");
+            tdTitle.appendTo(trTitle);
+            tdTitle = $("<td>异常内容</td>");
+            tdTitle.appendTo(trTitle);
+
+            for (var i = 0; i < datas.length; i++) {
+                //创建内容
+                tr = $("<tr class=\"trContent\"></tr>");
+                tr.appendTo(table);
+                var td = $("<td>" + datas[i].MachineCode + "</td>");
+                td.appendTo(tr);
+                td = $("<td>" + datas[i].HitchTime + "</td>");
+                td.appendTo(tr);
+                td = $("<td>" + datas[i].HitchDescribe + "</td>");
+                td.appendTo(tr);
+            }
+            $("#createtable").append("</table>");
+        }
+
+        // 测试加载异常信息
+        function TestLoadHitchs() {
+            $("#createtable").empty();
+            var table = $("<table class=\"table\" border=\"1\">");
+            table.appendTo($("#createtable"));
+            //创建表头
+            var trTitle = $("<tr class=\"trTitle\"></tr>");
+            trTitle.appendTo(table);
+            var tdTitle = $("<td style=\"width: 180px;\">设备名称</td>");
+            tdTitle.appendTo(trTitle);
+            tdTitle = $("<td style=\"width: 140px;\">异常时间</td>");
+            tdTitle.appendTo(trTitle);
+            tdTitle = $("<td>异常内容</td>");
+            tdTitle.appendTo(trTitle);
+
+            for (var i = 0; i < 3; i++) {
+                //创建内容
+                tr = $("<tr class=\"trContent\"></tr>");
+                tr.appendTo(table);
+                var td = $("<td>aaa</td>");
+                td.appendTo(tr);
+                td = $("<td>aaa</td>");
+                td.appendTo(tr);
+                td = $("<td>aaa</td>");
+                td.appendTo(tr);
+            }
+            $("#createtable").append("</table>");
+
+            ShowLayerFrom("异常信息", $("#createtable"));
+        }
+
+        function ShowHitchs(paramSampler) {
+            var res = TrainBeltSamplerV8Cef.GetHitchs(paramSampler);
+            LoadHitchs(eval(res));
+            ShowLayerFrom("异常信息", $("#createtable"));
+        }
+
+        function ShowLayerFrom(strtitle, domObj) {
+            $.layer({
+                type: 1,
+                title: strtitle,
+                btns: 0,
+                area: ['800px', '420px'],
+                border: [1, 0.3, '#000'],
+                page: {
+                    dom: domObj
+                }, close: function (index) {
+                    // 层右上角关闭按钮的点击事件触发回调函数
+                    //alert("close");
+                }, end: function () {
+                    // 层被彻底关闭后执行的回调函数
+                }
+            });
+        }
+
+        function ShowAlert(type, msg) {
+            $.layer({
+                dialog: {
+                    type: type,
+                    msg: msg
+                }
+            });
+        }
+
+        var i = 0;
+        function testColor() {
+
+            if (i % 2 == 0) {
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3弃料提升斗]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3输煤皮带]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3初级给料]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3初级破碎1]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3初级破碎2]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3初级破碎3]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3初级破碎4]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3初级破碎5]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3次级给料]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3缩分器]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3缩分器1]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3缩分器2]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3缩分器3]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3缩分器4]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3缩分器5]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3缩分器6]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3缩分器7]").css({ "fill": "Red" });
+
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4弃料提升斗]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4输煤皮带]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4初级给料]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4初级破碎1]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4初级破碎2]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4初级破碎3]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4初级破碎4]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4初级破碎5]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4次级给料]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4缩分器]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4缩分器1]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4缩分器2]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4缩分器3]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4缩分器4]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4缩分器5]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4缩分器6]").css({ "fill": "Red" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4缩分器7]").css({ "fill": "Red" });
+
+            }
+            else {
+
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3弃料提升斗]").css({ "fill": "url(#linearGradient6035-9)" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3输煤皮带]").css({ "fill": "#808080" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3初级给料]").css({ "fill": "#808080" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3初级破碎1]").css({ "fill": "url(#linearGradient5969-9)" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3初级破碎2]").css({ "fill": "url(#linearGradient5919-2)" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3初级破碎3]").css({ "fill": "url(#linearGradient5921-4)" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3初级破碎4]").css({ "fill": "url(#linearGradient5923-5)" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3初级破碎5]").css({ "fill": "url(#linearGradient5925-5)" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3次级给料]").css({ "fill": "#808080" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3缩分器1]").css({ "fill": "url(#linearGradient7572)" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3缩分器2]").css({ "fill": "url(#linearGradient5931-6)" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3缩分器3]").css({ "fill": "url(#linearGradient6946)" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3缩分器4]").css({ "fill": "url(#linearGradient5939-1)" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3缩分器5]").css({ "fill": "url(#linearGradient5941-4)" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3缩分器6]").css({ "fill": "url(#linearGradient5905-1)" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机3缩分器7]").css({ "fill": "url(#linearGradient7623)" });
+
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4弃料提升斗]").css({ "fill": "url(#linearGradient6035-9-6)" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4输煤皮带]").css({ "fill": "#808080" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4初级给料]").css({ "fill": "#808080" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4初级破碎1]").css({ "fill": "url(#linearGradient5969-9-7)" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4初级破碎2]").css({ "fill": "url(#linearGradient5919-2-2)" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4初级破碎3]").css({ "fill": "url(#linearGradient5921-4-3)" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4初级破碎4]").css({ "fill": "url(#linearGradient5923-5-2)" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4初级破碎5]").css({ "fill": "url(#linearGradient5925-5-2)" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4次级给料]").css({ "fill": "#808080" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4缩分器1]").css({ "fill": "url(#linearGradient13273)" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4缩分器2]").css({ "fill": "url(#linearGradient5931-6-1)" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4缩分器3]").css({ "fill": "url(#linearGradient7777)" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4缩分器4]").css({ "fill": "url(#linearGradient5939-1-2)" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4缩分器5]").css({ "fill": "url(#linearGradient5941-4-7)" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4缩分器6]").css({ "fill": "url(#linearGradient5905-1-1)" });
+                getCanvas1().find("*[inkscape\\:label=皮带采样机4缩分器7]").css({ "fill": "url(#linearGradient13324)" });
+            }
+            i++;
+        }
+
+        // 改变皮带颜色
+        function changeBeltColor($elements, color) {
+            $elements.find("*:not(g)").css({ "stroke": color });
+        }
+     
+    </script>
+    <style type="text/css">
+        html, body
+        {
+            margin: 0px;
+            padding: 0px;
+            font-family: 微软雅黑;
+            background-color: rgb(63, 63, 63);
+        }
+        .div-inbarrel-arrow
+        {
+            position: absolute;
+            top: -8px;
+            left: 6px;
+            width: 0px;
+            height: 0px;
+            border-top: solid 10px red;
+            border-bottom: solid 10px transparent;
+            border-left: solid 10px transparent;
+            border-right: solid 10px transparent;
+        }
+        .div-root
+        {
+            position: relative;
+            margin: 0px auto;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .ul-svg-barrel
+        {
+            padding: 0px;
+            padding-top: 5px;
+            margin: 0px;
+            list-style: none;
+            position: absolute;
+            width: 360px;
+            height: 42px;
+            background-color: rgb(63, 63, 63);
+        }
+        .ul-svg-barrel > li
+        {
+            position: relative;
+            float: left;
+            width: 36px;
+            height: 42px;
+            margin-left: 8.5px;
+        }
+        .ul-svg-barrel > li:first-child
+        {
+            margin-left: 0px;
+        }
+        .ul-svg-barrel > li > img
+        {
+            width: 36px;
+            height: 42px;
+            border: none;
+        }
+        .fontColor
+        {
+            color: #EBEBF2;
+            font-size: 10px;
+        }
+        .button1
+        {
+            position: absolute;
+            width: 100px;
+            height: 30px;
+            font-family: 微软雅黑;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .button1:hover
+        {
+            background-color: #00CED1;
+            border-color: #00CED1;
+            color: White;
+        }
+        
+        .label
+        {
+            font-family: 微软雅黑;
+            color: White;
+            font-size: 17px;
+            cursor: pointer;
+        }
+        .labelSampleCount
+        {
+            color: White;
+            font-size: 13px;
+        }
+        .table
+        {
+            border-collapse: collapse;
+            border: 1px solid #5C6065;
+            width: 100%;
+        }
+        
+        .table td
+        {
+            border: 1px solid #5C6065;
+        }
+        
+        .trTitle
+        {
+            background-color: #2C3E48;
+            text-align: center;
+            font-size: 20px;
+            color: White;
+            height: 40px;
+        }
+        .trContent
+        {
+            text-align: center;
+            height: 30px;
+        }
+        
+        .table-b table td
+        {
+            border: 1px solid #6D6E70;
+            text-align: center;
+            background-color: #2A3D49;
+        }
+        .button1:hover
+        {
+            background-color: #00CED1;
+            border-color: #00CED1;
+            color: White;
+        }
+    </style>
+</head>
+<body onselectstart="return false;">
+    <div class="div-root">
+        <div class="table-b" id="divCanvas">
+            <div style="position: absolute; top: 840px; left: 215px; width: 300px; height: 100px;">
+                <label class="label">
+                    <input name="ckbjy1" type="radio" value="底卸式" onclick="SubmitSet('集样1','底卸式')" />底卸式</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <label class="label">
+                    <input name="ckbjy1" type="radio" value="密码罐" onclick="SubmitSet('集样1','密码罐')" />密码罐</label>
+            </div>
+            <div style="position: absolute; top: 840px; left: 600px; width: 300px; height: 100px;">
+                <label class="label">
+                    <input name="ckbfc1" type="radio" value="#3皮带采样机" onclick="SubmitSet('翻车1','#3皮带采样机')" />#3皮带采样机</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <label class="label">
+                    <input name="ckbfc1" type="radio" value="#4皮带采样机" onclick="SubmitSet('翻车1','#4皮带采样机')" />#4皮带采样机</label>
+            </div>
+            <div style="position: absolute; top: 840px; left: 1098px; width: 300px; height: 100px;">
+                <label class="label">
+                    <input name="ckbfc2" type="radio" value="#3皮带采样机" onclick="SubmitSet('翻车2','#1皮带采样机')" />#3皮带采样机</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <label class="label">
+                    <input name="ckbfc2" type="radio" value="#4皮带采样机" onclick="SubmitSet('翻车2','#2皮带采样机')" />#4皮带采样机</label>
+            </div>
+            <div style="position: absolute; top: 840px; left: 1600px; width: 300px; height: 100px;">
+                <label class="label">
+                    <input name="ckbjy2" type="radio" value="底卸式" onclick="SubmitSet('集样2','底卸式')" />底卸式</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <label class="label">
+                    <input name="ckbjy2" type="radio" value="密码罐" onclick="SubmitSet('集样2','密码罐')" />密码罐</label>
+            </div>
+            <div style="position: absolute; top: 330px; left:605px;">
+                <input type="button" value="查看异常信息" class="button1" onclick="ShowHitchs('#1')" />
+            </div>
+
+            <div style="position: absolute; top: 330px; left: 1500px;">
+                <input type="button" value="查看异常信息" class="button1" onclick="ShowHitchs('#2')" />
+            </div>
+            <embed id="svgCanvas1" src="Resources/OutBeltSampler.svg" type="image/svg+xml" />
+        </div>
+        <!--采样机一 底卸式集样罐-->
+        <ul id="ulSampler1Barrel_DX" class="ul-svg-barrel" style="top: 730px; left: 145px;">
+            <li>
+                <!--<div class="div-inbarrel-arrow">
+                </div>-->
+                <img src="Resources/images/barrel-notfull.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+        </ul>
+        <!--采样机一 密码集样罐-->
+        <ul id="ulSampler1Barrel_MM" class="ul-svg-barrel" style="top: 730px; left: 570px;">
+            <li>
+                <!--<div class="div-inbarrel-arrow">
+                </div>-->
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+        </ul>
+        <!--采样机二 底卸式集样罐-->
+        <ul id="ulSampler2Barrel_DX" class="ul-svg-barrel" style="top: 730px; left: 1037px;">
+            <li>
+                <!--<div class="div-inbarrel-arrow">
+                </div>-->
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+        </ul>
+        <!--采样机二 密码集样罐-->
+        <ul id="ulSampler2Barrel_MM" class="ul-svg-barrel" style="top: 730px; left: 1460px;">
+            <li>
+                <!--<div class="div-inbarrel-arrow">
+                </div>-->
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+            <li>
+                <img src="Resources/images/barrel-empty.png" />
+            </li>
+        </ul>
+    </div>
+    <div id="createtable" style="width: 800px; height: 385px; display: none; overflow: auto;">
+    </div>
+</body>
+</html>

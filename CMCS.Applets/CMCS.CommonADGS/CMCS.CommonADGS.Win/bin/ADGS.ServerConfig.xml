@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <!--程序唯一标识-->
+  <AppIdentifier>化验设备通用取数</AppIdentifier>
+  <!--开机启动-->
+  <Startup>False</Startup>
+  <!--是否最小化运行-->
+  <IsSecretRunning>False</IsSecretRunning>
+  <!--是否关闭验证-->
+  <VerifyBeforeClose>False</VerifyBeforeClose>
+  <ReceiveSettings>
+    <!--服务器接收端口配置-->
+    <PortSetting>
+      <!--设备编号-->
+      <Param Key="MachineCode" Value="#1量热仪" />
+      <!--端口-->
+      <Param Key="Port" Value="800" />
+      <!--文件存储路径-->
+      <Param Key="SavePath" Value="F:\项目资料\化验资料\开元\自动量热仪\" />
+      <!--是否启用-->
+      <Param Key="Enabled" Value="True" />
+    </PortSetting>
+  </ReceiveSettings>
+</root>

@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Untitled Page</title>
+    <script type="text/javascript" src="../Resources/plugins/jquery/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../Resources/plugins/svg/svg.js"></script>
+    <script type="text/javascript" src="../Resources/js/svgHelper.js"></script>
+    <script type="text/javascript">
+
+        // 阻止右键菜单
+        document.oncontextmenu = function () { return false; };
+
+        window.onload = function () {
+
+        };
+
+        function sendMessageToBrowser() {
+            CefTesterV8Cef.sendMessage("Send Message To Browser", "Message Arguments");
+        }
+     
+    </script>
+    <style type="text/css">
+        html, body
+        {
+            margin: 0px;
+            padding: 0px;
+            font-family: 微软雅黑;
+            background-color: rgb(43, 47, 51);
+            color: white;
+        }
+        .div-root
+        {
+            position: relative;
+            margin: 0px auto;
+            width: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body onselectstart="return false;">
+    <div class="div-root">
+        <h1>
+            CEF测试面板</h1>
+        <hr />
+        <input type="button" value="Send Message To Browser" onclick="sendMessageToBrowser()" />
+    </div>
+</body>
+</html>

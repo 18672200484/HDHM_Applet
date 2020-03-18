@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{876E357B-8180-4060-87F5-5D5C11E29E4E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMCS.DumblyConcealer</RootNamespace>
+    <AssemblyName>CMCS.DumblyConcealer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=10.5.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="Oracle.ManagedDataAccess">
+      <HintPath>..\..\CMCS.Resources\Oracle.ManagedDataAccess\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DcDbers.cs" />
+    <Compile Include="Enums\eOutputType.cs" />
+    <Compile Include="Enums\eMachineCode.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tasks\AssayDevice\Entities\CLY_5E8SAII.cs" />
+    <Compile Include="Tasks\AssayDevice\Entities\LRY_5EC5500A.cs" />
+    <Compile Include="Tasks\AssayDevice\Entities\SFY_5EMW6510.cs" />
+    <Compile Include="Tasks\AssayDevice\EquAssayDeviceDAO.cs" />
+    <Compile Include="Tasks\AutoMaker\Entities\EquQZDZYJCmd.cs" />
+    <Compile Include="Tasks\AutoMaker\Entities\EquQZDZYJDetail.cs" />
+    <Compile Include="Tasks\AutoMaker\Entities\EquQZDZYJError.cs" />
+    <Compile Include="Tasks\AutoMaker\Entities\EquQZDZYJPlan.cs" />
+    <Compile Include="Tasks\AutoMaker\Entities\EquQZDZYJSignal.cs" />
+    <Compile Include="Tasks\AutoMaker\EquAutoMakerDAO.cs" />
+    <Compile Include="Tasks\BeltBalancer\Entities\CmcsBeltBalancerHistoryValue.cs" />
+    <Compile Include="Tasks\BeltBalancer\Entities\CmcsBeltBalancerValue.cs" />
+    <Compile Include="Tasks\BeltBalancer\EquBeltBalancerDAO.cs" />
+    <Compile Include="Tasks\CarJxSampler\Entities\EquQCJXCYJBarrel.cs" />
+    <Compile Include="Tasks\CarJxSampler\Entities\EquQCJXCYJError.cs" />
+    <Compile Include="Tasks\CarJxSampler\Entities\EquQCJXCYJSampleCmd.cs" />
+    <Compile Include="Tasks\CarJxSampler\Entities\EquQCJXCYJSamplePlan.cs" />
+    <Compile Include="Tasks\CarJxSampler\Entities\EquQCJXCYJSignal.cs" />
+    <Compile Include="Tasks\CarJxSampler\Entities\EquQCJXCYJSignalDetail.cs" />
+    <Compile Include="Tasks\CarJxSampler\Entities\EquQCJXCYJUnloadCmd.cs" />
+    <Compile Include="Tasks\CarJxSampler\Entities\EquQCJXCYJUnloadResult.cs" />
+    <Compile Include="Tasks\CarJxSampler\EquCarJXSamplerDAO.cs" />
+    <Compile Include="Tasks\DataHandler\DataHandlerDAO.cs" />
+    <Compile Include="Tasks\DataHandler\Entities\CmcsGuardInfo.cs" />
+    <Compile Include="Tasks\DataHandler\Enums\eEventCode.cs" />
+    <Compile Include="Tasks\TrainDiscriminator\TrainDiscriminatorDAO.cs" />
+    <Compile Include="Tasks\TrainDiscriminator\TrainDiscriminatorDBW.cs" />
+    <Compile Include="Tasks\TrainDiscriminator\TrainDiscriminatorTCPIP.cs" />
+    <Compile Include="Tasks\WeightBridger\EquWeightBridgerDAO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CMCS.Common\CMCS.Common\CMCS.Common.csproj">
+      <Project>{7587893A-FEFB-4810-8509-E13A35BBAC35}</Project>
+      <Name>CMCS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CMCS.Common\CMCS.DapperDber\CMCS.DapperDber.csproj">
+      <Project>{6384F3D5-7CB5-4D1F-8A1F-3FA9B0A78F05}</Project>
+      <Name>CMCS.DapperDber</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tasks\TrainDiscriminator\Entities\" />
+    <Folder Include="Tasks\WeightBridger\Entities\" />
+    <Folder Include="Utilities\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Tasks\AssayDevice\Entities\从化验设备取数后的中间库映射实体.txt" />
+    <Content Include="Tasks\AssayDevice\化验数据同步接口.txt" />
+    <Content Include="Tasks\AutoMaker\全自动制样机接口.txt" />
+    <Content Include="Tasks\BeltBalancer\皮带秤称重数据同步程序.txt" />
+    <Content Include="Tasks\CarJxSampler\汽车机械采样机接口.txt" />
+    <Content Include="Tasks\DataHandler\综合事件处理.txt" />
+    <Content Include="Tasks\TrainDiscriminator\车号识别数据接口.txt" />
+    <Content Include="Tasks\WeightBridger\火车轨道衡数据同步程序.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

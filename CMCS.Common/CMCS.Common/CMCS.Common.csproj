@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7587893A-FEFB-4810-8509-E13A35BBAC35}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMCS.Common</RootNamespace>
+    <AssemblyName>CMCS.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetSpeech">
+      <HintPath>..\..\CMCS.Resources\DotNetBar\DotNetSpeech.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CMCS.Resources\BasisPlatform\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CMCS.Resources\MySql\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\CMCS.Resources\Newtonsoft.Json\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess">
+      <HintPath>..\..\CMCS.Resources\Oracle.ManagedDataAccess\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonAppConfig.cs" />
+    <Compile Include="DAO\CommonDAO.cs" />
+    <Compile Include="DAO\BeltSamplerDAO.cs" />
+    <Compile Include="DAO\AutoMakerDAO.cs" />
+    <Compile Include="DAO\TrainInFactoryDAO.cs" />
+    <Compile Include="DAO\TruckInFactoryDAO.cs" />
+    <Compile Include="DAO\CarSamplerDAO.cs" />
+    <Compile Include="DAO\QCJXCYSamplerDAO.cs" />
+    <Compile Include="DapperDber_etc\OracleDapperDber_iEAA.cs" />
+    <Compile Include="DapperDber_etc\MySqlDapperDber_iEAA.cs" />
+    <Compile Include="Dbers.cs" />
+    <Compile Include="Entities\AssayDevices\CmcsAshFusionAssay.cs" />
+    <Compile Include="Entities\AssayDevices\CmcsElementAssay.cs" />
+    <Compile Include="Entities\BaseInfo\CmcsCamare.cs" />
+    <Compile Include="Entities\iEAA\CmcsUser.cs" />
+    <Compile Include="Entities\Inf\InfBeltSamplerUnloadResult.cs" />
+    <Compile Include="Entities\CarTransport\CmcsTruckInFactoryWay.cs" />
+    <Compile Include="Entities\CarTransport\CmcsTruckInFactoryWayDetail.cs" />
+    <Compile Include="Entities\CarTransport\CmcsSaleFuelTransport.cs" />
+    <Compile Include="Entities\CarTransport\CmcsTransportSales.cs" />
+    <Compile Include="Entities\CarTransport\CmcsTransportSalesDetail.cs" />
+    <Compile Include="Entities\CarTransport\CmcsProvinceAbbreviation.cs" />
+    <Compile Include="Entities\AssayDevices\CmcsHeatAssay.cs" />
+    <Compile Include="Entities\AssayDevices\CmcsMoistureAssay.cs" />
+    <Compile Include="Entities\AssayDevices\CmcsProximateAssay.cs" />
+    <Compile Include="Entities\AssayDevices\CmcsSulfurAssay.cs" />
+    <Compile Include="Entities\CarTransport\CmcsAutotruck.cs" />
+    <Compile Include="Entities\CarTransport\CmcsBuyFuelTransport.cs" />
+    <Compile Include="Entities\CarTransport\CmcsBuyFuelTransportDeduct.cs" />
+    <Compile Include="Entities\CarTransport\CmcsEPCCard.cs" />
+    <Compile Include="Entities\CarTransport\CmcsGoodsTransport.cs" />
+    <Compile Include="Entities\CarTransport\CmcsGoodsType.cs" />
+    <Compile Include="Entities\Fuel\CmcsLMYB.cs" />
+    <Compile Include="Entities\Fuel\CmcsLMYBDetail.cs" />
+    <Compile Include="Entities\CarTransport\CmcsSupplyReceive.cs" />
+    <Compile Include="Entities\CarTransport\CmcsTransportPicture.cs" />
+    <Compile Include="Entities\Inf\InfQCJXCYSampleCMD.cs" />
+    <Compile Include="Entities\Inf\InfQCJXCYJUnloadResult.cs" />
+    <Compile Include="Entities\Inf\InfQCJXCYUnLoadCMD.cs" />
+    <Compile Include="Entities\CarTransport\CmcsUnFinishTransport.cs" />
+    <Compile Include="Entities\CarTransport\CmcsVisitTransport.cs" />
+    <Compile Include="Entities\CarTransport\CmcsCarModel.cs" />
+    <Compile Include="Entities\Fuel\CmcsFuelQuality.cs" />
+    <Compile Include="Entities\Sys\CmcsConfirmOperationLog.cs" />
+    <Compile Include="Entities\Sys\CmcsModifyLog.cs" />
+    <Compile Include="Entities\Sys\EntityBase.cs" />
+    <Compile Include="Entities\Sys\ApiResult.cs" />
+    <Compile Include="Entities\Sys\SysModule.cs" />
+    <Compile Include="Entities\Sys\SysUsers.cs" />
+    <Compile Include="Entities\Sys\SysUserLogInatTempts.cs" />
+    <Compile Include="Entities\Sys\SysResource.cs" />
+    <Compile Include="Entities\Sys\SysResourceUser.cs" />
+    <Compile Include="Entities\TrainInFactory\CmcsTrainLine.cs" />
+    <Compile Include="Entities\TrainInFactory\CmcsTrainWatch.cs" />
+    <Compile Include="Entities\iEAA\User.cs" />
+    <Compile Include="Entities\Inf\InfBeltSampleCmd.cs" />
+    <Compile Include="Entities\Inf\InfBeltSamplePlan.cs" />
+    <Compile Include="Entities\Inf\InfCYGControlCMD.cs" />
+    <Compile Include="Entities\Inf\InfEquInfSampleBarrel.cs" />
+    <Compile Include="Entities\Fuel\CmcsInFactoryBatch.cs" />
+    <Compile Include="Entities\BaseInfo\CmcsMine.cs" />
+    <Compile Include="Entities\Fuel\CmcsRCMake.cs" />
+    <Compile Include="Entities\Fuel\CmcsRCMakeDetail.cs" />
+    <Compile Include="Entities\Fuel\CmcsRCSampleBarrel.cs" />
+    <Compile Include="Entities\Fuel\CmcsRCSampling.cs" />
+    <Compile Include="Entities\BaseInfo\CmcsAppletConfig.cs" />
+    <Compile Include="Entities\BaseInfo\CmcsStation.cs" />
+    <Compile Include="Entities\BaseInfo\CmcsSupplier.cs" />
+    <Compile Include="Entities\TrainInFactory\CmcsTrainCarriagePass.cs" />
+    <Compile Include="Entities\TrainInFactory\CmcsTrainSampleScheme.cs" />
+    <Compile Include="Entities\Fuel\CmcsTransport.cs" />
+    <Compile Include="Entities\Sys\EntityBase1.cs" />
+    <Compile Include="Entities\BaseInfo\CmcsSignalData.cs" />
+    <Compile Include="Entities\Inf\InfBeltSampleUnloadCmd.cs" />
+    <Compile Include="Entities\Inf\InfEquInfHitch.cs" />
+    <Compile Include="Entities\Inf\InfMakerPlan.cs" />
+    <Compile Include="Entities\Inf\InfMakerRecord.cs" />
+    <Compile Include="Entities\Inf\InfMakerControlCmd.cs" />
+    <Compile Include="Entities\BaseInfo\CmcsCMEquipment.cs" />
+    <Compile Include="Entities\Sys\EntityBase2.cs" />
+    <Compile Include="Entities\TrainInFactory\CmcsTrainWeightRecord.cs" />
+    <Compile Include="Entities\BaseInfo\CmcsFuelKind.cs" />
+    <Compile Include="Entities\Inf\InfCYGControlCMDDetail.cs" />
+    <Compile Include="Entities\Fuel\CmcsRCAssay.cs" />
+    <Compile Include="Entities\Fuel\CmcsRCSampling_B_T.cs" />
+    <Compile Include="Entities\Sys\CmcsSysMessage.cs" />
+    <Compile Include="Entities\BaseInfo\CmcsTransportCompany.cs" />
+    <Compile Include="Entities\iEAA\CodeContent.cs" />
+    <Compile Include="Entities\iEAA\CodeKind.cs" />
+    <Compile Include="Entities\Sys\CmcsAppRemoteControlCmd.cs" />
+    <Compile Include="Enums\eAppletLogLevel.cs" />
+    <Compile Include="Enums\eCarType.cs" />
+    <Compile Include="Enums\eEquInfCmdResultCode.cs" />
+    <Compile Include="Enums\eEquInfMakerCmd.cs" />
+    <Compile Include="Enums\eEquInfSamplerCmd.cs" />
+    <Compile Include="Enums\eEquInfSamplerSystemStatus.cs" />
+    <Compile Include="Enums\eEquInfSamplerUnloadType.cs" />
+    <Compile Include="Enums\eEquInfSampleType.cs" />
+    <Compile Include="Enums\eAssayType.cs" />
+    <Compile Include="Enums\eMessageType.cs" />
+    <Compile Include="Enums\eMsgWarnType.cs" />
+    <Compile Include="Enums\eSampleBarrelStatus.cs" />
+    <Compile Include="Enums\eSignalDataName.cs" />
+    <Compile Include="Enums\eTrainPassDirection.cs" />
+    <Compile Include="Enums\eTrainTipperTurnoverStatus.cs" />
+    <Compile Include="Enums\eEquInfAutoMakerSystemStatus.cs" />
+    <Compile Include="Enums\eMakeSampleType.cs" />
+    <Compile Include="Enums\eSamplingType.cs" />
+    <Compile Include="Enums\eEquInfGatherType.cs" />
+    <Compile Include="Enums\eSysMessageStatus.cs" />
+    <Compile Include="Enums\eTruckInFactoryStep.cs" />
+    <Compile Include="Enums\eUserRoleCodes.cs" />
+    <Compile Include="Enums\eMakeType.cs" />
+    <Compile Include="Enums\Sys\eUserLogInattempts.cs" />
+    <Compile Include="EquipmentStatusColors.cs" />
+    <Compile Include="GlobalVars.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\ChsSpeller.cs" />
+    <Compile Include="Utilities\CommonUtil.cs" />
+    <Compile Include="Utilities\ConvertHelper.cs" />
+    <Compile Include="Utilities\ApiLogin.cs" />
+    <Compile Include="Utilities\Log4Neter.cs" />
+    <Compile Include="Utilities\MD5Util.cs" />
+    <Compile Include="Utilities\StartUpUtil.cs" />
+    <Compile Include="Utilities\TaskSimpleScheduler.cs" />
+    <Compile Include="Utilities\VoiceSpeaker.cs" />
+    <Compile Include="Utilities\XOConverter.cs" />
+    <Compile Include="Views\View_TrainTipperQueue.cs" />
+    <Compile Include="Views\View_BuyFuelTransport.cs" />
+    <Compile Include="Views\View_SaleFuelTransport.cs" />
+    <Compile Include="Views\View_UnFinishTransport.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CMCS.DapperDber\CMCS.DapperDber.csproj">
+      <Project>{6384F3D5-7CB5-4D1F-8A1F-3FA9B0A78F05}</Project>
+      <Name>CMCS.DapperDber</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="通用组件.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

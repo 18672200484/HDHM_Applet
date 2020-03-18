@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CommonAppConfig>
+  <!--程序唯一标识-->
+  <AppIdentifier>制样样品校验</AppIdentifier>
+  <!--集中管控Oracle数据库连接字符串-->
+  <SelfConnStr>Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=10.36.0.37)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=ORCL)));User Id=cmcs_base_7;Password=1234;</SelfConnStr>
+</CommonAppConfig>
+

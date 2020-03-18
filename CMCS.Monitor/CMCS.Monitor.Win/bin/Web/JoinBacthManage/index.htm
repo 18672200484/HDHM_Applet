@@ -1,0 +1,291 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Untitled Page</title>
+   <script type="text/javascript" src="../Resources/plugins/jquery/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../Resources/plugins/layer/layer.min.js"></script>
+    <script type="text/javascript" src="../Resources/plugins/svg/svg.js"></script>
+    <script type="text/javascript" src="../Resources/js/svgHelper.js"></script>
+  
+    
+    <script type="text/javascript">
+        var canvas1;
+
+        window.onload = function () {
+            canvas1 = getCanvas1();
+        };
+
+//        $(function ($) {
+//            canvas1 = getCanvas1();
+//        });
+
+        // 获取SVG jquery对象
+        function getSVGjQuery(id) {
+            return $(document.getElementById(id).getSVGDocument())
+        }
+
+        // 获取 svgCanvas1 SVG jquery对象
+        function getCanvas1() {
+            return getSVGjQuery("svgCanvas1");
+        }
+
+        function StartTwinkle() {
+            alert(example.getDateTime());
+        }
+
+        function StartTwinkle2() {
+            alert(example.showConform("确定要删除？"));
+        }
+
+        // 请求数据 - 后台调用
+        function requestData(datas) {
+            for (var i = 0; i < datas.length; i++) {
+                dataHandler(datas[i]);
+            }
+        }
+
+        var angle = 1;
+        // 处理数据
+        function dataHandler(data) {
+            try {
+                // key_value
+                if (data.Type == 0)
+                    $("#" + data.Key).html(data.Value);
+                // json_data
+                else if (data.Type == 1) {
+
+                }
+                // svg_text
+                else if (data.Type == 2) {
+                    if (data.Key == "样品状态") {
+                        Createtable(data.Value);
+                    }
+                    if (data.Key == "异常信息") {
+                        CreateYCtable(data.Value);
+                    }
+
+                    if (data.Key == "系统") {
+                        if (data.Value == "0") {
+                            getCanvas1().find("*[inkscape\\:label=st]").html("系统空闲");
+                            svgChangeColor1(getCanvas1().find("*[inkscape\\:label=yxzt]"), "#008000");
+                            
+                        }
+                        else {
+                            getCanvas1().find("*[inkscape\\:label=st]").html("系统运行");
+                            svgChangeColor1(getCanvas1().find("*[inkscape\\:label=yxzt]"), "#ff0000");
+                        }
+                        
+                    }
+                    else {
+                        getCanvas1().find("*[inkscape\\:label=" + data.Key + "]").html(data.Value);
+                    }
+                   
+
+                }
+                // svg_color
+                else if (data.Type == 3) {
+                    changeColor1(getCanvas1().find("*[inkscape\\:label=" + data.Key + "]"), data.Value);
+                }
+                // svg_visible
+                else if (data.Type == 4) {
+                    if (data.Value.toLowerCase() == "true")
+                        getCanvas1().find("*[inkscape\\:label=" + data.Key + "]").show();
+                    else
+                        getCanvas1().find("*[inkscape\\:label=" + data.Key + "]").hide();
+                }
+                // svg_width
+                else if (data.Type == 5) {
+                    changeWidth(getCanvas1().find("*[inkscape\\:label=" + data.Key + "]"), data.Value * 388.85 / 50);
+                }
+            } catch (e) {
+                //alert(e.Message);
+            }
+        }
+
+        // 测试 改变数据
+        function test1() {
+            dataHandler({ Key: "制样机1_制样方式", Type: "2", Value: "170111098" });
+        }
+
+        // 测试 改变颜色
+        function testColor() {
+
+            //            dataHandler({ Key: "采样机1_运行模式_远程", Type: "3", Value: "Red" });
+            //            dataHandler({ Key: "采样机1_运行模式_就地", Type: "3", Value: "Red" });
+            //            dataHandler({ Key: "采样机1_程序状态", Type: "3", Value: "Red" });
+            //            dataHandler({ Key: "采样机1_设备状态", Type: "3", Value: "Red" });
+
+            //            dataHandler({ Key: "采样机1_汽车", Type: "4", Value: "false" });
+
+
+            dataHandler({ Key: "化验完成_Line", Type: "5", Value: 100 });
+        }
+
+        function Createtable(value) {
+            var str = "";
+            str += " <tr style=' '><th>编码</th><th>使用状态</th><th>样品码</th><th>卸料时间</th></tr> ";
+            var rows = value.split('|');
+           
+            for (var i = 0; i < rows.length; i++) {
+                var datas = rows[i].split(',');
+                if (datas[0].toString().length == 1) {
+                    datas[0] = "0" + datas[0];
+                }
+
+                if (datas[1] == "已使用") {
+
+                    svgChangeColor1(canvas1.find("*[inkscape\\:label=L" + datas[0] + "]"), "#008000");
+
+                    canvas1.find("*[inkscape\\:label=T" + datas[0] + "]").attr("cym", datas[2]);
+
+                    canvas1.find("*[inkscape\\:label=T" + datas[0] + "]").hover(function (e) {
+                        ShowBelt(e, $(this).attr("cym"));
+                    }, function () {
+                        $("#beltDiv").hide();
+                    });
+
+                   // changeColor1(getCanvas1().find("*[inkscape\\:label=" + "#LB02]"), "#008000ff");
+                }
+                str += " <tr><th>" + datas[0] + "</th><th>" + datas[1] + "</th><th>" + datas[2] + "</th><th>" + datas[3] + "</th></tr> ";
+            }
+            var d = $("#tbs").html(str);
+        }
+
+        function CreateYCtable(value) {
+            var str = "";
+            str += " <tr style='height:25px; font-size:16px;'><th>异常记录</th><th>异常时间</th><th>详细信息</th></tr> ";
+            var rows = value.split('|');
+           
+            for (var i = 0; i < rows.length; i++) {
+                var datas = rows[i].split(',');
+                if (datas[0].toString().length == 1) {
+                    datas[0] = "0" + datas[0];
+                }
+                var t0 = datas[1] == undefined ? "" : datas[1];
+                var t1 = datas[2] == undefined ? "" : datas[2];
+                var t2 = datas[3] == undefined ? "" : datas[3];
+                str += " <tr style='height:25px; font-size:16px;'><th>" + t0 + "</th><th>" + t1 + "</th><th>" + t2 + "</th></tr> ";
+            }
+            var d = $("#ycxx").html(str);
+        }
+
+        function ShowBelt(e, CYM) {
+            $("#beltDiv").html("<span style=' margin-left:20px;' >采样码：" + CYM + "</span>");
+
+            $("#beltDiv").show();
+
+            var x = 0;
+            $("#beltDiv").css("left", e.originalEvent.x + 10);
+            $("#beltDiv").css("top", e.originalEvent.y + 10);
+        }
+
+    </script>
+    <style type="text/css">
+        html, body
+        { 
+            margin: 0px;
+            padding: 0px;
+            font-family: 微软雅黑;
+            background-color: rgb(43, 47, 51);
+        }
+        .div-inbarrel-arrow
+        {
+            position: absolute;
+            top: -8px;
+            left: 6px;
+            width: 0px;
+            height: 0px;
+            border-top: solid 10px red;
+            border-bottom: solid 10px transparent;
+            border-left: solid 10px transparent;
+            border-right: solid 10px transparent;
+        }
+        .div-root
+        {
+            position: relative;
+            margin: 0px auto;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .ul-svg-barrel
+        {
+            padding: 0px;
+            padding-top: 5px;
+            margin: 0px;
+            list-style: none;
+            position: absolute;
+            width: 400px;
+            height: 80px;
+            background-color: rgb(43, 47, 51);
+        }
+        .ul-svg-barrel > li
+        {
+            position: relative;
+            float: left;
+            width: 31px;
+            height: 54px;
+            margin-left: 15px;
+        }
+        .ul-svg-barrel > li:first-child
+        {
+            margin-left: 0px;
+        }
+        .ul-svg-barrel > li > img
+        {
+            width: 31px;
+            height: 54px;
+            border: none;
+        }
+        .fontColor
+        {
+            color: #EBEBF2;
+            font-size: 10px;
+        }
+        .button1
+        {
+            position: absolute;
+            width: 86px;
+            height: 23px;
+            font-family: 微软雅黑;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        .button1:hover
+        {
+            background-color: #00CED1;
+            border-color: #00CED1;
+            color: White;
+        }
+    </style>
+</head>
+<body onselectstart="return false;">
+    <div class="div-root">
+        <div class="div-root" id="divCanvas">
+            <embed id="svgCanvas1" src="Resources/JoinBacth.svg" type="image/svg+xml" />
+        </div>
+
+        <div style=" color:White; position:absolute; left:800px; top:153px; width :750px;height:485px; overflow-x: auto;  overflow-y:auto;z-index:998">
+            <table id="tbs" width="100%" border="1" style="border-color:#bbbdbf; text-align:center; height:485px ; "  cellpadding="0" cellspacing="0"  >
+            
+            </table>
+        </div>
+
+         <div style=" color:White; position:absolute; left:800px; top:767px; width :750px;height:102px; overflow-x: auto;  overflow-y:auto;z-index:998">
+            <table id="ycxx" width="100%" border="1" style="border-color:#bbbdbf; text-align:center; height:102px ; "  cellpadding="0" cellspacing="0"  >
+           
+           
+            </table>
+        </div>
+
+        <!-- <div style=" color:White; position:absolute; left:800px; top:153px; width :750px;height:715px; overflow-x: auto;  overflow-y:auto;z-index:998">
+            <table id="tbs" width="100%" border="1" style="border-color:#bbbdbf; text-align:center; height:715px ; "  cellpadding="0" cellspacing="0"  >
+            </table>
+        </div>-->
+
+         <div id="beltDiv" style="width: 240px; height:50px; position:absolute;  z-index:999; line-height:50px;
+            left:200px; top:220px; display:none; background-color:Gray; color:White; overflow : auto;">
+        </div>
+    </div>
+</body>
+</html>

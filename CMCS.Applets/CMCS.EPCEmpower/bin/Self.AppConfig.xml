@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--程序唯一标识-->
+  <AppIdentifier>标签卡授权工具</AppIdentifier>
+  <!--发卡器串口-->
+  <RwerCom>10</RwerCom>
+  <!--授权码 注意：必须四个汉字-->
+  <PrefixCode>华电中宁</PrefixCode>
+  <!--起始编号-->
+  <StartNumber>2</StartNumber>
+  <!--编号递增-->
+  <AutoIncrease>1</AutoIncrease>
+  <!--授权模式  1=单机模式  2=联网模式-->
+  <EmpowerMode>2</EmpowerMode>
+  <!--联网模式需设置，Oracle数据库连接字符串-->
+  <SelfConnStr>Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=10.36.0.37)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=ORCL)));User Id=cmcs_base_7;Password=1234;</SelfConnStr>
+  <!--联网模式需设置，查询SQL语句 主键：Id,标签号：TagId，入库时间：InStorageDate-->
+  <SelectSQL>select Id,TagId,CreationTime as InStorageDate from CMCSTBEPCCARD t order by TagId asc</SelectSQL>
+  <!--联网模式需设置，入库判断SQL语句 标签号：TagId-->
+  <CheckSQL>select Id from CMCSTBEPCCARD where TagId=:TagId</CheckSQL>
+  <!--联网模式需设置，入库SQL语句 主键：Id,标签号：TagId，标签编号：CardNumber，入库时间：InStorageDate-->
+  <InsertSQL>
+    insert into CMCSTBEPCCARD (ID,isdeleted,creatoruserid,lastmodifieruserid,CARDNUMBER, TAGID,creationtime,lastmodificationtime)
+    values (:Id,0,1,1,:CARDNUMBER,:TAGID,to_date(:InStorageDate,'yyyy-MM-dd HH24:MI:SS'),to_date(:InStorageDate,'yyyy-MM-dd HH24:MI:SS'))
+  </InsertSQL>
+</root>

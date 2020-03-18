@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Untitled Page</title>
+    <script type="text/javascript" src="../Resources/plugins/jquery/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../Resources/plugins/svg/svg.js"></script>
+    <script type="text/javascript" src="../Resources/js/svgHelper.js"></script>
+    <script type="text/javascript">
+
+        var canvas1;
+
+        // 阻止右键菜单
+        document.oncontextmenu = function () { return false; };
+
+        window.onload = function () {
+            canvas1 = getCanvas1();
+
+            // 注册SVG元素脚本事件
+            initSvgElementEvent();
+        };
+
+        // 获取 svgCanvas1 SVG jquery对象
+        function getCanvas1() {
+            return getSVGjQuery("svgCanvas1");
+        }
+
+        // 注册SVG元素脚本事件
+        function initSvgElementEvent() {
+            canvas1.find("*[inkscape\\:label=#1皮带采样机_点击域],*[inkscape\\:label=#2皮带采样机_点击域]").bind("click", function () {
+                // 打开皮带采样机监控界面
+                HomePageV8Cef.OpenTrainBeltSampler();
+            });
+
+            canvas1.find("*[inkscape\\:label=#1火车机械采样机_点击域],*[inkscape\\:label=#2火车机械采样机_点击域]").bind("click", function () {
+                // 打开火车机械采样机监控界面
+                HomePageV8Cef.OpenTrainMachinerySampler();
+            });
+
+            canvas1.find("*[inkscape\\:label=#1翻车机_点击域],*[inkscape\\:label=#2翻车机_点击域]").bind("click", function () {
+                // 打开火车入厂翻车机监控
+                HomePageV8Cef.OpenTrainTipper();
+            });
+
+            canvas1.find("*[inkscape\\:label=#1动态衡_点击域]").bind("click", function () {
+                // 打开火车入厂记录查询
+                HomePageV8Cef.OpenWeightBridgeLoadToday();
+            });
+
+            canvas1.find("*[inkscape\\:label=#1全自动制样机_点击域]").bind("click", function () {
+                // 打开全自动制样机监控界面
+                HomePageV8Cef.OpenAutoMaker();
+            });
+
+            canvas1.find("*[inkscape\\:label=#1重车衡_点击域],*[inkscape\\:label=#2重车衡_点击域],*[inkscape\\:label=#1轻车衡_点击域],*[inkscape\\:label=#2轻车衡_点击域]").bind("click", function () {
+                // 打开汽车入厂重车衡监控
+                HomePageV8Cef.OpenTruckWeighter();
+            });
+
+            canvas1.find("*[inkscape\\:label=#1汽车机械采样机_点击域],*[inkscape\\:label=#2汽车机械采样机_点击域]").bind("click", function () {
+                // 打开汽车机械采样机监控
+                HomePageV8Cef.OpenTruckMachinerySampler();
+            });
+
+            canvas1.find("*[inkscape\\:label=#1智能存样柜_点击域]").bind("click", function () {
+                // 打开智能存样柜与气动传输监控
+                HomePageV8Cef.OpenAutoCupboard();
+            });
+
+            canvas1.find("*[inkscape\\:label=化验室_点击域]").bind("click", function () {
+                alert(window.appName);
+                // 打开化验室监控
+                HomePageV8Cef.OpenLaboratory();
+            });
+        }
+
+        // 请求数据 - 后台调用
+        function requestData(datas) {
+            for (var i = 0; i < datas.length; i++) {
+                dataHandler(datas[i]);
+            }
+        }
+
+        // 处理数据
+        function dataHandler(data) {
+            // key_value
+            if (data.Type == 0)
+                $("#" + data.Key).html(data.Value);
+            // json_data
+            else if (data.Type == 1) {
+
+            }
+            // svg_text
+            else if (data.Type == 2) {
+                canvas1.find("*[inkscape\\:label=" + data.Key + "]").html(data.Value);
+            }
+            // svg_color
+            else if (data.Type == 3) {
+                changeColor1(canvas1.find("*[inkscape\\:label=" + data.Key + "]"), data.Value);
+            }
+        }
+
+        // 测试
+        function test1() {
+
+        } 
+     
+    </script>
+    <style type="text/css">
+        html, body
+        {
+            margin: 0px;
+            padding: 0px;
+            font-family: 微软雅黑;
+            background-color: rgb(43, 47, 51);
+        }
+        .div-root
+        {
+            position: relative;
+            margin: 0px auto;
+            width: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body onselectstart="return false;" oncontextmenu="return false;">
+    <div class="div-root">
+        <embed id="svgCanvas1" src="Resources/HomePage.svg" type="image/svg+xml" />
+    </div>
+</body>
+</html>

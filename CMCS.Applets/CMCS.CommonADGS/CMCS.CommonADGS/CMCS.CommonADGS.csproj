@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5BF265C6-0368-4DD5-8EE8-0AF5A302D42B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMCS.CommonADGS</RootNamespace>
+    <AssemblyName>CMCS.CommonADGS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\..\..\..\宁夏大坝\Bieos_NXDB_APPLET\NXDB_CMCS_APPLET\CMCS.Applets\CMCS.ADGS\CMCS.ADGS.Win\bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\河南沁阳\Bieos_HNQY\lib\4.0\Plugins\Newtonsoft.Json\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CMCS.Resources\Oracle.ManagedDataAccess\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADGSServerConfig.cs" />
+    <Compile Include="ADGSAppConfig.cs" />
+    <Compile Include="Configurations\ServerConfiguration.cs" />
+    <Compile Include="Configurations\ClientConfiguration.cs" />
+    <Compile Include="Core\Server\UDPSendDAO.cs" />
+    <Compile Include="Core\Server\UDPReceiveDAO.cs" />
+    <Compile Include="Core\Win\AssayGraber.cs" />
+    <Compile Include="Core\Server\ServerPortSet.cs" />
+    <Compile Include="Core\Win\GrabPerformer.cs" />
+    <Compile Include="Utilities\OracleSqlBuilder.cs" />
+    <Compile Include="Core\Win\CustomGraber\KaiYuan\Sfy_5EMW6510_Graber.cs" />
+    <Compile Include="Core\Win\ByoGraber.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UDPDAO\MD5Helper.cs" />
+    <Compile Include="UDPDAO\MessageType.cs" />
+    <Compile Include="UDPDAO\ReadFileObject.cs" />
+    <Compile Include="UDPDAO\SerializeObject.cs" />
+    <Compile Include="UDPDAO\TraFransfersFile.cs" />
+    <Compile Include="UDPDAO\UdpReceive.cs" />
+    <Compile Include="UDPDAO\UdpSend.cs" />
+    <Compile Include="Utilities\StartUpUtil.cs" />
+    <Compile Include="Utilities\UdpUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\CMCS.Common\CMCS.Common\CMCS.Common.csproj">
+      <Project>{7587893a-fefb-4810-8509-e13a35bbac35}</Project>
+      <Name>CMCS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\CMCS.Common\CMCS.DapperDber\CMCS.DapperDber.csproj">
+      <Project>{6384F3D5-7CB5-4D1F-8A1F-3FA9B0A78F05}</Project>
+      <Name>CMCS.DapperDber</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\Win\CustomGraber\SanDe\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ADGS公共处理.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
