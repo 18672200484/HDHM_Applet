@@ -626,8 +626,8 @@ namespace CMCS.CarTransport.Weighter.Frms
 		/// <param name="value2">第二行内容</param>
 		private void UpdateLedShow(string value1 = "", string value2 = "")
 		{
-			UpdateLed1Show(value1, value2);
-			UpdateLed2Show(value1, value2);
+			if (this.LED1ConnectStatus) UpdateLed1Show(value1, value2);
+			if (this.LED2ConnectStatus) UpdateLed2Show(value1, value2);
 		}
 
 		#region LED1控制卡
@@ -767,7 +767,7 @@ namespace CMCS.CarTransport.Weighter.Frms
 
 			string ledContent = GenerateFillLedContent12(value1) + GenerateFillLedContent12(value2);
 
-			File.WriteAllText(this.LED1TempFile, ledContent, Encoding.UTF8);
+			File.WriteAllText(this.LED2TempFile, ledContent, Encoding.UTF8);
 
 			if (LED2m_bSendBusy == false)
 			{

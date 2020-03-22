@@ -62,10 +62,11 @@
     <Compile Include="Tasks\AssayDevice\Entities\LRY_5EC5500A.cs" />
     <Compile Include="Tasks\AssayDevice\Entities\SFY_5EMW6510.cs" />
     <Compile Include="Tasks\AssayDevice\EquAssayDeviceDAO.cs" />
+    <Compile Include="Tasks\AutoMaker\Entities\EquQZDZYJSignalDetail.cs" />
+    <Compile Include="Tasks\AutoMaker\Entities\EquQZDZYJMakeDetail.cs" />
     <Compile Include="Tasks\AutoMaker\Entities\EquQZDZYJCmd.cs" />
-    <Compile Include="Tasks\AutoMaker\Entities\EquQZDZYJDetail.cs" />
+    <Compile Include="Tasks\AutoMaker\Entities\EquQZDZYJCmdDetail.cs" />
     <Compile Include="Tasks\AutoMaker\Entities\EquQZDZYJError.cs" />
-    <Compile Include="Tasks\AutoMaker\Entities\EquQZDZYJPlan.cs" />
     <Compile Include="Tasks\AutoMaker\Entities\EquQZDZYJSignal.cs" />
     <Compile Include="Tasks\AutoMaker\EquAutoMakerDAO.cs" />
     <Compile Include="Tasks\BeltBalancer\Entities\CmcsBeltBalancerHistoryValue.cs" />

@@ -82,11 +82,11 @@ namespace CMCS.Common.Entities.Inf
             set { _MakeType = value; }
         }
 
-        private string _CoalSize;
+        private decimal _CoalSize;
         /// <summary>
         /// 煤炭粒度
         /// </summary>
-        public string CoalSize
+        public decimal CoalSize
         {
             get { return _CoalSize; }
             set { _CoalSize = value; }

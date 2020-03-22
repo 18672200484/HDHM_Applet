@@ -48,8 +48,8 @@ namespace CMCS.DumblyConcealer.Win.DumblyTasks
             taskSimpleScheduler.StartNewTask("#1全自动制样机-快速同步", () =>
             {
                 autoMakerDAO1.SyncPlan(this.rTxtOutputer.Output);
-                autoMakerDAO1.SyncCmd(this.rTxtOutputer.Output);
-                autoMakerDAO1.SyncError(this.rTxtOutputer.Output);
+                //autoMakerDAO1.SyncCmd(this.rTxtOutputer.Output);
+                //autoMakerDAO1.SyncError(this.rTxtOutputer.Output);
                 autoMakerDAO1.SyncSignal(this.rTxtOutputer.Output);
                 autoMakerDAO1.SyncMakeDetail(this.rTxtOutputer.Output);
 

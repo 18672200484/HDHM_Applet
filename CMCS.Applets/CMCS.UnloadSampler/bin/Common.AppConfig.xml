@@ -3,6 +3,6 @@
   <!--程序唯一标识-->
   <AppIdentifier>采样机卸样程序</AppIdentifier>
   <!--集中管控Oracle数据库连接字符串-->
-  <SelfConnStr>Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=ORCL)));User Id=bieos_hdhm;Password=1234;</SelfConnStr>
+  <SelfConnStr>Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=175.102.19.118)(PORT=10036))(CONNECT_DATA=(SERVICE_NAME=ORCL)));User Id=bieos_hdhm;Password=1234;</SelfConnStr>
 </CommonAppConfig>
 
