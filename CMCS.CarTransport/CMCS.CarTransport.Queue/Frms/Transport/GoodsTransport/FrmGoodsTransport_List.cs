@@ -178,13 +178,13 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.GoodsTransport
 		{
 			try
 			{
-				FileStream file = new FileStream("计量明细模板.xls", FileMode.Open, FileAccess.Read);
+				FileStream file = new FileStream("物资计量明细模板.xls", FileMode.Open, FileAccess.Read);
 				HSSFWorkbook hssfworkbook = new HSSFWorkbook(file);
-				HSSFSheet sheetl = (HSSFSheet)hssfworkbook.GetSheet("计量明细");
+				HSSFSheet sheetl = (HSSFSheet)hssfworkbook.GetSheet("Sheet1");
 
 				if (CurrExportData.Count == 0)
 				{
-					MessageBox.Show("请先查询数据");
+					MessageBoxEx.Show("请先查询数据");
 					return;
 				}
 
@@ -195,39 +195,58 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.GoodsTransport
 				{
 					CmcsGoodsTransport entity = CurrExportData[i];
 
-					Mysheet1(sheetl, i + 1, 0, entity.SerialNumber.ToString());
-					Mysheet1(sheetl, i + 1, 1, entity.CarNumber);
-					Mysheet1(sheetl, i + 1, 2, entity.SupplyUnitName);
-					Mysheet1(sheetl, i + 1, 3, entity.GoodsTypeName);
-					Mysheet1(sheetl, i + 1, 4, entity.FirstWeight.ToString());
-					Mysheet1(sheetl, i + 1, 5, entity.SecondWeight.ToString());
-					Mysheet1(sheetl, i + 1, 6, "0");
-					Mysheet1(sheetl, i + 1, 7, entity.SuttleWeight.ToString());
-					Mysheet1(sheetl, i + 1, 8, entity.SecondTime.Year < 2000 ? "" : entity.SecondTime.ToString("yyyy-MM-dd HH:mm:ss"));
+					Mysheet1(sheetl, i + 3, 0, entity.SerialNumber.ToString());
+					Mysheet1(sheetl, i + 3, 1, entity.CarNumber);
+					Mysheet1(sheetl, i + 3, 2, entity.SupplyUnitName);
+					Mysheet1(sheetl, i + 3, 3, entity.GoodsTypeName);
+					Mysheet1(sheetl, i + 3, 4, entity.FirstWeight.ToString());
+					Mysheet1(sheetl, i + 3, 5, entity.SecondWeight.ToString());
+					Mysheet1(sheetl, i + 3, 6, entity.SuttleWeight.ToString());
+					Mysheet1(sheetl, i + 3, 7, entity.SecondTime.Year < 2000 ? "" : entity.SecondTime.ToString("yyyy-MM-dd HH:mm:ss"));
+
+					sheetl.GetRow(i + 3).GetCell(0).CellStyle = sheetl.GetRow(3).GetCell(0).CellStyle;
+					sheetl.GetRow(i + 3).GetCell(1).CellStyle = sheetl.GetRow(3).GetCell(0).CellStyle;
+					sheetl.GetRow(i + 3).GetCell(2).CellStyle = sheetl.GetRow(3).GetCell(0).CellStyle;
+					sheetl.GetRow(i + 3).GetCell(3).CellStyle = sheetl.GetRow(3).GetCell(0).CellStyle;
+					sheetl.GetRow(i + 3).GetCell(4).CellStyle = sheetl.GetRow(3).GetCell(0).CellStyle;
+					sheetl.GetRow(i + 3).GetCell(5).CellStyle = sheetl.GetRow(3).GetCell(0).CellStyle;
+					sheetl.GetRow(i + 3).GetCell(6).CellStyle = sheetl.GetRow(3).GetCell(0).CellStyle;
+					sheetl.GetRow(i + 3).GetCell(7).CellStyle = sheetl.GetRow(3).GetCell(0).CellStyle;
 				}
 
 				#region 合计
-				Mysheet1(sheetl, CurrExportData.Count + 1, 0, "合计");
-				Mysheet1(sheetl, CurrExportData.Count + 1, 1, CurrExportData.Count + "车");
-				Mysheet1(sheetl, CurrExportData.Count + 1, 4, Math.Round(CurrExportData.Sum(a => a.FirstWeight), 2).ToString());
-				Mysheet1(sheetl, CurrExportData.Count + 1, 5, Math.Round(CurrExportData.Sum(a => a.SecondWeight), 2).ToString());
-				Mysheet1(sheetl, CurrExportData.Count + 1, 6, "0");
-				Mysheet1(sheetl, CurrExportData.Count + 1, 7, Math.Round(CurrExportData.Sum(a => a.SuttleWeight), 2).ToString());
+				Mysheet1(sheetl, CurrExportData.Count + 3, 0, "合计");
+				Mysheet1(sheetl, CurrExportData.Count + 3, 1, CurrExportData.Count + "车");
+				Mysheet1(sheetl, CurrExportData.Count + 3, 2, "");
+				Mysheet1(sheetl, CurrExportData.Count + 3, 3, "");
+				Mysheet1(sheetl, CurrExportData.Count + 3, 4, Math.Round(CurrExportData.Sum(a => a.FirstWeight), 2).ToString());
+				Mysheet1(sheetl, CurrExportData.Count + 3, 5, Math.Round(CurrExportData.Sum(a => a.SecondWeight), 2).ToString());
+				Mysheet1(sheetl, CurrExportData.Count + 3, 6, Math.Round(CurrExportData.Sum(a => a.SuttleWeight), 2).ToString());
+				Mysheet1(sheetl, CurrExportData.Count + 3, 7, "");
+
+				sheetl.GetRow(CurrExportData.Count + 3).GetCell(0).CellStyle = sheetl.GetRow(3).GetCell(0).CellStyle;
+				sheetl.GetRow(CurrExportData.Count + 3).GetCell(1).CellStyle = sheetl.GetRow(3).GetCell(0).CellStyle;
+				sheetl.GetRow(CurrExportData.Count + 3).GetCell(2).CellStyle = sheetl.GetRow(3).GetCell(0).CellStyle;
+				sheetl.GetRow(CurrExportData.Count + 3).GetCell(3).CellStyle = sheetl.GetRow(3).GetCell(0).CellStyle;
+				sheetl.GetRow(CurrExportData.Count + 3).GetCell(4).CellStyle = sheetl.GetRow(3).GetCell(0).CellStyle;
+				sheetl.GetRow(CurrExportData.Count + 3).GetCell(5).CellStyle = sheetl.GetRow(3).GetCell(0).CellStyle;
+				sheetl.GetRow(CurrExportData.Count + 3).GetCell(6).CellStyle = sheetl.GetRow(3).GetCell(0).CellStyle;
+				sheetl.GetRow(CurrExportData.Count + 3).GetCell(7).CellStyle = sheetl.GetRow(3).GetCell(0).CellStyle;
 				#endregion
 
 				sheetl.ForceFormulaRecalculation = true;
-				string fileName = DateTime.Now.ToString("yyyyMMddHHmmss") + "计量明细.xls";
+				string fileName = "物资计量明细" + DateTime.Now.ToString("yyyy-MM-dd") + ".xls";
 				GC.Collect();
 
 				FileStream fs = File.OpenWrite(folderBrowserDialog.SelectedPath + "\\" + fileName);
 				hssfworkbook.Write(fs);   //向打开的这个xls文件中写入表并保存。  
 				fs.Close();
-				MessageBox.Show("导出成功");
+				MessageBoxEx.Show("导出成功", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(ex.Message);
+				MessageBoxEx.Show(ex.Message);
 			}
 		}
 

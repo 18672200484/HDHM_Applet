@@ -104,6 +104,11 @@ namespace CMCS.CarTransport.Queue.Frms.BaseInfo.FuelKind
 
 		private void btnAdd_Click(object sender, EventArgs e)
 		{
+			if (this.SelFuelKind == null)
+			{
+				MessageBoxEx.Show("请先选择一个煤种!", "操作提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				return;
+			}
 			ProcessFromRequest(eEditMode.新增);
 		}
 
@@ -111,7 +116,7 @@ namespace CMCS.CarTransport.Queue.Frms.BaseInfo.FuelKind
 		{
 			if (this.SelFuelKind == null)
 			{
-				MessageBoxEx.Show("操作提示", "请先选择一个煤种!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBoxEx.Show("请先选择一个煤种!", "操作提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 			ProcessFromRequest(eEditMode.修改);
@@ -121,7 +126,7 @@ namespace CMCS.CarTransport.Queue.Frms.BaseInfo.FuelKind
 		{
 			if (this.SelFuelKind == null)
 			{
-				MessageBoxEx.Show("操作提示", "请先选择一个煤种!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBoxEx.Show("请先选择一个煤种!", "操作提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 			ProcessFromRequest(eEditMode.删除);
@@ -165,7 +170,7 @@ namespace CMCS.CarTransport.Queue.Frms.BaseInfo.FuelKind
 
 		private void DelTreeNode()
 		{
-			if (this.SelFuelKind.Id == "-1") { MessageBoxEx.Show("操作提示", "根节点不允许删除!", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+			if (this.SelFuelKind.Id == "-1") { MessageBoxEx.Show("根节点不允许删除!", "操作提示", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
 			if (MessageBoxEx.Show("确认删除该节点及子节点吗？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 			{
 				Dbers.GetInstance().SelfDber.DeleteBySQL<CmcsFuelKind>("where Id=:Id or parentId=:Id", new { Id = SelFuelKind.Id });
@@ -234,12 +239,12 @@ namespace CMCS.CarTransport.Queue.Frms.BaseInfo.FuelKind
 		{
 			if (string.IsNullOrEmpty(txt_FuelName.Text))
 			{
-				MessageBoxEx.Show("操作提示", "煤种名称不能为空!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBoxEx.Show("煤种名称不能为空!", "操作提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return false;
 			}
 			if (commonDAO.IsExistFuelKindName(txt_FuelName.Text, SelFuelKind.Id))
 			{
-				MessageBoxEx.Show("操作提示", "已有相同煤种名称!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBoxEx.Show("已有相同煤种名称!", "操作提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return false;
 			}
 			return true;

@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Untitled Page</title>
+	<script type="text/javascript" src="../Resources/plugins/jquery/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="../Resources/plugins/svg/svg.js"></script>
+	<script type="text/javascript" src="../Resources/js/svgHelper.js"></script>
+	<script type="text/javascript">
+
+		var canvas1;
+
+		window.onload = function () {
+			canvas1 = getCanvas1();
+		};
+
+		// 获取 svgCanvas1 SVG jquery对象
+		function getCanvas1() {
+			return getSVGjQuery("svgCanvas1");
+		}
+
+		// 请求数据 - 后台调用
+		function requestData(datas) {
+			for (var i = 0; i < datas.length; i++) {
+				dataHandler(datas[i]);
+			}
+		}
+
+		// 处理数据
+		function dataHandler(data) {
+			// key_value
+			if (data.Type == 0)
+				$("#" + data.Key).html(data.Value);
+			// json_data
+			else if (data.Type == 1) {
+
+			}
+			// svg_text
+			else if (data.Type == 2) {
+				canvas1.find("*[inkscape\\:label=" + data.Key + "]").html(data.Value);
+			}
+			// svg_color
+			else if (data.Type == 3) {
+				//alert(data.Key + ":" + data.Value);
+				svgChangeColor1(canvas1.find("*[inkscape\\:label=" + data.Key + "]"), data.Value);
+			}
+			// svg_visible
+			else if (data.Type == 4) {
+				if (data.Value.toLowerCase() == "true")
+					canvas1.find("*[inkscape\\:label=" + data.Key + "]").show();
+				else
+					canvas1.find("*[inkscape\\:label=" + data.Key + "]").hide();
+			}
+			// svg_scare
+			else if (data.Type == 8999) {
+				if (data.Value.toLowerCase() == "1")
+					changeScale(canvas1.find("*[inkscape\\:label=" + data.Key + "]"), true);
+				else
+					changeScale(canvas1.find("*[inkscape\\:label=" + data.Key + "]"), false);
+			}
+
+		}
+
+		function initpage() {
+			// dataHandler({ Key: "卡车", Type: 8999, Value: "1" });
+		}
+		// 测试
+		function test1() {
+			changeColor(canvas1.find("*[inkscape\\:label=制样机_系统]"), "red");
+		}
+	</script>
+</head>
+<body onload="initpage();" onselectstart="return false;">
+	<div class="div-root">
+		<embed id="svgCanvas1" src="Resources/AutoMaker.svg" type="image/svg+xml" />
+	</div>
+</body>
+</html>

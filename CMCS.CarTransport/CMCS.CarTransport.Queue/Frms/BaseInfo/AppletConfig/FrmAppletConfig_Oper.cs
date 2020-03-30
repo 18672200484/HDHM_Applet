@@ -56,14 +56,12 @@ namespace CMCS.CarTransport.Queue.Frms.BaseInfo.AppletConfig
 			if (txt_AppIdentifier.Text.Length == 0)
 			{
 				MessageBoxEx.Show("该程序唯一标识不能为空！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				return;
 			}
 			if (txt_ConfigName.Text.Length == 0)
 			{
 				MessageBoxEx.Show("该配置名称不能为空！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-			}
-			if (txt_ConfigName.Text.Length == 0)
-			{
-				MessageBoxEx.Show("该配置名称不能为空！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				return;
 			}
 
 			if ((CmcsAppModel == null || (CmcsAppModel.AppIdentifier != txt_AppIdentifier.Text && CmcsAppModel.ConfigName != txt_ConfigName.Text)) && Dbers.GetInstance().SelfDber.Entities<CmcsAppletConfig>(" where appIdentifier=:appIdentifier and ConfigName=:ConfigName", new { appIdentifier = txt_AppIdentifier.Text, ConfigName = txt_ConfigName.Text }).Count > 0)

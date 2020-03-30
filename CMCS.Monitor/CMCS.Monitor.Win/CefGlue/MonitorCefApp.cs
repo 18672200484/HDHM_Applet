@@ -8,18 +8,18 @@ using Xilium.CefGlue.Demo;
 
 namespace CMCS.Monitor.Win.CefGlue
 {
-    internal sealed class MonitorCefApp : CefApp
-    {
-        private CefRenderProcessHandler _renderProcessHandler = new MonitorRenderProcessHandler();
+	internal sealed class MonitorCefApp : CefApp
+	{
+		private CefRenderProcessHandler _renderProcessHandler = new MonitorRenderProcessHandler();
 
-        protected override void OnBeforeCommandLineProcessing(string processType, CefCommandLine commandLine)
-        {
-            //CMCS.Common.Utilities.Log4Neter.Info(processType + "     " + commandLine.ToString()); 
-        }
+		protected override void OnBeforeCommandLineProcessing(string processType, CefCommandLine commandLine)
+		{
+			//CMCS.Common.Utilities.Log4Neter.Info(processType + "     " + commandLine.ToString()); 
+		}
 
-        protected override CefRenderProcessHandler GetRenderProcessHandler()
-        {
-            return _renderProcessHandler;
-        }
-    }
+		protected override CefRenderProcessHandler GetRenderProcessHandler()
+		{
+			return _renderProcessHandler;
+		}
+	}
 }

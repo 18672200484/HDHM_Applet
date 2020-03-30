@@ -136,6 +136,8 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
 		private void FrmBuyFuelTransport_Oper_Load(object sender, EventArgs e)
 		{
 			btnAddDeduct.Enabled = GlobalVars.LoginUser.IsDeductUser == 1;
+			superGridControl1.PrimaryGrid.Columns["clmEdit"].Visible = GlobalVars.LoginUser.IsDeductUser == 1;
+			superGridControl1.PrimaryGrid.Columns["clmDelete"].Visible = GlobalVars.LoginUser.IsDeductUser == 1;
 			//绑定煤种信息
 			cmbFuelName_BuyFuel.DisplayMember = "Name";
 			cmbFuelName_BuyFuel.ValueMember = "Id";

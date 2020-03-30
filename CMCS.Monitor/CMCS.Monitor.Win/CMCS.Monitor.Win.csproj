@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CefGlue\CefMenuHandler.cs" />
+    <Compile Include="CefGlue\CefV8Handlers\AutoMakerCefV8Handler.cs" />
     <Compile Include="CefGlue\CefV8Handlers\HomePageCefV8Handler.cs" />
     <Compile Include="CefGlue\CefV8Handlers\TruckWeighterCefV8Handler.cs" />
     <Compile Include="CefGlue\CefV8Handlers\CarSamplerCefV8Handler.cs" />
@@ -106,6 +107,18 @@
     <Compile Include="CefGlue\CefV8Handlers\CefTesterCefV8Handler.cs" />
     <Compile Include="Core\PreviewCarBmp.cs" />
     <Compile Include="Core\SelfVars.cs" />
+    <Compile Include="Frms\FrmAutoMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frms\FrmAutoMaker.Designer.cs">
+      <DependentUpon>FrmAutoMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frms\FrmCarSampler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frms\FrmCarSampler.Designer.cs">
+      <DependentUpon>FrmCarSampler.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frms\FrmHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,12 +161,12 @@
     <Compile Include="Frms\FrmCefTester.Designer.cs">
       <DependentUpon>FrmCefTester.cs</DependentUpon>
     </Compile>
-    <Compile Include="Html\eHtmlDataItemType.cs" />
-    <Compile Include="Html\HtmlDataItem.cs" />
+    <Compile Include="Frms\Html\eHtmlDataItemType.cs" />
+    <Compile Include="Frms\Html\HtmlDataItem.cs" />
     <Compile Include="CefGlue\MonitorRenderProcessHandler.cs" />
     <Compile Include="CefGlue\MonitorCefApp.cs" />
     <Compile Include="CefGlue\CefAppImpl.cs" />
-    <Compile Include="Html\eTrainUpender.cs" />
+    <Compile Include="Frms\Html\eTrainUpender.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControls\CefWebBrowserEx.cs">
@@ -163,6 +176,12 @@
     <Compile Include="Utilities\MonitorCommon.cs" />
     <Compile Include="Utilities\SuperTabControlManager.cs" />
     <Compile Include="Utilities\WarningBoxUtil.cs" />
+    <EmbeddedResource Include="Frms\FrmAutoMaker.resx">
+      <DependentUpon>FrmAutoMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frms\FrmCarSampler.resx">
+      <DependentUpon>FrmCarSampler.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frms\FrmHomePage.resx">
       <DependentUpon>FrmHomePage.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,6 +249,10 @@
   <ItemGroup>
     <Content Include="bin\Common.AppConfig.xml" />
     <Content Include="bin\update.xml" />
+    <Content Include="bin\Web\AutoMaker\index.htm" />
+    <Content Include="bin\Web\AutoMaker\Resources\AutoMaker.svg" />
+    <Content Include="bin\Web\AutoMaker\Resources\js\register.js" />
+    <Content Include="bin\Web\CarSampler\Resources\CarSampler.svg" />
     <Content Include="bin\Web\CefTester\index.htm" />
     <Content Include="bin\Web\CefTester\Resources\js\register.js" />
     <Content Include="bin\Web\HomePage\index.htm" />
@@ -250,6 +273,8 @@
     <Content Include="bin\Web\Resources\plugins\layer\skin\layer.ext.css" />
     <Content Include="bin\Web\Resources\plugins\svg\svg.js" />
     <Content Include="bin\Web\Resources\js\svgHelper.js" />
+    <Content Include="bin\Web\CarSampler\index.htm" />
+    <Content Include="bin\Web\CarSampler\Resources\js\register.js" />
     <Content Include="bin\Web\TruckWeighter\index.htm" />
     <Content Include="bin\Web\TruckWeighter\Resources\js\register.js" />
     <Content Include="bin\Web\TruckWeighter\Resources\TruckWeighter.svg" />
@@ -258,6 +283,8 @@
     <None Include="Resources\CompanyLogo.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="bin\Web\AutoMaker\Resources\images\" />
+    <Folder Include="bin\Web\CarSampler\Resources\images\" />
     <Folder Include="bin\Web\HomePage\Resources\images\" />
     <Folder Include="bin\Web\Resources\images\" />
     <Folder Include="bin\Web\TruckWeighter\Resources\images\" />

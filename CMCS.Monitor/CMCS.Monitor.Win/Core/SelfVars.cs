@@ -15,11 +15,6 @@ namespace CMCS.Monitor.Win.Core
     public static class SelfVars
     {
         /// <summary>
-        /// 当前登录用户
-        /// </summary>
-        public static User LoginUser;
-
-        /// <summary>
         /// 主窗体引用
         /// </summary>
         public static FrmMainFrame MainFrameForm;
@@ -29,10 +24,20 @@ namespace CMCS.Monitor.Win.Core
         /// </summary>
         public static FrmTruckWeighter TruckWeighterForm;
 
-        /// <summary>
-        /// 网页地址 - CefTester
-        /// </summary>
-        public static string Url_CefTester = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Web/CefTester/index.htm");
+		/// <summary>
+		/// 采样机窗体引用
+		/// </summary>
+		public static FrmCarSampler CarSamplerForm;
+
+		/// <summary>
+		/// 制样机窗体引用
+		/// </summary>
+		public static FrmAutoMaker AutoMakerForm;
+
+		/// <summary>
+		/// 网页地址 - CefTester
+		/// </summary>
+		public static string Url_CefTester = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Web/CefTester/index.htm");
 
         /// <summary>
         /// 网页地址 - 集中管控首页
@@ -59,7 +64,7 @@ namespace CMCS.Monitor.Win.Core
         #region 全自动制样机
 
         /// <summary>
-        /// 网页地址 - 火车全自动制样机 #1
+        /// 网页地址 - 全自动制样机 #1
         /// </summary>
         public static string Url_AutoMaker = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Web/AutoMaker/index.htm");
 

@@ -141,7 +141,17 @@ namespace CMCS.Common.Entities.Inf
             get { return _BarrelType; }
             set { _BarrelType = value; }
         }
-         
-        
-    }
+
+		private double _SampleWeight;
+		/// <summary>
+		/// 样重
+		/// </summary>
+		public double SampleWeight
+		{
+			get { return _SampleWeight; }
+			set { _SampleWeight = value; }
+		}
+
+
+	}
 }

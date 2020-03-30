@@ -64,7 +64,7 @@ namespace CMCS.CarTransport.Queue.Frms.BaseInfo.EPCCard
 
         void Search(string input)
         {
-            List<CmcsEPCCard> list =  Dbers.GetInstance().SelfDber.Entities<CmcsEPCCard>("where CardNumber like '%'||:CardNumber||'%' and id not in (select EPCCardId from CmcsTbAutoTruck) order by CardNumber asc", new { CardNumber = input});
+            List<CmcsEPCCard> list =  Dbers.GetInstance().SelfDber.Entities<CmcsEPCCard>("where id not in (select EPCCardId from CmcsTbAutoTruck) and CardNumber like '%'||:CardNumber||'%' order by CardNumber asc", new { CardNumber = input});
             superGridControl1.PrimaryGrid.DataSource = list;
         }
 

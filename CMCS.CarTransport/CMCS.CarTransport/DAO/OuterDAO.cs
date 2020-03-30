@@ -53,6 +53,17 @@ namespace CMCS.CarTransport.DAO
 		}
 
 		/// <summary>
+		/// 获取指定日期已完成的已出厂的入厂煤运输记录
+		/// </summary>
+		/// <param name="dtStart"></param>
+		/// <param name="dtEnd"></param>
+		/// <returns></returns>
+		public List<View_BuyFuelTransport> GetFinishedBuyFuelTransportOut(DateTime dtStart, DateTime dtEnd)
+		{
+			return SelfDber.Entities<View_BuyFuelTransport>("where IsFinish=1 and IsUse=1 and OutFactoryTime>=:dtStart and OutFactoryTime<:dtEnd order by OutFactoryTime desc", new { dtStart = dtStart, dtEnd = dtEnd });
+		}
+
+		/// <summary>
 		/// 获取未完成的入厂煤运输记录
 		/// </summary>
 		/// <returns></returns>

@@ -40,7 +40,7 @@ namespace CMCS.CarTransport.Queue.Frms.BaseInfo.Supplier
         /// </summary>
         int CurrentIndex = 0;
 
-        string SqlWhere = string.Empty;
+        string SqlWhere = "where IsDeleted=0 ";
 
         public FrmSupplier_List()
         {
@@ -69,8 +69,6 @@ namespace CMCS.CarTransport.Queue.Frms.BaseInfo.Supplier
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            this.SqlWhere = " where 1=1";
-
             if (!string.IsNullOrEmpty(txtName_Ser.Text)) this.SqlWhere += " and Name like '%" + txtName_Ser.Text + "%'";
 
             CurrentIndex = 0;
@@ -79,7 +77,6 @@ namespace CMCS.CarTransport.Queue.Frms.BaseInfo.Supplier
 
         private void btnAll_Click(object sender, EventArgs e)
         {
-            this.SqlWhere = string.Empty;
             txtName_Ser.Text = string.Empty;
 
             CurrentIndex = 0;
@@ -203,8 +200,10 @@ namespace CMCS.CarTransport.Queue.Frms.BaseInfo.Supplier
                     {
                         try
                         {
-                            Dbers.GetInstance().SelfDber.Delete<CmcsSupplier>(entity.Id);
-                        }
+							entity.IsDeleted = 1;
+
+							Dbers.GetInstance().SelfDber.Update(entity);
+						}
                         catch (Exception)
                         {
                             MessageBoxEx.Show("该供应商正在使用中，禁止删除！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);

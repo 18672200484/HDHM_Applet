@@ -34,7 +34,7 @@ namespace CMCS.CarTransport.JxSampler.Frms.Sys
 
         private void Form1_Shown(object sender, EventArgs e)
         {
-            if (GlobalVars.LoginUser != null) lblLoginUserName.Text = GlobalVars.LoginUser.UserName;
+            if (GlobalVars.LoginUser != null) lblLoginUserName.Text = GlobalVars.LoginUser.Name;
 
             commonDAO.SetSignalDataValue(CommonAppConfig.GetInstance().AppIdentifier, eSignalDataName.系统.ToString(), "1");
         }

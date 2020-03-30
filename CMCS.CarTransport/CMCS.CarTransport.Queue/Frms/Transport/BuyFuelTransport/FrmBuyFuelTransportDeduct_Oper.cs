@@ -75,7 +75,7 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
 		{
 			if (dbi_DeductWeight.Value == 0)
 			{
-				MessageBoxEx.Show("扣重不能为0！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				MessageBoxEx.Show("扣量不能为0！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 				return;
 			}
 			if (this.EditMode == eEditMode.修改)
@@ -84,7 +84,6 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
 				CmcsBuyFuelTransportDeduct.DeductType = (string)cmb_DeductType.SelectedItem;
 				CmcsBuyFuelTransportDeduct.DeductUser = GlobalVars.LoginUser.Name;
 				CmcsBuyFuelTransportDeduct.LastModificAtionTime = DateTime.Now;
-				CmcsBuyFuelTransportDeduct.LastModifierUserId = GlobalVars.LoginUser.UserName;
 				Dbers.GetInstance().SelfDber.Update(CmcsBuyFuelTransportDeduct);
 			}
 			else if (this.EditMode == eEditMode.新增)
@@ -93,6 +92,7 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
 				CmcsBuyFuelTransportDeduct.TransportId = this.PId;
 				CmcsBuyFuelTransportDeduct.DeductWeight = (decimal)dbi_DeductWeight.Value;
 				CmcsBuyFuelTransportDeduct.DeductType = (string)cmb_DeductType.SelectedItem;
+				CmcsBuyFuelTransportDeduct.DeductUser = GlobalVars.LoginUser.Name;
 				Dbers.GetInstance().SelfDber.Insert(CmcsBuyFuelTransportDeduct);
 			}
 			this.DialogResult = DialogResult.OK;

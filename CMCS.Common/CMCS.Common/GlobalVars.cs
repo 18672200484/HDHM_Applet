@@ -185,7 +185,7 @@ namespace CMCS.Common
         public static string MachineCode_QCJXCYJ_7 = "#7汽车机械采样机";
 
         /// <summary>
-        /// 接口类型 - 徐州赛摩汽车机械采样机
+        /// 接口类型 - 汽车机械采样机
         /// </summary>
         public static string InterfaceType_QCJXCYJ = "湖南三德汽车机械采样机";
 

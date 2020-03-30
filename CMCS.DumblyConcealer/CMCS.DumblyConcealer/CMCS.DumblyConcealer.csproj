@@ -84,6 +84,7 @@
     <Compile Include="Tasks\DataHandler\DataHandlerDAO.cs" />
     <Compile Include="Tasks\DataHandler\Entities\CmcsGuardInfo.cs" />
     <Compile Include="Tasks\DataHandler\Enums\eEventCode.cs" />
+    <Compile Include="Tasks\SignalData\SignalDataDAO.cs" />
     <Compile Include="Tasks\TrainDiscriminator\TrainDiscriminatorDAO.cs" />
     <Compile Include="Tasks\TrainDiscriminator\TrainDiscriminatorDBW.cs" />
     <Compile Include="Tasks\TrainDiscriminator\TrainDiscriminatorTCPIP.cs" />
@@ -111,6 +112,7 @@
     <Content Include="Tasks\BeltBalancer\皮带秤称重数据同步程序.txt" />
     <Content Include="Tasks\CarJxSampler\汽车机械采样机接口.txt" />
     <Content Include="Tasks\DataHandler\综合事件处理.txt" />
+    <Content Include="Tasks\SignalData\集控信号点.txt" />
     <Content Include="Tasks\TrainDiscriminator\车号识别数据接口.txt" />
     <Content Include="Tasks\WeightBridger\火车轨道衡数据同步程序.txt" />
   </ItemGroup>
