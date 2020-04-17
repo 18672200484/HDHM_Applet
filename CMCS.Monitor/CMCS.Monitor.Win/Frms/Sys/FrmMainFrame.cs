@@ -168,6 +168,25 @@ namespace CMCS.Monitor.Win.Frms.Sys
 			});
 		}
 
+		/// <summary>
+		/// 打开全自动存样柜
+		/// </summary>
+		public void OpenAutoCupboard()
+		{
+			this.InvokeEx(() =>
+			{
+				string uniqueKey = FrmAutoCupboardPneumaticTransfer.UniqueKey;
+
+				if (FrmMainFrame.superTabControlManager.GetTab(uniqueKey) == null)
+				{
+					SelfVars.AutoCupboardForm = new FrmAutoCupboardPneumaticTransfer();
+					FrmMainFrame.superTabControlManager.CreateTab(SelfVars.AutoCupboardForm.Text, uniqueKey, SelfVars.AutoCupboardForm, false);
+				}
+				else
+					FrmMainFrame.superTabControlManager.ChangeToTab(uniqueKey);
+			});
+		}
+
 		#endregion
 
 		/// <summary>
@@ -245,12 +264,30 @@ namespace CMCS.Monitor.Win.Frms.Sys
 			OpenCarSampler();
 		}
 
+		/// <summary>
+		/// 全自动制样机
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void btnOpenAutoMaker_Click(object sender, EventArgs e)
 		{
 			ButtonX button = (ButtonX)sender;
 			SetColorTable(button != null ? button.Name : "");
 
 			OpenAutoMaker();
+		}
+
+		/// <summary>
+		/// 全自动存样柜
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void btnOpenAutoCupboard_Click(object sender, EventArgs e)
+		{
+			ButtonX button = (ButtonX)sender;
+			SetColorTable(button != null ? button.Name : "");
+
+			OpenAutoCupboard();
 		}
 		#endregion
 

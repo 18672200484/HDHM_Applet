@@ -253,7 +253,7 @@ namespace CMCS.WeighCheck.MakeWeight.Frms.Sys
             this.MinimumSize = new System.Drawing.Size(770, 544);
             this.Name = "FrmMainFrame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "武汉博晟-制样样品登记";
+            this.Text = "华电重工-制样样品登记";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Shown += new System.EventHandler(this.Form1_Shown);

@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="svg2" inkscape:version="0.48.4 r9939" sodipodi:docname="AutoCupboardPneumaticTransfer.svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 1080"
+	 style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#2B2E33;stroke:#2B2E33;stroke-width:2.109;}
+	.st1{fill:#1B75BB;}
+	.st2{fill:#A6A8AB;}
+	.st3{fill:#D0D2D3;}
+	.st4{fill:#58595B;}
+	.st5{fill:#404041;}
+	.st6{fill:url(#rect138_1_);}
+	.st7{fill:url(#rect187_1_);}
+	.st8{fill:#FFFFFF;}
+	.st9{font-family:'AdobeSongStd-Light-GBpc-EUC-H';}
+	.st10{font-size:21.1104px;}
+	.st11{fill:#231F20;}
+	.st12{fill:#EC1C24;}
+	.st13{fill:#E6E7E8;}
+	.st14{font-size:42.2206px;}
+	.st15{fill:#929497;}
+	.st16{fill:#414042;}
+	.st17{fill:#00A551;}
+	.st18{font-size:15.8323px;}
+	.st19{fill:#FFFFFF;enable-background:new    ;}
+	.st20{font-size:18.4713px;}
+	.st21{fill:url(#rect121_1_);}
+	.st22{fill:#6D6E70;}
+	.st23{font-size:17.3702px;}
+	.st24{fill:#EE4036;enable-background:new    ;}
+</style>
+<rect id="rect388" sodipodi:insensitive="true" class="st0" width="1920" height="1080">
+</rect>
+<polygon id="polygon390" class="st1" points="1540.8,362 1540.8,259.8 1550.9,259.8 1550.9,362 "/>
+<polygon id="polygon392" class="st1" points="1360.1,217.3 1508.8,217.3 1508.8,227.4 1360.1,227.4 "/>
+<rect id="rect106" x="105.3" y="244.1" class="st2" width="10.5" height="175.6"/>
+<rect id="rect112" x="105.3" y="242.7" class="st2" width="57.1" height="10.6"/>
+<rect id="rect127" x="72.4" y="435.8" class="st3" width="76.4" height="104.2"/>
+<path id="path397" inkscape:connector-curvature="0" class="st4" d="M72.4,540h76.4V435.8H72.4C72.4,435.8,72.4,540,72.4,540z
+	 M69.5,542.9v-110h82.1v110H69.5z"/>
+<rect id="rect129" x="73.7" y="437.3" class="st5" width="73.8" height="39.8"/>
+<linearGradient id="rect138_1_" gradientUnits="userSpaceOnUse" x1="90.0309" y1="576.26" x2="118.6897" y2="576.26" gradientTransform="matrix(1.06 0 0 -1.06 -3.546284e-02 1037.1403)">
+	<stop  offset="0" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#231F20"/>
+</linearGradient>
+<polygon id="rect138" class="st6" points="125.8,420.5 95.4,420.5 95.4,432.2 125.8,432.2 "/>
+<path id="path401" inkscape:connector-curvature="0" class="st5" d="M95.4,432.2h30.4v-11.7H95.4V432.2z M126.1,432.9H95h-0.4v-0.4
+	v-12.4v-0.4H95h31.1h0.4v0.4v12.4v0.4H126.1z"/>
+<rect id="rect176" x="527.1" y="512.1" class="st4" width="83.2" height="6.4"/>
+<path id="path404" inkscape:connector-curvature="0" class="st5" d="M590.3,541.9v-23.4h19.9v23.4H590.3z M591.7,540.3h17.1v-20.1
+	h-17.1V540.3z"/>
+<rect id="rect180" x="591.9" y="403.2" class="st5" width="18.4" height="108.9"/>
+<linearGradient id="rect187_1_" gradientUnits="userSpaceOnUse" x1="527.8488" y1="598.1005" x2="527.8488" y2="495.3365" gradientTransform="matrix(1.06 0 0 -1.06 -3.546284e-02 1037.1403)">
+	<stop  offset="0" style="stop-color:#BBBDBF"/>
+	<stop  offset="0.9882" style="stop-color:#404041"/>
+	<stop  offset="1" style="stop-color:#404041"/>
+</linearGradient>
+<polygon id="rect187" class="st7" points="591.9,403.2 527.1,403.2 527.1,512.1 591.9,512.1 "/>
+<text transform="matrix(1 0 0 1 177.5396 164.3369)" class="st8 st9 st10">四项转换器</text>
+<text id="text205" transform="matrix(1 0 0 1 90.8149 567.1016)" class="st8 st9 st10">风机</text>
+<path id="path412" inkscape:connector-curvature="0" class="st11" d="M130.2,466.3h-18.5h-0.2v-0.2v-17.9v-0.2h0.2h18.5h0.1l0.1,0
+	c9.8,9.3,0,18.1,0,18.1L130.2,466.3L130.2,466.3L130.2,466.3z M112,465.9h18.2c0.7-0.7,9-8.9,0-17.5H112L112,465.9L112,465.9z"/>
+<path id="path414" inkscape:connector-curvature="0" class="st12" d="M112,465.9h18.2c0.7-0.7,9-8.9,0-17.5H112L112,465.9L112,465.9
+	z"/>
+<path id="path416" inkscape:connector-curvature="0" class="st11" d="M90.9,448.1h18.5h0.2v0.2v17.9v0.2h-0.2H90.9h-0.1l-0.1-0.1
+	c-9.8-9.3,0-18.1,0-18.1L90.9,448.1L90.9,448.1L90.9,448.1z M109.2,448.4H91c-0.7,0.7-9,8.9,0,17.5h18.2L109.2,448.4L109.2,448.4z"
+	/>
+<path id="path418" inkscape:connector-curvature="0" class="st13" d="M109.2,448.4H91c-0.7,0.7-9,8.9,0,17.5h18.2L109.2,448.4
+	L109.2,448.4z"/>
+<path id="path420" inkscape:connector-curvature="0" class="st1" d="M1508.8,217.3c4.9,0,42.1,0.9,42.1,42.5h-10.1
+	c0-33.8-31.9-32.3-32-32.3V217.3L1508.8,217.3z"/>
+<text id="text217-4" transform="matrix(1 0 0 1 764.3877 138.9072)" class="st8 st9 st14">智能存样柜及气动传输</text>
+<text id="text201-9" transform="matrix(1 0 0 1 421.9028 471.5068)" class="st8 st9 st10">二项转换器</text>
+<g id="_347943336" transform="matrix(1.0599991,0,0,1.0599991,0.02453627,-130.95511)">
+	<rect id="rect13" x="1416.5" y="475.7" class="st3" width="84.7" height="15"/>
+	<rect id="rect15" x="1416.5" y="585.4" class="st3" width="84.7" height="13.2"/>
+	<rect id="rect23" x="1444" y="465" class="st5" width="35.1" height="10.7"/>
+	<rect id="rect35" x="1416.5" y="490.7" class="st5" width="84.7" height="94.7"/>
+	<polygon id="polygon41" class="st13" points="1475.9,506.4 1475.9,513.7 1493.1,503.7 1475.9,493.8 1475.9,501 1459,501 
+		1459,506.4 	"/>
+	<path id="_156391512" inkscape:connector-curvature="0" class="st11" d="M1475.9,493.8v7.1v0.2h-0.2H1459v5.4h16.7h0.2v0.2v7.1
+		l17.2-9.9L1475.9,493.8z M1475.6,500.7v-7.2v-0.3l0.3,0.1l17.8,10.2l0.3,0.1l-0.3,0.1l-17.8,10.2l-0.3,0.1V514v-7.2h-16.7h-0.2
+		v-0.2v-5.7v-0.2h0.2L1475.6,500.7L1475.6,500.7z"/>
+	<polygon id="polygon43" class="st12" points="1440.9,506.4 1457.8,506.4 1457.8,501 1440.9,501 1440.9,493.8 1423.7,503.7 
+		1440.9,513.7 	"/>
+	<path id="_156391320" inkscape:connector-curvature="0" class="st11" d="M1440.9,500.9v-7.1l-17.2,9.9l17.2,9.9v-7.1v-0.2h0.2h16.7
+		V501h-16.7h-0.2V500.9z M1441.3,493.5v7.2h16.7h0.2v0.2v5.7v0.2h-0.2h-16.7v7.2v0.3l-0.3-0.1l-17.8-10.2l-0.3-0.1l0.3-0.1
+		l17.8-10.2l0.3-0.1V493.5L1441.3,493.5z"/>
+	<path id="_156391248" inkscape:connector-curvature="0" class="st11" d="M1476,571.6v-17.4v-0.2h0.2h16.8h0.2v0.2v17.4v0.1l0,0
+		c-8.8,9.2-17.1,0-17.1,0L1476,571.6L1476,571.6L1476,571.6z M1476.3,554.4v17.2c0.6,0.7,8.4,8.5,16.5,0v-17.2L1476.3,554.4
+		L1476.3,554.4z"/>
+	<path id="_156391176" inkscape:connector-curvature="0" class="st12" d="M1476.3,554.4v17.2c0.6,0.7,8.4,8.5,16.5,0v-17.2
+		L1476.3,554.4L1476.3,554.4z"/>
+	<path id="_156391104" inkscape:connector-curvature="0" class="st13" d="M1492.8,551.8v-17.2c-0.6-0.7-8.4-8.5-16.5,0v17.2
+		L1492.8,551.8L1492.8,551.8z"/>
+	<path id="_156391032" inkscape:connector-curvature="0" class="st11" d="M1492.8,551.8v-17.2c-0.6-0.7-8.4-8.5-16.5,0v17.2
+		L1492.8,551.8L1492.8,551.8z M1493.2,534.6V552v0.2h-0.2h-16.8h-0.2V552v-17.4v-0.1l0,0c8.8-9.2,17.1,0,17.1,0L1493.2,534.6
+		L1493.2,534.6L1493.2,534.6z"/>
+	<text id="text215" transform="matrix(0.9434 0 0 0.9434 1409.9796 648.6205)" class="st8 st9 st10">取样工作站</text>
+	<text id="text213-4-0" transform="matrix(0.9434 0 0 0.9434 1428.8965 625.0287)" class="st8 st9 st10">化验室</text>
+	<g id="g445">
+		<polygon id="polygon41_0" class="st13" points="1449.2,529.5 1456.5,529.5 1446.5,512.3 1436.6,529.5 1443.9,529.5 1443.9,546.4 
+			1449.2,546.4 		"/>
+		<path id="_156387216" inkscape:connector-curvature="0" class="st11" d="M1436.6,529.5h7.1h0.2v0.2v16.7h5.4v-16.7v-0.2h0.2h7.1
+			l-9.9-17.2L1436.6,529.5z M1443.5,529.8h-7.2h-0.3l0.1-0.3l10.2-17.8l0.1-0.3l0.1,0.3l10.2,17.8l0.1,0.3h-0.3h-7.2v16.7v0.2h-0.2
+			h-5.7h-0.2v-0.2V529.8z"/>
+		<polygon id="polygon43_1" class="st12" points="1449.2,564.5 1449.2,547.6 1443.9,547.6 1443.9,564.5 1436.6,564.5 1446.5,581.7 
+			1456.5,564.5 		"/>
+		<path id="_156387024" inkscape:connector-curvature="0" class="st11" d="M1443.7,564.5h-7.1l9.9,17.2l9.9-17.2h-7.1h-0.2v-0.2
+			v-16.7h-5.4v16.7v0.2H1443.7z M1436.3,564.1h7.2v-16.7v-0.2h0.2h5.7h0.2v0.2v16.7h7.2h0.3l-0.1,0.3l-10.2,17.8l-0.1,0.3l-0.1-0.3
+			l-10.2-17.8l-0.1-0.3H1436.3z"/>
+	</g>
+</g>
+<polygon id="polygon451" class="st1" points="1264,377.1 1264,287.9 1274.1,287.9 1274.1,377.1 "/>
+<polygon id="polygon453" class="st1" points="1181.5,245.5 1232,245.5 1232,255.6 1181.5,255.6 "/>
+<path id="path455" inkscape:connector-curvature="0" class="st1" d="M1232,245.5c4.9-0.1,42.1,0.9,42.1,42.5H1264
+	c0-33.8-31.9-32.3-32-32.3V245.5L1232,245.5z"/>
+<g id="_165856088" transform="matrix(1.0599991,0,0,1.0599991,0.02453627,-130.95511)">
+	<rect id="rect11" x="1165.7" y="511.1" class="st3" width="48.3" height="76.9"/>
+	<rect id="rect17" x="1213.9" y="511.1" class="st15" width="31.9" height="76.9"/>
+	<rect id="rect19" x="1165.7" y="500.7" class="st5" width="80.1" height="10.5"/>
+	<rect id="rect21" x="1178.9" y="479.3" class="st5" width="35.1" height="21.4"/>
+	<rect id="rect25" x="1157" y="568.7" class="st5" width="8.7" height="10.7"/>
+	<rect id="rect27" x="1157" y="555.3" class="st3" width="8.7" height="13.4"/>
+	<rect id="rect29" x="1165.7" y="588.1" class="st5" width="80.1" height="10.2"/>
+	<text id="text213" transform="matrix(0.9434 0 0 0.9434 1157.035 648.6205)" class="st8 st9 st10">存样工作站</text>
+	<text id="text213-4" transform="matrix(0.9434 0 0 0.9434 1179.765 625.1319)" class="st8 st9 st10">制样间</text>
+	<g id="g467">
+		<polygon id="polygon41_2" class="st12" points="1192.5,549.9 1199.8,549.9 1189.8,532.7 1179.9,549.9 1187.1,549.9 1187.1,566.8 
+			1192.5,566.8 		"/>
+		<path id="_156386808" inkscape:connector-curvature="0" class="st11" d="M1179.9,549.9h7.1h0.2v0.2v16.7h5.4v-16.7v-0.2h0.2h7.1
+			l-9.9-17.2L1179.9,549.9L1179.9,549.9z M1186.8,550.3h-7.2h-0.3l0.1-0.3l10.2-17.8l0.1-0.3l0.1,0.3l10.2,17.8l0.1,0.3h-0.3h-7.2
+			V567v0.2h-0.2h-5.7h-0.2V567L1186.8,550.3L1186.8,550.3z"/>
+	</g>
+</g>
+<g id="g3516" inkscape:label="姘斿姩浼犺緭_椋庢満">
+	<path id="path471" inkscape:connector-curvature="0" class="st16" d="M118.5,507.9c0,1.5-0.4,3-1.1,4.3l12.8,7.8
+		c-3.9,6.4-10.9,10.7-18.9,10.9l-0.4-15c-1.5,0-3-0.4-4.3-1.1l-7.8,12.8c-6.4-3.9-10.8-10.9-11-18.9l15-0.4c0-1.5,0.4-3,1.1-4.3
+		l-12.8-7.8c3.9-6.4,10.9-10.7,19-10.9l0.4,15c1.5,0,3,0.4,4.3,1.1l7.8-12.8c6.4,3.9,10.7,10.9,10.9,18.9L118.5,507.9L118.5,507.9z"
+		/>
+</g>
+<polygon id="polygon473" class="st1" points="467.1,273.6 533.8,273.6 533.8,283.8 467.1,283.8 "/>
+<polygon id="polygon475" class="st1" points="565.8,387.7 565.8,316.1 575.9,316.1 575.9,387.7 "/>
+<path id="path477" inkscape:connector-curvature="0" class="st1" d="M533.8,273.6c4.9-0.1,42.1,0.9,42.1,42.5h-10.1
+	c0-33.8-31.9-32.3-32-32.3L533.8,273.6L533.8,273.6z"/>
+<text id="text209" transform="matrix(1 0 0 1 297.0381 637.7285)" class="st8 st9 st10">#1智能存样柜</text>
+<circle id="_156382296" inkscape:label="#1鏅鸿兘瀛樻牱鏌淿绯荤粺" sodipodi:cx="231.58701" sodipodi:cy="510.327" sodipodi:rx="9.3602505" sodipodi:ry="9.3602505" class="st17" cx="274.1" cy="630.3" r="12.7">
+</circle>
+<text id="text209_3" transform="matrix(1 0 0 1 823.707 637.7285)" class="st8 st9 st10">#</text>
+<text id="text484" transform="matrix(1 0 0 1 849.5601 637.7285)" class="st8 st9 st10">智能存样柜</text>
+<text id="text486" transform="matrix(1 0 0 1 837.1797 637.7285)" class="st8 st9 st10">2</text>
+<circle id="_156382080" inkscape:label="#2鏅鸿兘瀛樻牱鏌淿绯荤粺" sodipodi:cx="620.83002" sodipodi:cy="510.327" sodipodi:rx="9.3602505" sodipodi:ry="9.3602505" class="st17" cx="800.7" cy="630.3" r="12.7">
+</circle>
+<text id="text209_4" transform="matrix(1 0 0 1 43.6094 646.4473)" class="st8 st9 st10">已存</text>
+<text id="text209_5" transform="matrix(1 0 0 1 138.4185 646.1885)" class="st8 st9 st10">超期</text>
+<rect id="rect491" x="93.8" y="628.8" class="st17" width="20.3" height="20.3"/>
+<rect id="rect493" x="188.6" y="628.8" class="st12" width="20.3" height="20.3"/>
+<rect id="rect287" x="31.8" y="693.2" class="st5" width="5.1" height="242.8"/>
+<path id="path499" inkscape:connector-curvature="0" class="st5" d="M33.2,937.4h132.3V968H33.2C33.2,968,33.2,937.4,33.2,937.4z
+	 M31.8,935.9v33.5h135.2v-33.5C166.9,935.9,31.8,935.9,31.8,935.9z"/>
+<polygon id="polygon501" class="st4" points="165.5,968 33.2,968 33.2,937.4 165.5,937.4 "/>
+<text id="text209_8" transform="matrix(1 0 0 1 41.9746 958.2373)" class="st8 st9 st18">共有仓位：</text>
+<text id="text504" inkscape:label="#1鏅鸿兘瀛樻牱鏌淿鍏辨湁浠撲綅" transform="matrix(1 0 0 1 121.1357 958.2373)" class="st19 st9 st18">1174</text>
+<path id="path506" inkscape:connector-curvature="0" class="st5" d="M299.2,937.4H166.9V968h132.3V937.4z M300.7,935.9v33.5H165.5
+	v-33.5H300.7z"/>
+<polygon id="polygon508" class="st4" points="166.9,968 299.2,968 299.2,937.4 166.9,937.4 "/>
+<text id="text209_9" transform="matrix(1 0 0 1 178.6895 958.2373)" class="st8 st9 st18">已存仓位：</text>
+<text id="text511" inkscape:label="#1鏅鸿兘瀛樻牱鏌淿宸插瓨浠撲綅" transform="matrix(1 0 0 1 257.8506 958.2373)" class="st19 st9 st18">877</text>
+<path id="path513" inkscape:connector-curvature="0" class="st5" d="M432.9,937.4H300.7V968h132.3V937.4z M434.4,935.9v33.5H299.2
+	v-33.5H434.4z"/>
+<polygon id="polygon515" class="st4" points="300.7,968 432.9,968 432.9,937.4 300.7,937.4 "/>
+<text id="text209_10" transform="matrix(1 0 0 1 314.2041 958.2373)" class="st8 st9 st18">未存仓位：</text>
+<text id="text518" inkscape:label="#1鏅鸿兘瀛樻牱鏌淿鏈瓨浠撲綅" transform="matrix(1 0 0 1 393.3667 958.2373)" class="st19 st9 st18">297</text>
+<path id="path520" inkscape:connector-curvature="0" class="st5" d="M567.4,937.4h-133V968h133V937.4z M568.8,935.9v33.5H432.9
+	v-33.5H568.8z"/>
+<polygon id="polygon522" class="st4" points="434.4,968 567.4,968 567.4,937.4 434.4,937.4 "/>
+<text id="text209_11" transform="matrix(1 0 0 1 446.5679 958.2305)" class="st8 st9 st18">存样率：</text>
+<text transform="matrix(1 0 0 1 512.4492 958.8691)" class="st8 st9 st18">74.1%</text>
+<rect id="rect287_13" x="138.2" y="693.2" class="st5" width="5.1" height="242.8"/>
+<rect id="rect287_15" x="244.6" y="693.2" class="st5" width="5.1" height="242.8"/>
+<rect id="rect287_17" x="351" y="693.2" class="st5" width="5.1" height="242.8"/>
+<rect id="rect287_19" x="457.4" y="693.2" class="st5" width="5.1" height="242.8"/>
+<rect id="rect287_20" x="563.7" y="693.2" class="st5" width="5.1" height="242.8"/>
+<rect id="rect287_24" x="602.9" y="693.2" class="st5" width="5.1" height="242.8"/>
+<path id="path546" inkscape:connector-curvature="0" class="st5" d="M33.2,691.7h534.2v-30.6H33.2C33.2,661.1,33.2,691.7,33.2,691.7
+	z M31.8,693.2v-33.5h537v33.5C568.8,693.2,31.8,693.2,31.8,693.2z"/>
+<polygon id="polygon548" class="st4" points="567.4,661.1 33.2,661.1 33.2,691.7 567.4,691.7 "/>
+<text id="text209_29" inkscape:label="#1鏅鸿兘瀛樻牱鏌淿4鍙锋煖宸插瓨" transform="matrix(1 0 0 1 370.7783 686.1865)" class="st19 st9 st20">0</text>
+<text id="text571" transform="matrix(1 0 0 1 412.4785 686.1865)" class="st8 st9 st20">224</text>
+<text id="text573" transform="matrix(1 0 0 1 402.0361 686.1865)" class="st8 st9 st20">/</text>
+<path id="path575" inkscape:connector-curvature="0" class="st5" d="M604.3,691.7h534.2v-30.6H604.3V691.7z M602.9,693.2v-33.5h537
+	v33.5H602.9z"/>
+<polygon id="polygon577" class="st4" points="1138.5,661.1 604.3,661.1 604.3,691.7 1138.5,691.7 "/>
+<text id="text209_30" inkscape:label="#2鏅鸿兘瀛樻牱鏌淿1鍙锋煖宸插瓨" transform="matrix(1 0 0 1 621.6904 686.1865)" class="st19 st9 st20">102</text>
+<text id="text580" transform="matrix(1 0 0 1 667.1895 686.1865)" class="st8 st9 st20">224</text>
+<text id="text582" transform="matrix(1 0 0 1 656.7471 686.1865)" class="st8 st9 st20">/</text>
+<text id="text209_31" inkscape:label="#2鏅鸿兘瀛樻牱鏌淿2鍙锋煖宸插瓨" transform="matrix(1 0 0 1 729.1113 686.1865)" class="st19 st9 st20">0</text>
+<text id="text585" transform="matrix(1 0 0 1 770.812 686.1865)" class="st8 st9 st20">224</text>
+<text id="text587" transform="matrix(1 0 0 1 760.3691 686.1865)" class="st8 st9 st20">/</text>
+<text id="text209_32" inkscape:label="#2鏅鸿兘瀛樻牱鏌淿3鍙锋煖宸插瓨" transform="matrix(1 0 0 1 835.5083 686.1865)" class="st19 st9 st20">0</text>
+<text id="text590" transform="matrix(1 0 0 1 877.209 686.1865)" class="st8 st9 st20">224</text>
+<text id="text592" transform="matrix(1 0 0 1 866.7661 686.1865)" class="st8 st9 st20">/</text>
+<text id="text209_33" inkscape:label="#2鏅鸿兘瀛樻牱鏌淿5鍙锋煖宸插瓨" transform="matrix(1 0 0 1 1048.3018 686.1865)" class="st19 st9 st20">0</text>
+<text id="text595" transform="matrix(1 0 0 1 1090.002 686.1865)" class="st8 st9 st20">224</text>
+<text id="text597" transform="matrix(1 0 0 1 1079.5596 686.1865)" class="st8 st9 st20">/</text>
+<text id="text209_34" inkscape:label="#2鏅鸿兘瀛樻牱鏌淿4鍙锋煖宸插瓨" transform="matrix(1 0 0 1 939.3521 686.1865)" class="st19 st9 st20">0</text>
+<text id="text600" transform="matrix(1 0 0 1 981.0527 686.1865)" class="st8 st9 st20">224</text>
+<text id="text602" transform="matrix(1 0 0 1 970.6099 686.1865)" class="st8 st9 st20">/</text>
+<path id="path604" inkscape:connector-curvature="0" class="st5" d="M604.3,937.4h132.3V968H604.3V937.4L604.3,937.4z M602.9,935.9
+	v33.5h135.2v-33.5H602.9z"/>
+<polygon id="polygon606" class="st4" points="736.6,968 604.3,968 604.3,937.4 736.6,937.4 "/>
+<text id="text209_35" transform="matrix(1 0 0 1 613.1016 958.2373)" class="st8 st9 st18">共有仓位：</text>
+<text id="text609" inkscape:label="#2鏅鸿兘瀛樻牱鏌淿鍏辨湁浠撲綅" transform="matrix(1 0 0 1 692.2627 958.2373)" class="st19 st9 st18">1174</text>
+<path id="path611" inkscape:connector-curvature="0" class="st5" d="M870.3,937.4H738.1V968h132.3V937.4z M871.8,935.9v33.5H736.6
+	v-33.5H871.8z"/>
+<polygon id="polygon613" class="st4" points="738.1,968 870.3,968 870.3,937.4 738.1,937.4 "/>
+<text id="text209_36" transform="matrix(1 0 0 1 749.8164 958.2373)" class="st8 st9 st18">已存仓位：</text>
+<text id="text616" inkscape:label="#2鏅鸿兘瀛樻牱鏌淿宸插瓨浠撲綅" transform="matrix(1 0 0 1 828.9775 958.2373)" class="st19 st9 st18">877</text>
+<path id="path618" inkscape:connector-curvature="0" class="st5" d="M1004.1,937.4H871.8V968h132.3V937.4z M1005.5,935.9v33.5H870.3
+	v-33.5H1005.5z"/>
+<polygon id="polygon620" class="st4" points="871.8,968 1004.1,968 1004.1,937.4 871.8,937.4 "/>
+<text id="text209_37" transform="matrix(1 0 0 1 885.3311 958.2373)" class="st8 st9 st18">未存仓位：</text>
+<text id="text623" inkscape:label="#2鏅鸿兘瀛樻牱鏌淿鏈瓨浠撲綅" transform="matrix(1 0 0 1 964.4937 958.2373)" class="st19 st9 st18">297</text>
+<path id="path625" inkscape:connector-curvature="0" class="st5" d="M1138.5,937.4h-133V968h133V937.4z M1139.9,935.9v33.5h-135.9
+	v-33.5H1139.9L1139.9,935.9z"/>
+<polygon id="polygon627" class="st4" points="1005.5,968 1138.5,968 1138.5,937.4 1005.5,937.4 "/>
+<text id="text209_38" transform="matrix(1 0 0 1 1017.6943 958.2305)" class="st8 st9 st18">存样率：</text>
+<rect id="rect287_40" x="709.3" y="693.2" class="st5" width="5.1" height="242.8"/>
+<rect id="rect287_42" x="815.7" y="693.2" class="st5" width="5.1" height="242.8"/>
+<rect id="rect287_44" x="922.1" y="693.2" class="st5" width="5.1" height="242.8"/>
+<rect id="rect287_46" x="1028.5" y="693.2" class="st5" width="5.1" height="242.8"/>
+<rect id="rect287_47" x="1134.9" y="693.2" class="st5" width="5.1" height="242.8"/>
+<g id="_347942712" transform="matrix(1.0599991,0,0,1.0599991,0.02453627,-130.95511)">
+	<polygon id="_156382752" class="st1" points="504.3,662.7 465.5,662.7 465.5,672.2 504.3,672.2 	"/>
+	<polygon id="_165858944" class="st1" points="435.4,745.9 435.4,702.7 425.8,702.7 425.8,745.9 	"/>
+	<path id="_165856976" inkscape:connector-curvature="0" class="st1" d="M465.5,662.7c-4.6,0-39.7,0.9-39.7,40.1h9.6
+		c0-31.9,30.1-30.5,30.2-30.5V662.7L465.5,662.7z"/>
+	<path id="_165860864" inkscape:connector-curvature="0" class="st1" d="M504.3,672.2c4.6,0,39.7-0.9,39.7-40.1h-9.6
+		c0,31.9-30.1,30.5-30.2,30.5V672.2L504.3,672.2z"/>
+</g>
+<g id="_165855008" transform="matrix(1.0599991,0,0,1.0599991,0.02453627,-130.95511)">
+	<polygon id="_165858056" class="st1" points="601,662.7 639.8,662.7 639.8,672.2 601,672.2 	"/>
+	<polygon id="_126009904" class="st1" points="670,745.9 670,702.7 679.5,702.7 679.5,745.9 	"/>
+	<path id="_165862736" inkscape:connector-curvature="0" class="st1" d="M639.8,662.7c4.6,0,39.7,0.9,39.7,40.1H670
+		c0-31.9-30.1-30.5-30.2-30.5V662.7L639.8,662.7z"/>
+	<path id="_165862832" inkscape:connector-curvature="0" class="st1" d="M601,672.2c-4.6,0-39.7-0.9-39.7-40.1h9.6
+		c0,31.9,30.1,30.5,30.2,30.5V672.2L601,672.2z"/>
+</g>
+<polygon id="polygon723" class="st1" points="1819,377.1 1819,228.4 1829.1,228.4 1829.1,377.1 "/>
+<polygon id="polygon725" class="st1" points="1717.3,185.9 1787,185.9 1787,196 1717.3,196 "/>
+<path id="path727" inkscape:connector-curvature="0" class="st1" d="M1787,185.9c4.9,0,42.1,0.9,42.1,42.5H1819
+	c0-33.8-31.9-32.3-32-32.3V185.9L1787,185.9z"/>
+<rect id="rect108" x="284.8" y="179.1" class="st4" width="6.4" height="111.5"/>
+<path id="path730" inkscape:connector-curvature="0" class="st5" d="M292.7,201.4h17.7v-20.9h-17.7V201.4z M311.2,202.9H292h-0.7
+	v-0.7v-22.3v-0.7h0.7h19.2h0.7v0.7v22.3v0.7H311.2z"/>
+<path id="path732" inkscape:connector-curvature="0" class="st5" d="M292.7,232.8h17.7v-20.9h-17.7V232.8z M311.2,234.2H292h-0.7
+	v-0.7v-22.3v-0.7h0.7h19.2h0.7v0.7v22.3v0.7H311.2z"/>
+<rect id="rect114" x="175.9" y="179.1" class="st5" width="108.9" height="29.1"/>
+<linearGradient id="rect121_1_" gradientUnits="userSpaceOnUse" x1="217.3671" y1="781.9756" x2="217.3671" y2="704.3071" gradientTransform="matrix(1.06 0 0 -1.06 -3.546284e-02 1037.1403)">
+	<stop  offset="0" style="stop-color:#BBBDBF"/>
+	<stop  offset="0.9882" style="stop-color:#404041"/>
+	<stop  offset="1" style="stop-color:#404041"/>
+</linearGradient>
+<polygon id="rect121" class="st21" points="284.8,208.2 175.9,208.2 175.9,290.6 284.8,290.6 "/>
+<g id="g4554" transform="matrix(0.97710063,0,0,1,3.6189834,0)" inkscape:label="鍥涢」杞崲鍣╛鏃嬭浆">
+	<rect id="rect172" x="164" y="240.8" inkscape:label="#rect172" class="st3" width="150.4" height="19.5">
+	</rect>
+	<path id="path737" inkscape:connector-curvature="0" class="st5" d="M164,260.3h150.4v-19.5H164L164,260.3L164,260.3z M315.1,261.7
+		H163.2h-0.7V261v-21v-0.7h0.7h151.8h0.7v0.7v21v0.7H315.1z"/>
+</g>
+<rect id="rect110" x="292.7" y="180.6" class="st22" width="17.7" height="20.9"/>
+<text id="text164" inkscape:label="鍥涢」杞崲鍣" transform="matrix(1 0 0 1 297.0098 197.6914)" class="st19 st9 st23">1</text>
+<rect id="rect110_48" x="292.7" y="211.9" class="st22" width="17.7" height="20.9"/>
+<text id="text174" inkscape:label="鍥涢」杞崲鍣" transform="matrix(1 0 0 1 297.0732 229.0361)" class="st19 st9 st23">2</text>
+<g id="g4558" transform="matrix(1,0,0,0.97094742,0,6.3905552)" inkscape:label="浜岄」杞崲鍣╛鏃嬭浆">
+	<rect id="rect172-7" x="560.4" y="394.2" class="st3" width="20.8" height="156.4"/>
+	<path id="path746" inkscape:connector-curvature="0" class="st5" d="M560.4,550.5h20.8V394.2h-20.8V550.5z M581.9,552h-22.2H559
+		v-0.7V393.4v-0.7h0.7h22.2h0.7v0.7v157.8v0.7H581.9z"/>
+</g>
+<path id="_126014344" inkscape:connector-curvature="0" class="st5" d="M292.7,289.1h17.7v-20.9h-17.7V289.1z M311.2,290.6H292h-0.7
+	v-0.7v-22.3v-0.7h0.7h19.2h0.7v0.7v22.3v0.7H311.2z"/>
+<rect id="rect110_49" x="292.7" y="268.3" class="st22" width="17.7" height="20.9"/>
+<text id="text168" inkscape:label="鍥涢」杞崲鍣" transform="matrix(1 0 0 1 296.792 285.2725)" class="st19 st9 st23">4</text>
+<g id="_156384528" transform="matrix(1.0599991,0,0,1.0599991,0.02453627,-130.95511)">
+	<rect id="rect11_50" x="1689.3" y="511.1" class="st3" width="48.3" height="76.9"/>
+	<rect id="rect17_51" x="1737.5" y="511.1" class="st15" width="31.9" height="76.9"/>
+	<rect id="rect19_52" x="1689.3" y="500.7" class="st5" width="80.1" height="10.5"/>
+	<rect id="rect21_53" x="1702.5" y="479.3" class="st5" width="35.1" height="21.4"/>
+	<rect id="rect25_54" x="1680.6" y="568.7" class="st5" width="8.7" height="10.7"/>
+	<rect id="rect27_55" x="1680.6" y="555.3" class="st3" width="8.7" height="13.4"/>
+	<rect id="rect29_56" x="1689.3" y="588.1" class="st5" width="80.1" height="10.2"/>
+	<text id="text213_57" transform="matrix(0.9434 0 0 0.9434 1680.6315 648.6205)" class="st8 st9 st10">弃样工作站</text>
+	<text id="text213-4_58" transform="matrix(0.9434 0 0 0.9434 1700.0715 625.1319)" class="st8 st9 st10">弃样间</text>
+	<g id="g765">
+		<polygon id="polygon43_59" class="st12" points="1716.1,549.2 1716.1,532.4 1710.7,532.4 1710.7,549.2 1703.5,549.2 1713.4,566.5 
+			1723.4,549.2 		"/>
+		<path id="_347937840" inkscape:connector-curvature="0" class="st11" d="M1710.6,549.2h-7.1l9.9,17.2l9.9-17.2h-7.1h-0.2v-0.2
+			v-16.7h-5.4v16.7v0.2H1710.6z M1703.2,548.9h7.2v-16.7V532h0.2h5.7h0.2v0.2v16.7h7.2h0.3l-0.1,0.3l-10.2,17.8l-0.1,0.3l-0.1-0.3
+			l-10.2-17.8l-0.1-0.3H1703.2z"/>
+	</g>
+</g>
+<text id="text209_60" transform="matrix(1 0 0 1 1522.1914 637.7285)" class="st8 st9 st10">气动传输</text>
+<circle id="_347939448" inkscape:label="姘斿姩浼犺緭_绯荤粺" sodipodi:cx="1137.05" sodipodi:cy="510.327" sodipodi:rx="9.3602505" sodipodi:ry="9.3602505" class="st17" cx="1499.2" cy="630.3" r="12.7">
+</circle>
+<path id="path776" inkscape:connector-curvature="0" class="st3" d="M467.1,180.8v20.3c-18.7,0-15.1,0-33.7,0v-20.3
+	C451.9,180.8,448.3,180.8,467.1,180.8z M447.2,183.7L447.2,183.7h1.8h11.3v14.5H449h-1.8h0l-8.5-7.3L447.2,183.7L447.2,183.7z
+	 M449,185.5v10.9h9.5v-10.9H449z M447.2,186.1l-5.7,4.9l5.7,4.9V186.1L447.2,186.1z M465.1,182.8h-29.7c0,5.1,0,11.3,0,16.3h29.7
+	C465.1,193.1,465.1,189,465.1,182.8z"/>
+<path id="path778" inkscape:connector-curvature="0" class="st3" d="M645.7,180.8v20.3c-18.7,0-15.1,0-33.7,0v-20.3
+	C630.5,180.8,626.9,180.8,645.7,180.8z M625.8,183.7L625.8,183.7h1.8h11.3v14.5h-11.3h-1.8l0,0l-8.5-7.3L625.8,183.7L625.8,183.7z
+	 M627.6,185.5v10.9h9.5v-10.9H627.6z M625.8,186.1l-5.7,4.9l5.7,4.9V186.1L625.8,186.1z M643.7,182.8h-29.7c0,5.1,0,11.3,0,16.3
+	h29.7C643.7,193.1,643.7,189,643.7,182.8z"/>
+<path id="path780" inkscape:connector-curvature="0" class="st3" d="M824.3,180.8v20.3c-18.7,0-15.1,0-33.7,0v-20.3
+	C809.1,180.8,805.5,180.8,824.3,180.8z M804.4,183.7L804.4,183.7h1.8h11.3v14.5h-11.3h-1.8l0,0l-8.5-7.3L804.4,183.7L804.4,183.7z
+	 M806.2,185.5v10.9h9.5v-10.9H806.2z M804.4,186.1l-5.7,4.9l5.7,4.9V186.1L804.4,186.1z M822.3,182.8h-29.7c0,5.1,0,11.3,0,16.3
+	h29.7C822.3,193.1,822.3,189,822.3,182.8z"/>
+<path id="path782" inkscape:connector-curvature="0" class="st3" d="M1002.9,180.8v20.3c-18.7,0-15.1,0-33.7,0v-20.3
+	C987.8,180.8,984.1,180.8,1002.9,180.8z M983,183.7L983,183.7h1.8h11.3v14.5h-11.3H983l0,0l-8.5-7.3L983,183.7L983,183.7z
+	 M984.8,185.5v10.9h9.5v-10.9H984.8z M983,186.1l-5.7,4.9l5.7,4.9V186.1L983,186.1z M1000.9,182.8h-29.7c0,5.1,0,11.3,0,16.3h29.7
+	C1000.9,193.1,1000.9,189,1000.9,182.8z"/>
+<path id="path784" inkscape:connector-curvature="0" class="st3" d="M1181.5,180.8v20.3c-18.7,0-15.1,0-33.7,0v-20.3
+	C1166.4,180.8,1162.7,180.8,1181.5,180.8z M1161.6,183.7L1161.6,183.7h1.8h11.3v14.5h-11.3h-1.8l0,0l-8.5-7.3L1161.6,183.7
+	L1161.6,183.7z M1163.4,185.5v10.9h9.5v-10.9H1163.4z M1161.6,186.1l-5.7,4.9l5.7,4.9V186.1L1161.6,186.1z M1179.5,182.8h-29.7
+	c0,5.1,0,11.3,0,16.3h29.7C1179.5,193.1,1179.5,189,1179.5,182.8z"/>
+<path id="path786" inkscape:connector-curvature="0" class="st3" d="M1360.1,180.8v20.3c-18.7,0-15.1,0-33.7,0v-20.3
+	C1345,180.8,1341.3,180.8,1360.1,180.8z M1340.2,183.7L1340.2,183.7h1.8h11.3v14.5H1342h-1.8l0,0l-8.5-7.3L1340.2,183.7
+	L1340.2,183.7z M1342,185.5v10.9h9.5v-10.9H1342z M1340.2,186.1l-5.7,4.9l5.7,4.9V186.1L1340.2,186.1z M1358.1,182.8h-29.7
+	c0,5.1,0,11.3,0,16.3h29.7C1358.1,193.1,1358.1,189,1358.1,182.8z"/>
+<path id="path788" inkscape:connector-curvature="0" class="st3" d="M1538.7,180.8v20.3c-18.7,0-15.1,0-33.7,0v-20.3
+	C1523.6,180.8,1519.9,180.8,1538.7,180.8z M1518.8,183.7L1518.8,183.7h1.8h11.3v14.5h-11.3h-1.8l0,0l-8.5-7.3L1518.8,183.7
+	L1518.8,183.7z M1520.6,185.5v10.9h9.5v-10.9H1520.6z M1518.8,186.1l-5.7,4.9l5.7,4.9V186.1L1518.8,186.1z M1536.7,182.8H1507
+	c0,5.1,0,11.3,0,16.3h29.7C1536.7,193.1,1536.7,189,1536.7,182.8z"/>
+<path id="path790" inkscape:connector-curvature="0" class="st3" d="M1717.3,180.8v20.3c-18.7,0-15.1,0-33.7,0v-20.3
+	C1702.2,180.8,1698.6,180.8,1717.3,180.8z M1697.4,183.7L1697.4,183.7h1.8h11.3v14.5h-11.3h-1.8l0,0l-8.5-7.3L1697.4,183.7
+	L1697.4,183.7z M1699.2,185.5v10.9h9.5v-10.9H1699.2z M1697.4,186.1l-5.7,4.9l5.7,4.9V186.1L1697.4,186.1z M1715.3,182.8h-29.7
+	c0,5.1,0,11.3,0,16.3h29.7C1715.3,193.1,1715.3,189,1715.3,182.8z"/>
+<polygon id="polygon792" class="st1" points="1538.7,185.9 1683.6,185.9 1683.6,196 1538.7,196 "/>
+<polygon id="polygon794" class="st1" points="1360.1,185.9 1505,185.9 1505,196 1360.1,196 "/>
+<polygon id="polygon796" class="st1" points="1181.5,185.9 1326.4,185.9 1326.4,196 1181.5,196 "/>
+<polygon id="polygon798" class="st1" points="1002.9,185.9 1147.8,185.9 1147.8,196 1002.9,196 "/>
+<polygon id="polygon800" class="st1" points="824.3,185.9 969.2,185.9 969.2,196 824.3,196 "/>
+<polygon id="polygon802" class="st1" points="645.7,185.9 790.6,185.9 790.6,196 645.7,196 "/>
+<polygon id="polygon804" class="st1" points="467.1,185.9 612,185.9 612,196 467.1,196 "/>
+<polygon id="polygon806" class="st1" points="311.9,185.9 433.3,185.9 433.3,196 311.9,196 "/>
+<path id="path808" inkscape:connector-curvature="0" class="st3" d="M467.1,212.2v20.3c-18.7,0-15.1,0-33.7,0v-20.3
+	C451.9,212.2,448.3,212.2,467.1,212.2z M447.2,215.1L447.2,215.1h1.8h11.3v14.5H449h-1.8h0l-8.5-7.3L447.2,215.1L447.2,215.1z
+	 M449,216.9v10.9h9.5v-10.9H449z M447.2,217.5l-5.7,4.9l5.7,4.9C447.2,227.2,447.2,217.5,447.2,217.5z M465.1,214.2h-29.7
+	c0,5.1,0,11.3,0,16.3h29.7C465.1,224.5,465.1,220.4,465.1,214.2z"/>
+<path id="path810" inkscape:connector-curvature="0" class="st3" d="M645.7,212.2v20.3c-18.7,0-15.1,0-33.7,0v-20.3
+	C630.5,212.2,626.9,212.2,645.7,212.2z M625.8,215.1L625.8,215.1h1.8h11.3v14.5h-11.3h-1.8l0,0l-8.5-7.3L625.8,215.1L625.8,215.1z
+	 M627.6,216.9v10.9h9.5v-10.9H627.6z M625.8,217.5l-5.7,4.9l5.7,4.9C625.8,227.2,625.8,217.5,625.8,217.5z M643.7,214.2h-29.7
+	c0,5.1,0,11.3,0,16.3h29.7C643.7,224.5,643.7,220.4,643.7,214.2z"/>
+<path id="path812" inkscape:connector-curvature="0" class="st3" d="M824.3,212.2v20.3c-18.7,0-15.1,0-33.7,0v-20.3
+	C809.1,212.2,805.5,212.2,824.3,212.2z M804.4,215.1L804.4,215.1h1.8h11.3v14.5h-11.3h-1.8l0,0l-8.5-7.3L804.4,215.1L804.4,215.1z
+	 M806.2,216.9v10.9h9.5v-10.9H806.2z M804.4,217.5l-5.7,4.9l5.7,4.9C804.4,227.2,804.4,217.5,804.4,217.5z M822.3,214.2h-29.7
+	c0,5.1,0,11.3,0,16.3h29.7C822.3,224.5,822.3,220.4,822.3,214.2z"/>
+<path id="path814" inkscape:connector-curvature="0" class="st3" d="M1002.9,212.2v20.3c-18.7,0-15.1,0-33.7,0v-20.3
+	C987.8,212.2,984.1,212.2,1002.9,212.2z M983,215.1L983,215.1h1.8h11.3v14.5h-11.3H983l0,0l-8.5-7.3L983,215.1L983,215.1z
+	 M984.8,216.9v10.9h9.5v-10.9H984.8z M983,217.5l-5.7,4.9l5.7,4.9C983,227.2,983,217.5,983,217.5z M1000.9,214.2h-29.7
+	c0,5.1,0,11.3,0,16.3h29.7C1000.9,224.5,1000.9,220.4,1000.9,214.2z"/>
+<path id="path816" inkscape:connector-curvature="0" class="st3" d="M1181.5,212.2v20.3c-18.7,0-15.1,0-33.7,0v-20.3
+	C1166.4,212.2,1162.7,212.2,1181.5,212.2z M1161.6,215.1L1161.6,215.1h1.8h11.3v14.5h-11.3h-1.8l0,0l-8.5-7.3L1161.6,215.1
+	L1161.6,215.1z M1163.4,216.9v10.9h9.5v-10.9H1163.4z M1161.6,217.5l-5.7,4.9l5.7,4.9C1161.6,227.2,1161.6,217.5,1161.6,217.5z
+	 M1179.5,214.2h-29.7c0,5.1,0,11.3,0,16.3h29.7C1179.5,224.5,1179.5,220.4,1179.5,214.2z"/>
+<path id="path818" inkscape:connector-curvature="0" class="st3" d="M1360.1,212.2v20.3c-18.7,0-15.1,0-33.7,0v-20.3
+	C1345,212.2,1341.3,212.2,1360.1,212.2z M1340.2,215.1L1340.2,215.1h1.8h11.3v14.5H1342h-1.8l0,0l-8.5-7.3L1340.2,215.1
+	L1340.2,215.1z M1342,216.9v10.9h9.5v-10.9H1342z M1340.2,217.5l-5.7,4.9l5.7,4.9C1340.2,227.2,1340.2,217.5,1340.2,217.5z
+	 M1358.1,214.2h-29.7c0,5.1,0,11.3,0,16.3h29.7C1358.1,224.5,1358.1,220.4,1358.1,214.2z"/>
+<polygon id="polygon820" class="st1" points="1181.5,217.3 1326.4,217.3 1326.4,227.4 1181.5,227.4 "/>
+<polygon id="polygon822" class="st1" points="1002.9,217.3 1147.8,217.3 1147.8,227.4 1002.9,227.4 "/>
+<polygon id="polygon824" class="st1" points="824.3,217.3 969.2,217.3 969.2,227.4 824.3,227.4 "/>
+<polygon id="polygon826" class="st1" points="645.7,217.3 790.6,217.3 790.6,227.4 645.7,227.4 "/>
+<polygon id="polygon828" class="st1" points="467.1,217.3 612,217.3 612,227.4 467.1,227.4 "/>
+<polygon id="polygon830" class="st1" points="311.9,217.3 433.3,217.3 433.3,227.4 311.9,227.4 "/>
+<path id="path832" inkscape:connector-curvature="0" class="st3" d="M467.1,240.4v20.3c-18.7,0-15.1,0-33.7,0v-20.3
+	C451.9,240.4,448.3,240.4,467.1,240.4z M447.2,243.3L447.2,243.3h1.8h11.3v14.5H449h-1.8h0l-8.5-7.3L447.2,243.3L447.2,243.3z
+	 M449,245.1V256h9.5v-10.9H449z M447.2,245.7l-5.7,4.9l5.7,4.9C447.2,255.4,447.2,245.7,447.2,245.7z M465.1,242.4h-29.7
+	c0,5.1,0,11.3,0,16.3h29.7C465.1,252.6,465.1,248.5,465.1,242.4z"/>
+<path id="path834" inkscape:connector-curvature="0" class="st3" d="M645.7,240.4v20.3c-18.7,0-15.1,0-33.7,0v-20.3
+	C630.5,240.4,626.9,240.4,645.7,240.4z M625.8,243.3L625.8,243.3h1.8h11.3v14.5h-11.3h-1.8l0,0l-8.5-7.3L625.8,243.3L625.8,243.3z
+	 M627.6,245.1V256h9.5v-10.9H627.6z M625.8,245.7l-5.7,4.9l5.7,4.9C625.8,255.4,625.8,245.7,625.8,245.7z M643.7,242.4h-29.7
+	c0,5.1,0,11.3,0,16.3h29.7C643.7,252.6,643.7,248.5,643.7,242.4z"/>
+<path id="path836" inkscape:connector-curvature="0" class="st3" d="M824.3,240.4v20.3c-18.7,0-15.1,0-33.7,0v-20.3
+	C809.1,240.4,805.5,240.4,824.3,240.4z M804.4,243.3L804.4,243.3h1.8h11.3v14.5h-11.3h-1.8l0,0l-8.5-7.3L804.4,243.3L804.4,243.3z
+	 M806.2,245.1V256h9.5v-10.9H806.2z M804.4,245.7l-5.7,4.9l5.7,4.9C804.4,255.4,804.4,245.7,804.4,245.7z M822.3,242.4h-29.7
+	c0,5.1,0,11.3,0,16.3h29.7C822.3,252.6,822.3,248.5,822.3,242.4z"/>
+<path id="path838" inkscape:connector-curvature="0" class="st3" d="M1002.9,240.4v20.3c-18.7,0-15.1,0-33.7,0v-20.3
+	C987.8,240.4,984.1,240.4,1002.9,240.4z M983,243.3L983,243.3h1.8h11.3v14.5h-11.3H983l0,0l-8.5-7.3L983,243.3L983,243.3z
+	 M984.8,245.1V256h9.5v-10.9H984.8z M983,245.7l-5.7,4.9l5.7,4.9C983,255.4,983,245.7,983,245.7z M1000.9,242.4h-29.7
+	c0,5.1,0,11.3,0,16.3h29.7C1000.9,252.6,1000.9,248.5,1000.9,242.4z"/>
+<path id="path840" inkscape:connector-curvature="0" class="st3" d="M1181.5,240.4v20.3c-18.7,0-15.1,0-33.7,0v-20.3
+	C1166.4,240.4,1162.7,240.4,1181.5,240.4z M1161.6,243.3L1161.6,243.3h1.8h11.3v14.5h-11.3h-1.8l0,0l-8.5-7.3L1161.6,243.3
+	L1161.6,243.3z M1163.4,245.1V256h9.5v-10.9H1163.4z M1161.6,245.7l-5.7,4.9l5.7,4.9C1161.6,255.4,1161.6,245.7,1161.6,245.7z
+	 M1179.5,242.4h-29.7c0,5.1,0,11.3,0,16.3h29.7C1179.5,252.6,1179.5,248.5,1179.5,242.4z"/>
+<polygon id="polygon842" class="st1" points="1002.9,245.5 1147.8,245.5 1147.8,255.6 1002.9,255.6 "/>
+<polygon id="polygon844" class="st1" points="824.3,245.5 969.2,245.5 969.2,255.6 824.3,255.6 "/>
+<polygon id="polygon846" class="st1" points="645.7,245.5 790.6,245.5 790.6,255.6 645.7,255.6 "/>
+<polygon id="polygon848" class="st1" points="467.1,245.5 612,245.5 612,255.6 467.1,255.6 "/>
+<polygon id="polygon850" class="st1" points="315.7,245.5 433.3,245.5 433.3,255.6 315.7,255.6 "/>
+<path id="path852" inkscape:connector-curvature="0" class="st3" d="M467.1,268.6v20.3c-18.7,0-15.1,0-33.7,0v-20.3
+	C451.9,268.6,448.3,268.6,467.1,268.6z M447.2,271.4L447.2,271.4h1.8h11.3V286H449h-1.8h0l-8.5-7.3L447.2,271.4L447.2,271.4z
+	 M449,273.3v10.9h9.5v-10.9H449z M447.2,273.8l-5.7,4.9l5.7,4.9V273.8L447.2,273.8z M465.1,270.6h-29.7c0,5.1,0,11.3,0,16.3h29.7
+	C465.1,280.8,465.1,276.7,465.1,270.6z"/>
+<polygon id="polygon854" class="st1" points="311.9,273.6 433.3,273.6 433.3,283.8 311.9,283.8 "/>
+<path id="_126014344-1" inkscape:connector-curvature="0" class="st5" d="M293,260.3h17.7v-19.5H293V260.3z M311.5,261.6h-19.1h-0.7
+	V261v-20.9v-0.7h0.7h19.1h0.7v0.7V261v0.7H311.5z"/>
+<rect id="rect110_48-4" x="293" y="240.8" class="st22" width="17.7" height="19.6"/>
+<text id="text170" inkscape:label="鍥涢」杞崲鍣" transform="matrix(1 0 0 1 296.8896 256.6313)" class="st24 st9 st23">3</text>
+<polygon id="polygon406-0" class="st22" points="581.3,538.3 581.3,520.5 560.4,520.5 560.4,538.3 "/>
+<text id="text199" inkscape:label="浜岄」杞崲鍣" transform="matrix(-4.371145e-08 1 -1 -4.371145e-08 564.7799 524.6566)" class="st24 st9 st23">2</text>
+<polygon id="polygon406" class="st22" points="591.7,520 591.7,540.3 608.8,540.3 608.8,520 "/>
+<text id="text191" inkscape:label="浜岄」杞崲鍣" transform="matrix(-4.371145e-08 1 -1 -4.371145e-08 593.8112 525.4945)" class="st19 st9 st23">1</text>
+<text transform="matrix(1 0 0 1 1083.748 958.0488)" class="st8 st9 st18">74.1%</text>
+<text id="text209_29-1" inkscape:label="#1鏅鸿兘瀛樻牱鏌淿1鍙锋煖宸插瓨" transform="matrix(1 0 0 1 56.71 686.0674)" class="st19 st9 st20">0</text>
+<text id="text571-7" transform="matrix(1 0 0 1 98.4102 686.0674)" class="st8 st9 st20">224</text>
+<text id="text573-4" transform="matrix(1 0 0 1 87.9678 686.0674)" class="st8 st9 st20">/</text>
+<text id="text209_29-0" inkscape:label="#1鏅鸿兘瀛樻牱鏌淿2鍙锋煖宸插瓨" transform="matrix(1 0 0 1 161.4121 686.0674)" class="st19 st9 st20">0</text>
+<text id="text571-9" transform="matrix(1 0 0 1 203.1123 686.0674)" class="st8 st9 st20">224</text>
+<text id="text573-48" transform="matrix(1 0 0 1 192.6699 686.0674)" class="st8 st9 st20">/</text>
+<text id="text209_29-8" inkscape:label="#1鏅鸿兘瀛樻牱鏌淿3鍙锋煖宸插瓨" transform="matrix(1 0 0 1 263.8579 686.0674)" class="st19 st9 st20">0</text>
+<text id="text571-2" transform="matrix(1 0 0 1 305.5581 686.0674)" class="st8 st9 st20">224</text>
+<text id="text573-45" transform="matrix(1 0 0 1 295.1157 686.0674)" class="st8 st9 st20">/</text>
+<text id="text209_29-5" inkscape:label="#1鏅鸿兘瀛樻牱鏌淿5鍙锋煖宸插瓨" transform="matrix(1 0 0 1 483.1909 684.7139)" class="st19 st9 st20">0</text>
+<text id="text571-1" transform="matrix(1 0 0 1 524.8911 684.7139)" class="st8 st9 st20">224</text>
+<text id="text573-7" transform="matrix(1 0 0 1 514.4482 684.7139)" class="st8 st9 st20">/</text>
+</svg>

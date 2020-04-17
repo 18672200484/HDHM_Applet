@@ -425,7 +425,7 @@
             this.MaximumSize = new System.Drawing.Size(1100, 575);
             this.Name = "FrmUnloadSampler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "武汉博晟燃料集中管控-卸样控制程序";
+            this.Text = "华电重工燃料集中管控-卸样控制程序";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.FrmUnloadSampler_Load);
             this.pnlExMain.ResumeLayout(false);

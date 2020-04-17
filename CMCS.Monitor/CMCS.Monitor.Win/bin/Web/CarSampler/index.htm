@@ -26,9 +26,8 @@
 
 			canvas1.find("*[inkscape\\:label=1号机械采样机点击域],*[inkscape\\:label=2号机械采样机点击域]").bind("click", function (evt) {
 				// 选中汽车衡
-				HomePageV8Cef.ChangeSelected(evt.target.getAttribute("inkscape:label"));
+				CarSamplerV8Cef.ChangeSelected(evt.target.getAttribute("inkscape:label"));
 				var ss = changeSelected(evt.target.getAttribute("inkscape:label"));
-				alert(ss);
 			});
 
 			canvas1.find("*[inkscape\\:label=1号机械采样机点击域],*[inkscape\\:label=2号机械采样机点击域]").css("cursor", "pointer");

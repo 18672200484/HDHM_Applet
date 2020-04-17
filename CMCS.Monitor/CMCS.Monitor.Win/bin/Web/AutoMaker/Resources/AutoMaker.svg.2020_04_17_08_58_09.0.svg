@@ -36,9 +36,9 @@
    inkscape:window-height="1017"
    id="namedview1335"
    showgrid="false"
-   inkscape:zoom="0.79999999"
-   inkscape:cx="1023.2269"
-   inkscape:cy="501.59699"
+   inkscape:zoom="0.56568542"
+   inkscape:cx="816.12163"
+   inkscape:cy="590.50163"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
@@ -274,7 +274,6 @@
      id="tspan31"
      style="font-size:24px;font-family:MicrosoftYaHei;fill:#ffffff">样品数</tspan></text>
 
-
 	</g>
 	<g
    id="g39">
@@ -284,7 +283,6 @@
    id="text37"
    style="font-size:24px;font-family:MicrosoftYaHei;fill:#ffffff">当前制样码</text>
 
-
 	</g>
 	<text
    transform="translate(480.666,106.8334)"
@@ -292,13 +290,11 @@
    id="text41"
    style="font-size:24px;font-family:MicrosoftYaHei;fill:#ffffff">当前水分制</text>
 
-
 	<text
    transform="translate(148.5788,169.8551)"
    class="st8 st9 st11 st12"
    id="text43"
    style="font-size:32px;font-family:MicrosoftYaHei;letter-spacing:5;fill:#ffffff">4</text>
-
 
 	<text
    transform="translate(270.1362,169.855)"
@@ -306,13 +302,11 @@
    id="text45"
    style="font-size:32px;font-family:MicrosoftYaHei;fill:#ffffff">ZY2031001</text>
 
-
 	<text
    transform="translate(514.629,169.855)"
    class="st8 st9 st11 st12"
    id="text47"
    style="font-size:32px;font-family:MicrosoftYaHei;letter-spacing:5;fill:#ffffff">3%</text>
-
 
 </g>
 <g
@@ -345,13 +339,11 @@
    id="text57"
    style="font-size:36px;font-family:MicrosoftYaHei;letter-spacing:5;fill:#ffffff">制样机状态</text>
 
-
 	<text
    transform="translate(825.032,184.2374)"
    class="st8 st9 st17 st18"
    id="text59"
    style="font-size:26px;font-family:MicrosoftYaHei;letter-spacing:4;fill:#ffffff">就绪</text>
-
 
 	<text
    transform="translate(972.5457,184.2377)"
@@ -359,13 +351,11 @@
    id="text61"
    style="font-size:26px;font-family:MicrosoftYaHei;letter-spacing:4;fill:#ffffff">故障</text>
 
-
 	<text
    transform="translate(1121.0583,184.2377)"
    class="st8 st9 st17 st18"
    id="text63"
    style="font-size:26px;font-family:MicrosoftYaHei;letter-spacing:4;fill:#ffffff">运行</text>
-
 
 </g>
 <g
@@ -406,7 +396,7 @@
    id="g133">
 		<polygon
    class="st21"
-   points="561,581.6 567.5,570.6 1126.5,570.6 1126.5,581.6 "
+   points="1126.5,581.6 561,581.6 567.5,570.6 1126.5,570.6 "
    id="polygon77"
    style="fill:#c1c2c6" />
 		<rect
@@ -429,7 +419,7 @@
    style="fill:#939393;stroke:#666666;stroke-width:0.5;stroke-miterlimit:10" />
 			<polygon
    class="st22"
-   points="28.7,623.9 37.2,613.4 33.1,613.4 24.6,623.9 "
+   points="24.6,623.9 28.7,623.9 37.2,613.4 33.1,613.4 "
    id="polygon83"
    style="fill:#939393;stroke:#666666;stroke-width:0.5;stroke-miterlimit:10" />
 			<rect
@@ -453,7 +443,7 @@
    style="fill:#939393;stroke:#666666;stroke-width:0.5;stroke-miterlimit:10" />
 			<polygon
    class="st22"
-   points="122.7,624.7 131.2,614.2 127.1,614.2 118.6,624.7 "
+   points="118.6,624.7 122.7,624.7 131.2,614.2 127.1,614.2 "
    id="polygon91"
    style="fill:#939393;stroke:#666666;stroke-width:0.5;stroke-miterlimit:10" />
 			<rect
@@ -477,7 +467,7 @@
    style="fill:#939393;stroke:#666666;stroke-width:0.5;stroke-miterlimit:10" />
 			<polygon
    class="st22"
-   points="156.9,624.7 165.4,614.2 161.3,614.2 152.8,624.7 "
+   points="152.8,624.7 156.9,624.7 165.4,614.2 161.3,614.2 "
    id="polygon99"
    style="fill:#939393;stroke:#666666;stroke-width:0.5;stroke-miterlimit:10" />
 			<rect
@@ -571,22 +561,22 @@
    style="fill:#939393;stroke:#4d4d4d;stroke-miterlimit:10" />
 		<polygon
    class="st24"
-   points="1559.8,641.9 1567.7,627.9 1567.7,585.5 1559.8,594.1 "
+   points="1559.8,594.1 1559.8,641.9 1567.7,627.9 1567.7,585.5 "
    id="polygon125"
    style="fill:#7a7a7a;stroke:#4d4d4d;stroke-miterlimit:10" />
 		<polygon
    class="st25"
-   points="1875.5,583 1880.8,570.2 1880.8,617.2 1875.5,627.2 "
+   points="1875.5,627.2 1875.5,583 1880.8,570.2 1880.8,617.2 "
    id="polygon127"
    style="fill:#7a7a7a" />
 		<polygon
    class="st26"
-   points="1768.3,583 1778.1,570.2 1880.8,570.2 1875.5,583 "
+   points="1875.5,583 1768.3,583 1778.1,570.2 1880.8,570.2 "
    id="polygon129"
    style="fill:#c8c8c8" />
 		<polygon
    class="st26"
-   points="1287,582.6 1294.4,572.6 1613.6,572.6 1613.6,583 "
+   points="1613.6,583 1287,582.6 1294.4,572.6 1613.6,572.6 "
    id="polygon131"
    style="fill:#c8c8c8" />
 	</g>
@@ -806,12 +796,12 @@
    style="fill:#5b87f4" />
 		<polygon
    class="st34"
-   points="499.5,248.6 515.5,265.6 476.5,265.6 472.5,260.6 298.5,260.6 290.5,248.6 "
+   points="472.5,260.6 298.5,260.6 290.5,248.6 499.5,248.6 515.5,265.6 476.5,265.6 "
    id="polygon203"
    style="fill:#2f55ee" />
 		<polygon
    class="st34"
-   points="476.5,284.6 472.5,279.6 472.5,259.6 476.5,265.6 "
+   points="476.5,265.6 476.5,284.6 472.5,279.6 472.5,259.6 "
    id="polygon205"
    style="fill:#2f55ee" />
 		<rect
@@ -832,12 +822,12 @@
    style="fill:#5389f4" />
 		<polygon
    class="st34"
-   points="290.5,248.6 290.5,580.6 298.5,580.6 298.5,260.6 "
+   points="298.5,260.6 290.5,248.6 290.5,580.6 298.5,580.6 "
    id="polygon211"
    style="fill:#2f55ee" />
 		<polygon
    class="st36"
-   points="480.5,284.6 487.5,295.6 504.5,295.6 510.5,284.6 "
+   points="510.5,284.6 480.5,284.6 487.5,295.6 504.5,295.6 "
    id="polygon213"
    style="fill:#dfdfde" />
 		<rect
@@ -869,7 +859,7 @@
    style="fill:#2f55ee" />
 		<polygon
    class="st34"
-   points="887.3,306 891.3,301 891.3,281 887.3,287 "
+   points="887.3,287 887.3,306 891.3,301 891.3,281 "
    id="polygon223"
    style="fill:#2f55ee" />
 		<path
@@ -892,7 +882,7 @@
    style="fill:#2f55ee" />
 		<polygon
    class="st36"
-   points="883.3,306 876.3,317 859.3,317 853.3,306 "
+   points="853.3,306 883.3,306 876.3,317 859.3,317 "
    id="polygon231"
    style="fill:#dfdfde" />
 		<path
@@ -920,7 +910,7 @@
    style="fill:#2f55ee" />
 		<polygon
    class="st34"
-   points="1167.5,306 1163.5,301 1163.5,281 1167.5,287 "
+   points="1167.5,287 1167.5,306 1163.5,301 1163.5,281 "
    id="polygon241"
    style="fill:#2f55ee" />
 		<path
@@ -943,7 +933,7 @@
    style="fill:#2f55ee" />
 		<polygon
    class="st36"
-   points="1171.5,306 1178.5,317 1195.5,317 1201.5,306 "
+   points="1201.5,306 1171.5,306 1178.5,317 1195.5,317 "
    id="polygon249"
    style="fill:#dfdfde" />
 		<path
@@ -971,7 +961,7 @@
    style="fill:#2f55ee" />
 		<polygon
    class="st34"
-   points="1650.4,300.2 1646.4,295.2 1646.4,275.2 1650.4,281.2 "
+   points="1650.4,281.2 1650.4,300.2 1646.4,295.2 1646.4,275.2 "
    id="polygon259"
    style="fill:#2f55ee" />
 		<path
@@ -994,7 +984,7 @@
    style="fill:#2f55ee" />
 		<polygon
    class="st36"
-   points="1654.4,300.2 1661.4,311.2 1678.4,311.2 1684.4,300.2 "
+   points="1684.4,300.2 1654.4,300.2 1661.4,311.2 1678.4,311.2 "
    id="polygon267"
    style="fill:#dfdfde" />
 		<path
@@ -1008,12 +998,12 @@
    id="g297">
 		<polygon
    class="st38"
-   points="418.5,340.6 427.5,323.6 568.5,323.6 562.5,340.6 "
+   points="562.5,340.6 418.5,340.6 427.5,323.6 568.5,323.6 "
    id="polygon273"
    style="fill:#2f55ee;stroke:#666666;stroke-miterlimit:10" />
 		<polygon
    class="st36"
-   points="469.5,301.6 526.5,301.6 512.5,327.6 483.5,327.6 "
+   points="483.5,327.6 469.5,301.6 526.5,301.6 512.5,327.6 "
    id="polygon275"
    style="fill:#dfdfde" />
 		<rect
@@ -1026,7 +1016,7 @@
    style="fill:#5b87f4" />
 		<polygon
    class="st39"
-   points="568.5,323.6 560.5,340.6 560.5,579.6 567.5,570.6 "
+   points="567.5,570.6 568.5,323.6 560.5,340.6 560.5,579.6 "
    id="polygon279"
    style="fill:#2b54d6" />
 		<rect
@@ -1087,7 +1077,7 @@
    style="fill:#22383b;stroke:#1a1a1a;stroke-miterlimit:10" />
 		<polygon
    class="st42"
-   points="542.5,394.3 505,394.3 512.5,383.6 542.5,383.6 "
+   points="542.5,383.6 542.5,394.3 505,394.3 512.5,383.6 "
    id="polygon295"
    style="fill:#1a1a1a" />
 	</g>
@@ -1095,12 +1085,12 @@
    id="g332">
 		<polygon
    class="st34"
-   points="1126.5,362.9 1136.6,347.5 1295.5,347.5 1287,362.9 "
+   points="1287,362.9 1126.5,362.9 1136.6,347.5 1295.5,347.5 "
    id="polygon299"
    style="fill:#2f55ee" />
 		<polygon
    class="st36"
-   points="1151.8,323.9 1216,323.9 1200.3,347.5 1167.6,347.5 "
+   points="1167.6,347.5 1151.8,323.9 1216,323.9 1200.3,347.5 "
    id="polygon301"
    style="fill:#dfdfde" />
 		<rect
@@ -1113,7 +1103,7 @@
    style="fill:#5b87f4" />
 		<polygon
    class="st39"
-   points="1295.5,347.5 1286.5,362.9 1287,581.6 1294.4,571.6 "
+   points="1294.4,571.6 1295.5,347.5 1286.5,362.9 1287,581.6 "
    id="polygon305"
    style="fill:#2b54d6" />
 		<rect
@@ -1166,7 +1156,7 @@
    style="fill:#22383b;stroke:#1a1a1a;stroke-miterlimit:10" />
 		<polygon
    class="st42"
-   points="1266.2,411.7 1223.9,411.7 1232.4,401.9 1266.2,401.9 "
+   points="1266.2,401.9 1266.2,411.7 1223.9,411.7 1232.4,401.9 "
    id="polygon319"
    style="fill:#1a1a1a" />
 		<rect
@@ -1210,12 +1200,12 @@
    id="g367">
 		<polygon
    class="st34"
-   points="1613.6,363.9 1623.8,348.5 1782.6,348.5 1774.2,363.9 "
+   points="1774.2,363.9 1613.6,363.9 1623.8,348.5 1782.6,348.5 "
    id="polygon334"
    style="fill:#2f55ee" />
 		<polygon
    class="st36"
-   points="1639,324.9 1703.2,324.9 1687.4,348.5 1654.7,348.5 "
+   points="1654.7,348.5 1639,324.9 1703.2,324.9 1687.4,348.5 "
    id="polygon336"
    style="fill:#dfdfde" />
 		<rect
@@ -1228,7 +1218,7 @@
    style="fill:#5b87f4" />
 		<polygon
    class="st39"
-   points="1782.6,348.5 1773.6,363.9 1773.6,580.7 1781.5,572.6 "
+   points="1781.5,572.6 1782.6,348.5 1773.6,363.9 1773.6,580.7 "
    id="polygon340"
    style="fill:#2b54d6" />
 		<rect
@@ -1289,7 +1279,7 @@
    style="fill:#22383b;stroke:#1a1a1a;stroke-miterlimit:10" />
 		<polygon
    class="st42"
-   points="1753.3,412.7 1711.1,412.7 1719.5,402.9 1753.3,402.9 "
+   points="1753.3,402.9 1753.3,412.7 1711.1,412.7 1719.5,402.9 "
    id="polygon356"
    style="fill:#1a1a1a" />
 		<linearGradient
@@ -1325,12 +1315,12 @@
    id="g401">
 		<polygon
    class="st34"
-   points="1399.8,365 1409.9,348.7 1568.8,348.7 1560.3,365 "
+   points="1560.3,365 1399.8,365 1409.9,348.7 1568.8,348.7 "
    id="polygon369"
    style="fill:#2f55ee" />
 		<polygon
    class="st39"
-   points="1568.8,348.7 1559.8,365 1559.8,594.1 1567.7,585.5 "
+   points="1567.7,585.5 1568.8,348.7 1559.8,365 1559.8,594.1 "
    id="polygon371"
    style="fill:#2b54d6" />
 		<rect
@@ -1458,12 +1448,12 @@
    style="fill:#3c6fe2;stroke:#4d4d4d;stroke-width:1.5;stroke-miterlimit:10" />
 		<polygon
    class="st42"
-   points="417.5,475.4 380,475.4 387.5,464.7 417.5,464.7 "
+   points="417.5,464.7 417.5,475.4 380,475.4 387.5,464.7 "
    id="polygon407"
    style="fill:#1a1a1a" />
 		<polygon
    class="st34"
-   points="323.1,451.6 332.1,440.2 418.5,440.2 418.5,451.6 "
+   points="418.5,451.6 323.1,451.6 332.1,440.2 418.5,440.2 "
    id="polygon409"
    style="fill:#2f55ee" />
 		<rect
@@ -1516,22 +1506,22 @@
    id="g436">
 		<polygon
    class="st50"
-   points="597.9,448.8 577.3,448.8 577.3,422.1 563.5,414.1 563.5,402.1 590.1,402.1 597.9,414.1 "
+   points="563.5,414.1 563.5,402.1 590.1,402.1 597.9,414.1 597.9,448.8 577.3,448.8 577.3,422.1 "
    id="polygon426"
    style="fill:#3b6cec" />
 		<polygon
    class="st51"
-   points="563.5,402.1 568.1,395.8 594.9,395.8 590.1,402.1 "
+   points="590.1,402.1 563.5,402.1 568.1,395.8 594.9,395.8 "
    id="polygon428"
    style="fill:#2c53f1" />
 		<polygon
    class="st52"
-   points="594.9,395.8 602.7,408.9 597.9,414.1 590.1,402.1 "
+   points="590.1,402.1 594.9,395.8 602.7,408.9 597.9,414.1 "
    id="polygon430"
    style="fill:#3651e2" />
 		<polygon
    class="st51"
-   points="597.9,448.8 597.9,414.1 602.7,408.9 602.7,448.8 "
+   points="602.7,448.8 597.9,448.8 597.9,414.1 602.7,408.9 "
    id="polygon432"
    style="fill:#2c53f1" />
 		<rect
@@ -1547,12 +1537,12 @@
    id="g457">
 		<polygon
    class="st51"
-   points="567.2,512.4 952.2,442.1 946.5,454.1 565.2,522.3 "
+   points="565.2,522.3 567.2,512.4 952.2,442.1 946.5,454.1 "
    id="polygon438"
    style="fill:#2c53f1" />
 		<polygon
    class="st54"
-   points="943.7,485.3 950.5,472.8 946.5,454.1 565.2,522.3 565.2,539.8 929.7,474.3 929.7,485.3 "
+   points="565.2,522.3 565.2,539.8 929.7,474.3 929.7,485.3 943.7,485.3 950.5,472.8 946.5,454.1 "
    id="polygon440"
    style="fill:#3a6dec" />
 		<path
@@ -1563,7 +1553,7 @@
    style="fill:#2c53f1" />
 		<polygon
    class="st55"
-   points="946.5,454.1 952.2,442.1 956.4,464.4 950.5,472.8 "
+   points="950.5,472.8 946.5,454.1 952.2,442.1 956.4,464.4 "
    id="polygon444"
    style="fill:#2951d3" />
 		<path
@@ -1605,22 +1595,22 @@
    id="g467">
 		<polygon
    class="st55"
-   points="860.5,435.6 869.5,457.3 891.7,454.1 882.2,432.1 "
+   points="882.2,432.1 860.5,435.6 869.5,457.3 891.7,454.1 "
    id="polygon459"
    style="fill:#2951d3" />
 		<polygon
    class="st57"
-   points="872,477.6 869.5,457.3 891.7,454.1 891.7,474.3 "
+   points="891.7,474.3 872,477.6 869.5,457.3 891.7,454.1 "
    id="polygon461"
    style="fill:#366fe8" />
 		<polygon
    class="st58"
-   points="860.5,435.6 862.7,457.3 872,477.6 869.5,457.3 "
+   points="869.5,457.3 860.5,435.6 862.7,457.3 872,477.6 "
    id="polygon463"
    style="fill:#4068e7" />
 		<polygon
    class="st59"
-   points="872,477.6 891.7,474.3 890.6,493.4 878.8,494.9 "
+   points="878.8,494.9 872,477.6 891.7,474.3 890.6,493.4 "
    id="polygon465"
    style="fill:#e6e6e6" />
 	</g>
@@ -1628,22 +1618,22 @@
    id="g477">
 		<polygon
    class="st55"
-   points="617.9,477.3 626.9,499.1 649.2,495.8 639.7,473.8 "
+   points="639.7,473.8 617.9,477.3 626.9,499.1 649.2,495.8 "
    id="polygon469"
    style="fill:#2951d3" />
 		<polygon
    class="st57"
-   points="629.4,519.3 626.9,499.1 649.2,495.8 649.2,516.1 "
+   points="649.2,516.1 629.4,519.3 626.9,499.1 649.2,495.8 "
    id="polygon471"
    style="fill:#366fe8" />
 		<polygon
    class="st58"
-   points="617.9,477.3 620.2,499.1 629.4,519.3 626.9,499.1 "
+   points="626.9,499.1 617.9,477.3 620.2,499.1 629.4,519.3 "
    id="polygon473"
    style="fill:#4068e7" />
 		<polygon
    class="st59"
-   points="629.4,519.3 649.2,516.1 648,535.2 636.2,536.7 "
+   points="636.2,536.7 629.4,519.3 649.2,516.1 648,535.2 "
    id="polygon475"
    style="fill:#e6e6e6" />
 	</g>
@@ -1651,7 +1641,7 @@
    id="g489">
 		<polygon
    class="st60"
-   points="582,492.6 599.1,492.6 603.4,457.8 577,457.8 "
+   points="577,457.8 582,492.6 599.1,492.6 603.4,457.8 "
    id="polygon479"
    style="fill:#dcdcdd" />
 		<rect
@@ -1691,12 +1681,12 @@
    id="g519">
 		<polygon
    class="st62"
-   points="730.1,492.6 742.1,486.6 847.3,486.6 841.1,492.6 "
+   points="841.1,492.6 730.1,492.6 742.1,486.6 847.3,486.6 "
    id="polygon491"
    style="fill:#244bc6" />
 		<polygon
    class="st62"
-   points="841.1,492.6 841.1,581.6 846.1,571.7 846.1,486.6 "
+   points="846.1,486.6 841.1,492.6 841.1,581.6 846.1,571.7 "
    id="polygon493"
    style="fill:#244bc6" />
 		<rect
@@ -1781,7 +1771,7 @@
    style="fill:#d5e2f6;stroke:#4d4d4d;stroke-miterlimit:10" />
 		<polygon
    class="st42"
-   points="835.5,504.3 808.3,504.3 813.7,496.5 835.5,496.5 "
+   points="835.5,496.5 835.5,504.3 808.3,504.3 813.7,496.5 "
    id="polygon517"
    style="fill:#1a1a1a" />
 	</g>
@@ -1797,7 +1787,7 @@
    style="fill:#3c6fe2;stroke:#4d4d4d;stroke-miterlimit:10" />
 		<polygon
    class="st34"
-   points="1019.5,492.8 1014.5,500.4 1082.2,500.4 1087.7,492.8 "
+   points="1087.7,492.8 1019.5,492.8 1014.5,500.4 1082.2,500.4 "
    id="polygon523"
    style="fill:#2f55ee" />
 		<polyline
@@ -1807,7 +1797,7 @@
    style="fill:#244bc6" />
 		<polygon
    class="st65"
-   points="1022.2,515.6 1073.5,515.6 1073.5,503.3 1032.5,502.8 "
+   points="1032.5,502.8 1022.2,515.6 1073.5,515.6 1073.5,503.3 "
    id="polygon527"
    style="fill:#010100" />
 		<rect
@@ -1823,7 +1813,7 @@
    id="g544">
 		<polygon
    class="st62"
-   points="821.9,386.1 881.9,386.1 907.5,330.6 795.1,330.6 "
+   points="795.1,330.6 821.9,386.1 881.9,386.1 907.5,330.6 "
    id="polygon533"
    style="fill:#244bc6" />
 		<linearGradient
@@ -1865,12 +1855,12 @@
    style="fill:#3c6fe2;stroke:#4d4d4d;stroke-miterlimit:10" />
 	<polygon
    class="st38"
-   points="1810.6,558.8 1803.1,566.6 1846.5,566.6 1852.6,558.8 "
+   points="1852.6,558.8 1810.6,558.8 1803.1,566.6 1846.5,566.6 "
    id="polygon548"
    style="fill:#2f55ee;stroke:#666666;stroke-miterlimit:10" />
 	<polygon
    class="st28"
-   points="1846.5,581.6 1846.5,566.6 1852.6,558.8 1852.6,572.7 "
+   points="1852.6,572.7 1846.5,581.6 1846.5,566.6 1852.6,558.8 "
    id="polygon550"
    style="fill:#3c6fe2;stroke:#4d4d4d;stroke-miterlimit:10" />
 	<g
@@ -1962,7 +1952,7 @@
 	</g>
 	<polygon
    class="st55"
-   points="1329.5,450.4 1331.3,449.3 1336.5,449.7 1334.2,450.6 "
+   points="1334.2,450.6 1329.5,450.4 1331.3,449.3 1336.5,449.7 "
    id="polygon582"
    style="fill:#2951d3" />
 	<rect
@@ -2087,19 +2077,19 @@
    style="fill:url(#SVGID_13_)" />
 	<polygon
    class="st74"
-   points="1334.7,504.9 1336.5,503 1336.5,449.7 1334.5,450.6 "
+   points="1334.5,450.6 1334.7,504.9 1336.5,503 1336.5,449.7 "
    id="polygon622"
    style="fill:#2951d3;stroke:#666666;stroke-width:0.25;stroke-miterlimit:10" />
 	<g
    id="g628">
 		<polygon
    class="st69"
-   points="1334.7,458.3 1346.6,470 1343.5,474.1 1334.7,465.3 "
+   points="1334.7,465.3 1334.7,458.3 1346.6,470 1343.5,474.1 "
    id="polygon624"
    style="fill:#3c6fe2;stroke:#4d4d4d;stroke-width:0.25;stroke-miterlimit:10" />
 		<polygon
    class="st75"
-   points="1346.6,470 1346.9,466.2 1336,455.6 1334.7,458.3 "
+   points="1334.7,458.3 1346.6,470 1346.9,466.2 1336,455.6 "
    id="polygon626"
    style="fill:#2951d3;stroke:#4d4d4d;stroke-width:0.25;stroke-miterlimit:10" />
 	</g>
@@ -2107,22 +2097,22 @@
    id="g638">
 		<polygon
    class="st55"
-   points="1326.7,426 1328.9,435 1337.7,435.2 1335.4,426 "
+   points="1335.4,426 1326.7,426 1328.9,435 1337.7,435.2 "
    id="polygon630"
    style="fill:#2951d3" />
 		<polygon
    class="st57"
-   points="1328.6,443.1 1328.9,435 1337.7,435.2 1336.5,443.1 "
+   points="1336.5,443.1 1328.6,443.1 1328.9,435 1337.7,435.2 "
    id="polygon632"
    style="fill:#366fe8" />
 		<polygon
    class="st58"
-   points="1326.7,426 1326.2,434.6 1328.6,443.1 1328.9,435 "
+   points="1328.9,435 1326.7,426 1326.2,434.6 1328.6,443.1 "
    id="polygon634"
    style="fill:#4068e7" />
 		<polygon
    class="st59"
-   points="1328.6,443.1 1336.5,443.1 1334.9,450.4 1330.2,450.3 "
+   points="1330.2,450.3 1328.6,443.1 1336.5,443.1 1334.9,450.4 "
    id="polygon636"
    style="fill:#e6e6e6" />
 	</g>
@@ -2156,22 +2146,22 @@
    id="g659">
 		<polygon
    class="st50"
-   points="723.5,573.2 704.9,573.2 704.9,546.5 692.5,538.5 692.5,526.5 716.5,526.5 723.5,538.5 "
+   points="692.5,538.5 692.5,526.5 716.5,526.5 723.5,538.5 723.5,573.2 704.9,573.2 704.9,546.5 "
    id="polygon649"
    style="fill:#3b6cec" />
 		<polygon
    class="st51"
-   points="692.5,526.5 696.6,520.2 720.8,520.2 716.5,526.5 "
+   points="716.5,526.5 692.5,526.5 696.6,520.2 720.8,520.2 "
    id="polygon651"
    style="fill:#2c53f1" />
 		<polygon
    class="st52"
-   points="720.8,520.2 727.8,533.3 723.5,538.5 716.5,526.5 "
+   points="716.5,526.5 720.8,520.2 727.8,533.3 723.5,538.5 "
    id="polygon653"
    style="fill:#3651e2" />
 		<polygon
    class="st51"
-   points="723.5,573.2 723.5,538.5 727.8,533.3 727.8,573.2 "
+   points="727.8,573.2 723.5,573.2 723.5,538.5 727.8,533.3 "
    id="polygon655"
    style="fill:#2c53f1" />
 		<rect
@@ -2319,7 +2309,7 @@
 	</linearGradient>
 	<polygon
    class="st81"
-   points="459.5,657.3 459.5,638.1 1906.5,638.1 1906.5,657.3 "
+   points="1906.5,657.3 459.5,657.3 459.5,638.1 1906.5,638.1 "
    id="polygon704"
    style="fill:url(#SVGID_19_)" />
 	<text
@@ -2328,13 +2318,11 @@
    id="text706"
    style="font-size:14px;font-family:MicrosoftYaHei;fill:#ffffff">入料口</text>
 
-
 	<text
    transform="translate(706.6544,465.0623)"
    class="st8 st9 st82"
    id="text708"
    style="font-size:14px;font-family:MicrosoftYaHei;fill:#ffffff">定质量缩分单元</text>
-
 
 	<text
    transform="translate(1126.4783,653.1187)"
@@ -2342,13 +2330,11 @@
    id="text710"
    style="font-size:14px;font-family:MicrosoftYaHei">除尘系统</text>
 
-
 	<text
    transform="translate(304.9786,614.1715)"
    class="st9 st83"
    id="text712"
    style="font-size:18px;font-family:MicrosoftYaHei">一级破碎</text>
-
 
 	<text
    transform="translate(725.1451,612.1783)"
@@ -2356,13 +2342,11 @@
    id="text714"
    style="font-size:18px;font-family:MicrosoftYaHei">样瓶封装单元</text>
 
-
 	<text
    transform="translate(866.2286,612.1787)"
    class="st9 st83"
    id="text716"
    style="font-size:18px;font-family:MicrosoftYaHei">备份样暂存</text>
-
 
 	<text
    transform="translate(1116.5195,612.1786)"
@@ -2370,13 +2354,11 @@
    id="text718"
    style="font-size:18px;font-family:MicrosoftYaHei">全水缩分单元</text>
 
-
 	<text
    transform="translate(1433.8119,627.2294)"
    class="st9 st83"
    id="text720"
    style="font-size:18px;font-family:MicrosoftYaHei">在线测全水</text>
-
 
 	<text
    transform="translate(1638.9641,612.437)"
@@ -2384,13 +2366,11 @@
    id="text722"
    style="font-size:18px;font-family:MicrosoftYaHei">制粉单元</text>
 
-
 	<text
    transform="translate(1775.6144,612.4374)"
    class="st9 st83"
    id="text724"
    style="font-size:18px;font-family:MicrosoftYaHei">自动发样端</text>
-
 
 	<text
    transform="translate(832.4788,361.9402)"
@@ -2398,13 +2378,11 @@
    id="text726"
    style="font-size:14px;font-family:MicrosoftYaHei;fill:#ffffff">弃料仓</text>
 
-
 	<text
    transform="translate(308.9786,361.9402)"
    class="st8 st9 st84"
    id="text728"
    style="font-size:14px;font-family:MicrosoftYaHei;writing-mode:tb-rl;fill:#ffffff">一级提升</text>
-
 
 	<text
    transform="translate(1112.3054,361.94)"
@@ -2412,20 +2390,17 @@
    id="text730"
    style="font-size:12px;font-family:MicrosoftYaHei;writing-mode:tb-rl;fill:#ffffff">二级提升</text>
 
-
 	<text
    transform="translate(1595.2806,364.9823)"
    class="st8 st9 st84"
    id="text732"
    style="font-size:14px;font-family:MicrosoftYaHei;writing-mode:tb-rl;fill:#ffffff">三级提升</text>
 
-
 	<text
    transform="translate(941.4785,361.9403)"
    class="st8 st9 st85"
    id="text734"
    style="font-size:12px;font-family:MicrosoftYaHei;writing-mode:tb-rl;fill:#ffffff">弃料提升</text>
-
 
 	<rect
    x="1419.6"
@@ -2448,7 +2423,6 @@
    class="st8 st9 st82"
    id="text740"
    style="font-size:14px;font-family:MicrosoftYaHei;fill:#ffffff">-1个样品正在测试</text>
-
 
 	
 		<use
@@ -2573,7 +2547,6 @@
    id="text764"
    style="font-size:14px;font-family:MicrosoftYaHei">01</text>
 
-
 		</g>
 		<g
    id="g783">
@@ -2617,7 +2590,6 @@
    class="st9 st82"
    id="text781"
    style="font-size:14px;font-family:MicrosoftYaHei">02</text>
-
 
 		</g>
 		<g
@@ -2663,7 +2635,6 @@
    id="text798"
    style="font-size:14px;font-family:MicrosoftYaHei">03</text>
 
-
 		</g>
 		<g
    id="g817">
@@ -2707,7 +2678,6 @@
    class="st9 st82"
    id="text815"
    style="font-size:14px;font-family:MicrosoftYaHei">04</text>
-
 
 		</g>
 		<g
@@ -2753,7 +2723,6 @@
    id="text832"
    style="font-size:14px;font-family:MicrosoftYaHei">05</text>
 
-
 		</g>
 		<g
    id="g851">
@@ -2798,7 +2767,6 @@
    id="text849"
    style="font-size:14px;font-family:MicrosoftYaHei">06</text>
 
-
 		</g>
 		<path
    class="st28"
@@ -2813,13 +2781,11 @@
    id="text857"
    style="font-size:8px;font-family:MicrosoftYaHei;fill:#ffffff">2kg</text>
 
-
 	<text
    transform="translate(884.4925,526.3541)"
    class="st8 st9 st96"
    id="text859"
    style="font-size:8px;font-family:MicrosoftYaHei;fill:#ffffff">0kg</text>
-
 
 	<text
    transform="translate(909.5122,526.3539)"
@@ -2827,13 +2793,11 @@
    id="text861"
    style="font-size:8px;font-family:MicrosoftYaHei;fill:#ffffff">2kg</text>
 
-
 	<text
    transform="translate(934.5324,526.354)"
    class="st8 st9 st96"
    id="text863"
    style="font-size:8px;font-family:MicrosoftYaHei;fill:#ffffff">2kg</text>
-
 
 	<text
    transform="translate(959.5526,526.3539)"
@@ -2841,13 +2805,11 @@
    id="text865"
    style="font-size:8px;font-family:MicrosoftYaHei;fill:#ffffff">2kg</text>
 
-
 	<text
    transform="translate(984.5723,526.3538)"
    class="st8 st9 st96"
    id="text867"
    style="font-size:8px;font-family:MicrosoftYaHei;fill:#ffffff">2kg</text>
-
 
 	<text
    transform="translate(856.1454,510.1875)"
@@ -2855,18 +2817,16 @@
    id="text869"
    style="font-size:10px;font-family:MicrosoftYaHei;fill:#ffffff">样品重量</text>
 
-
 	<text
    transform="translate(1869,384.144)"
    class="st8 st9 st84"
    id="text871"
    style="font-size:14px;font-family:MicrosoftYaHei;writing-mode:tb-rl;fill:#ffffff">气动发送管道</text>
 
-
 </g>
 <g
    id="g890"
-   transform="translate(2.1999512,-130.69995)">
+   transform="translate(0,-160)">
 	<linearGradient
    id="SVGID_26_"
    gradientUnits="userSpaceOnUse"
@@ -2976,7 +2936,7 @@
 </g>
 <g
    id="g924"
-   transform="translate(2.5,-130.25)">
+   transform="translate(0,-160)">
 	<linearGradient
    id="SVGID_28_"
    gradientUnits="userSpaceOnUse"
@@ -3086,7 +3046,7 @@
 </g>
 <g
    id="g958"
-   transform="translate(1.25,-127.75)">
+   transform="translate(0,-160)">
 	<linearGradient
    id="SVGID_30_"
    gradientUnits="userSpaceOnUse"
@@ -3141,7 +3101,7 @@
 </g>
 <g
    id="g975"
-   transform="translate(0,-130)">
+   transform="translate(0,-160)">
 	<linearGradient
    id="SVGID_31_"
    gradientUnits="userSpaceOnUse"
@@ -3196,7 +3156,7 @@
 </g>
 <g
    id="g992"
-   transform="translate(0,-129)">
+   transform="translate(0,-160)">
 	<linearGradient
    id="SVGID_32_"
    gradientUnits="userSpaceOnUse"
@@ -3251,7 +3211,7 @@
 </g>
 <g
    id="g1009"
-   transform="translate(0,-127)">
+   transform="translate(0,-160)">
 	<linearGradient
    id="SVGID_33_"
    gradientUnits="userSpaceOnUse"
@@ -3306,7 +3266,7 @@
 </g>
 <g
    id="g1026"
-   transform="translate(-1.25,-127.5)">
+   transform="translate(0,-160)">
 	<linearGradient
    id="SVGID_34_"
    gradientUnits="userSpaceOnUse"
@@ -4034,7 +3994,6 @@
      id="tspan1234"
      style="font-size:16px;font-family:MicrosoftYaHei">送机</tspan></text>
 
-
 <text
    id="text1242"
    x="174.6855"
@@ -4050,14 +4009,12 @@
      id="tspan1240"
      style="font-size:16px;font-family:MicrosoftYaHei">入料口</tspan></text>
 
-
 <text
    class="st9 st120"
    id="text1244"
    style="font-size:16px;font-family:MicrosoftYaHei"
    x="309.01859"
    y="627.3454">一级提升</text>
-
 
 <text
    id="text1250"
@@ -4074,7 +4031,6 @@
      id="tspan1248"
      style="font-size:16px;font-family:MicrosoftYaHei">缩分</tspan></text>
 
-
 <text
    class="st9 st120"
    id="text1252"
@@ -4082,14 +4038,12 @@
    x="579.54742"
    y="814.88361">一级破碎</text>
 
-
 <text
    class="st9 st120"
    id="text1254"
    style="font-size:16px;font-family:MicrosoftYaHei"
    x="714.40179"
    y="814.88361">弃料提升</text>
-
 
 <text
    id="text1260"
@@ -4106,14 +4060,12 @@
      id="tspan1258"
      style="font-size:16px;font-family:MicrosoftYaHei">单元</tspan></text>
 
-
 <text
    class="st9 st120"
    id="text1262"
    style="font-size:16px;font-family:MicrosoftYaHei"
    x="859.68707"
    y="814.88409">弃料仓</text>
-
 
 <text
    id="text1268"
@@ -4130,14 +4082,12 @@
      id="tspan1266"
      style="font-size:16px;font-family:MicrosoftYaHei">暂存</tspan></text>
 
-
 <text
    class="st9 st120"
    id="text1270"
    style="font-size:16px;font-family:MicrosoftYaHei"
    x="989.82507"
    y="627.34491">二级提升</text>
-
 
 <text
    class="st9 st120"
@@ -4146,14 +4096,12 @@
    x="1126.1584"
    y="627.34558">全水缩分</text>
 
-
 <text
    class="st9 st120"
    id="text1274"
    style="font-size:16px;font-family:MicrosoftYaHei"
    x="1260.1191"
    y="627.34479">存查缩分</text>
-
 
 <text
    class="st9 st120"
@@ -4162,14 +4110,12 @@
    x="1547.9076"
    y="627.34509">三级提升</text>
 
-
 <text
    class="st9 st120"
    id="text1278"
    style="font-size:16px;font-family:MicrosoftYaHei"
    x="1682.2444"
    y="627.34528">旋转缩分</text>
-
 
 <text
    class="st9 st120"
@@ -4178,14 +4124,12 @@
    x="1256.116"
    y="814.88342">3mm干燥</text>
 
-
 <text
    class="st9 st120"
    id="text1282"
    style="font-size:16px;font-family:MicrosoftYaHei"
    x="1458.4174"
    y="814.88342">在线测全水</text>
-
 
 <text
    class="st9 st120"
@@ -4194,7 +4138,6 @@
    x="1682.2443"
    y="814.88342">制粉单元</text>
 
-
 <text
    class="st9 st120"
    id="text1286"
@@ -4202,14 +4145,12 @@
    x="1817.0162"
    y="814.88342">除尘单元</text>
 
-
 <text
    class="st9 st120"
    id="text1288"
    style="font-size:16px;font-family:MicrosoftYaHei"
    x="1817.0161"
    y="627.34521">气动传输</text>
-
 
 <text
    id="text1294"
@@ -4226,7 +4167,6 @@
      id="tspan1292"
      style="font-size:16px;font-family:MicrosoftYaHei">水缩分</tspan></text>
 
-
 <text
    id="text1300"
    x="445.10269"
@@ -4241,7 +4181,6 @@
      class="st9 st120"
      id="tspan1298"
      style="font-size:16px;font-family:MicrosoftYaHei">入料口</tspan></text>
-
 
 <use
    xlink:href="#箭头_4"
@@ -4423,7 +4362,7 @@
    transform="translate(0,-160)">
 	<polygon
    class="st121"
-   points="1484.5,778.4 1484.5,784.1 1511.3,784.1 1511.3,788 1527.2,781.3 1511.3,774.5 1511.3,778.4 "
+   points="1511.3,788 1527.2,781.3 1511.3,774.5 1511.3,778.4 1484.5,778.4 1484.5,784.1 1511.3,784.1 "
    id="polygon1326"
    style="fill:#ff1b1b" />
 </g>
@@ -4432,7 +4371,7 @@
    transform="translate(0,-160)">
 	<polygon
    class="st121"
-   points="1505.6,851.7 1505.6,784.8 1499.9,784.8 1499.9,851.7 1499.9,874.1 1496,874.1 1502.8,891.6 1509.5,874.1 1505.6,874.1 "
+   points="1499.9,851.7 1499.9,874.1 1496,874.1 1502.8,891.6 1509.5,874.1 1505.6,874.1 1505.6,851.7 1505.6,784.8 1499.9,784.8 "
    id="polygon1330"
    style="fill:#ff1b1b" />
 </g>

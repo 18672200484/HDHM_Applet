@@ -26,7 +26,7 @@ namespace CMCS.CarTransport.Queue.Frms.Sys
 		private void Form1_Load(object sender, EventArgs e)
 		{
 			lblVersion.Text = new AU.Updater().Version;
-			this.Text = CommonAppConfig.GetInstance().AppIdentifier;
+			//this.Text = CommonAppConfig.GetInstance().AppIdentifier;
 
 			#region 初始化菜单查看权限
 			if (GlobalVars.LoginUser.IsSupper == 0)

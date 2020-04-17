@@ -250,7 +250,7 @@ namespace CMCS.UnloadSampler.Frms.Sys
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMainFrame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "武汉博晟燃料集中管控-采样机卸样程序";
+            this.Text = "华电重工燃料集中管控-采样机卸样程序";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Shown += new System.EventHandler(this.Form1_Shown);

@@ -35,6 +35,11 @@ namespace CMCS.Monitor.Win.Core
 		public static FrmAutoMaker AutoMakerForm;
 
 		/// <summary>
+		/// 存样柜窗体引用
+		/// </summary>
+		public static FrmAutoCupboardPneumaticTransfer AutoCupboardForm;
+
+		/// <summary>
 		/// 网页地址 - CefTester
 		/// </summary>
 		public static string Url_CefTester = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Web/CefTester/index.htm");

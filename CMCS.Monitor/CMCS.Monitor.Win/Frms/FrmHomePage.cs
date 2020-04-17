@@ -261,6 +261,8 @@ namespace CMCS.Monitor.Win.Frms
 				SelfVars.MainFrameForm.OpenTruckWeighter();
 			else if (message.Name == "TruckWeighterChangeSelected")
 				SelfVars.TruckWeighterForm.CurrentMachineCode = MonitorCommon.GetInstance().GetTruckWeighterMachineCodeBySelected(message.Arguments.GetString(0));
+			else if (message.Name == "CarSamplerChangeSelected")
+				SelfVars.CarSamplerForm.CurrentMachineCode = MonitorCommon.GetInstance().GetCarSamplerMachineCodeBySelected(message.Arguments.GetString(0));
 
 			return true;
 		}

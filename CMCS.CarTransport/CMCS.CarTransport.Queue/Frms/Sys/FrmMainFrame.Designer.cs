@@ -65,9 +65,9 @@ namespace CMCS.CarTransport.Queue.Frms.Sys
 			this.btnOpenFuelKindlLoad = new DevComponents.DotNetBar.ButtonItem();
 			this.btnOpenMineLoad = new DevComponents.DotNetBar.ButtonItem();
 			this.btnOpenGoodsTypeLoad = new DevComponents.DotNetBar.ButtonItem();
+			this.btnOpenProvince = new DevComponents.DotNetBar.ButtonItem();
 			this.btnOpenAppletConfigLoad = new DevComponents.DotNetBar.ButtonItem();
 			this.btnOpenCamareLoad = new DevComponents.DotNetBar.ButtonItem();
-			this.btnOpenProvince = new DevComponents.DotNetBar.ButtonItem();
 			this.timer_CurrentTime = new System.Windows.Forms.Timer(this.components);
 			this.tableLayoutPanel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
@@ -461,6 +461,14 @@ namespace CMCS.CarTransport.Queue.Frms.Sys
 			this.btnOpenGoodsTypeLoad.Text = "物资管理";
 			this.btnOpenGoodsTypeLoad.Click += new System.EventHandler(this.btnOpenGoodsTypeLoad_Click);
 			// 
+			// btnOpenProvince
+			// 
+			this.btnOpenProvince.GlobalItem = false;
+			this.btnOpenProvince.Name = "btnOpenProvince";
+			this.btnOpenProvince.Tag = "CMCS.CarTransport.Queue.Frms.BaseInfo.Province.FrmProvince_List";
+			this.btnOpenProvince.Text = "省份简称";
+			this.btnOpenProvince.Click += new System.EventHandler(this.btnOpenProvince_Click);
+			// 
 			// btnOpenAppletConfigLoad
 			// 
 			this.btnOpenAppletConfigLoad.GlobalItem = false;
@@ -476,14 +484,6 @@ namespace CMCS.CarTransport.Queue.Frms.Sys
 			this.btnOpenCamareLoad.Tag = "CMCS.CarTransport.Queue.Frms.BaseInfo.CamareInfo.FrmCamare_List";
 			this.btnOpenCamareLoad.Text = "摄像头管理";
 			this.btnOpenCamareLoad.Click += new System.EventHandler(this.btnOpenCamareLoad_Click);
-			// 
-			// btnOpenProvince
-			// 
-			this.btnOpenProvince.GlobalItem = false;
-			this.btnOpenProvince.Name = "btnOpenProvince";
-			this.btnOpenProvince.Tag = "CMCS.CarTransport.Queue.Frms.BaseInfo.Province.FrmProvince_List";
-			this.btnOpenProvince.Text = "省份简称";
-			this.btnOpenProvince.Click += new System.EventHandler(this.btnOpenProvince_Click);
 			// 
 			// timer_CurrentTime
 			// 
@@ -503,7 +503,7 @@ namespace CMCS.CarTransport.Queue.Frms.Sys
 			this.MinimumSize = new System.Drawing.Size(1440, 850);
 			this.Name = "FrmMainFrame";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "武汉博晟汽车智能化-入厂排队";
+			this.Text = "华电重工汽车智能化-入厂排队";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.Shown += new System.EventHandler(this.Form1_Shown);

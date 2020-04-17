@@ -3,8 +3,8 @@
   <!--程序唯一标识-->
   <AppIdentifier>集中管控</AppIdentifier>
   <!--集中管控Oracle数据库连接字符串-->
-  <!--<SelfConnStr>Data Source=server104_new;User ID=cmcs_base;Password=1234;Persist Security Info=False;</SelfConnStr>-->
-  <SelfConnStr>Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=175.102.19.118)(PORT=10036))(CONNECT_DATA=(SERVICE_NAME=ORCL)));User Id=bieos_hdhm;Password=1234;</SelfConnStr>
+  <!--<SelfConnStr>Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=175.102.19.118)(PORT=10036))(CONNECT_DATA=(SERVICE_NAME=ORCL)));User Id=bieos_hdhm;Password=1234;</SelfConnStr>-->
+  <SelfConnStr>Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=ORCL)));User Id=bieos_hdhm;Password=1234;</SelfConnStr>
 </CommonAppConfig>
 
 

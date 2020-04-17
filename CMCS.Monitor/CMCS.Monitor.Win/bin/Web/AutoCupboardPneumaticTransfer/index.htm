@@ -1,0 +1,464 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Untitled Page</title>
+    <script type="text/javascript" src="../Resources/plugins/jquery/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../Resources/plugins/layer/layer.min.js"></script>
+    <script type="text/javascript" src="../Resources/plugins/svg/svg.js"></script>
+    <script type="text/javascript" src="../Resources/js/svgHelper.js"></script>
+    <script type="text/javascript">
+
+        $(function ($) {
+
+        });
+
+        function initpage() {
+            dataHandler({ Key: "四项转换器", Type: "9999", Value: 3 });
+            dataHandler({ Key: "二项转换器", Type: "9998", Value: 2 });
+        }
+
+        // 获取SVG jquery对象
+        function getSVGjQuery(id) {
+            return $(document.getElementById(id).getSVGDocument())
+        }
+
+        // 获取 svgCanvas1 SVG jquery对象
+        function getCanvas1() {
+            return getSVGjQuery("svgCanvas1");
+        }
+
+        function StartTwinkle() {
+            alert(example.getDateTime());
+        }
+
+        function StartTwinkle2() {
+            alert(example.showConform("确定要删除？"));
+        }
+
+        // 请求数据 - 后台调用
+        function requestData(datas) {
+            for (var i = 0; i < datas.length; i++) {
+                dataHandler(datas[i]);
+            }
+        }
+
+        var angle = 1;
+        // 处理数据
+        function dataHandler(data) {
+
+            try {
+                // key_value
+                if (data.Type == 0)
+                    if (data.Tag == "ShowDiv")
+                        CaclDiv($("#" + data.Key), data.Value, data.Value2);
+                    else
+                        $("#" + data.Key).html(data.Value);
+                // json_data
+                else if (data.Type == 1) {
+                    if (data.Key == "采样机1_集样罐" || data.Key == "采样机2_集样罐") loadBarrels(data);
+                }
+                // svg_text
+                else if (data.Type == 2) {
+                    getCanvas1().find("*[inkscape\\:label=" + data.Key + "]").html(data.Value);
+                }
+                // svg_color
+                else if (data.Type == 3) {
+                    changeColor1(getCanvas1().find("*[inkscape\\:label=" + data.Key + "]"), data.Value);
+                }
+                // svg_scroll
+                else if (data.Type == 9999) {
+                    if (data.Value == 1) {
+                        changeScroll(getCanvas1().find("*[inkscape\\:label=" + data.Key + "]"), "-25,159,110.4");
+                    } if (data.Value == 2) {
+                        changeScroll(getCanvas1().find("*[inkscape\\:label=" + data.Key + "]"), "-12,159,110.4");
+                    } if (data.Value == 3) {
+                        changeScroll(getCanvas1().find("*[inkscape\\:label=" + data.Key + "]"), "0,159,110.4");
+                    } if (data.Value == 4) {
+                        changeScroll(getCanvas1().find("*[inkscape\\:label=" + data.Key + "]"), "12,159,110.4");
+                    }
+                }
+                // svg_scroll
+                else if (data.Type == 9998) {
+                    if (data.Value == 1) {
+                        changeScroll(getCanvas1().find("*[inkscape\\:label=" + data.Key + "]"), "-12,477.5,219");
+                    } if (data.Value == 2) {
+                        changeScroll(getCanvas1().find("*[inkscape\\:label=" + data.Key + "]"), "0,477.5,219");
+                    }
+                }
+                else if (data.Type = 9997) {
+                    keys = data.Value;
+                }
+            } catch (e) {
+                //alert(e.Message);
+            }
+        }
+
+        var i = 0;
+        // 测试 
+        function test() {
+            //            if (i == 0) {
+            //                i++;
+            //                changeScroll(getCanvas1().find("*[inkscape\\:label=二项转换器_旋转]"), "-12,477.5,219");
+            //            }
+            //            else if (i == 1) {
+            //                changeScroll(getCanvas1().find("*[inkscape\\:label=二项转换器_旋转]"), "0,477.5,219");
+            //                i = 0;
+            //            }
+
+            //            CaclDiv($("#div1-1"), 12, 123);
+
+            dataHandler({ Key: "气动传输_风机", Type: "9997", Value: "气动传输_风机" });
+        }
+
+        //显示div存样信息
+        function CaclDiv(divObj, exist, pass) {
+            divObj.children().eq(0).css("height", (224 - pass - exist) * divObj.height() / 224);
+            divObj.children().eq(1).css("height", pass * divObj.height() / 224);
+            divObj.children().eq(2).css("height", exist * divObj.height() / 224);
+        }
+
+        // 测试 改变颜色
+        function testColor() {
+
+        }
+
+        // 旋转
+        var i = 1;
+        var keys = "";
+//        window.setInterval(function () {
+//            if (keys.indexOf("气动传输_风机") >= 0)
+//            alert(getCanvas1().find("*[inkscape\\:label=气动传输_风机]").attr("transform"));
+//                changeScroll(getCanvas1().find("*[inkscape\\:label=气动传输_风机]"), i + ",146,437");
+//            i += 60;
+//            if (i >= 360)
+//                i = 0;
+//        }, 3000);
+
+        //加载样品传输信息
+        function LoadSampleInfo(datas) {
+            $("#sampletable").empty();
+            var table = $("<table class=\"SampleTable\" border=\"1\">");
+            table.appendTo($("#sampletable"));
+
+            if (datas.length > 6)
+                $("#sampletableTitle").css("width", "566px");
+            else
+                $("#sampletableTitle").css("width", "100%");
+
+            //创建表头
+            var trTitle = $("<tr class=\"trSampleTitle\"></tr>");
+            trTitle.appendTo(table);
+            var tdTitle = $("<td style=\"width: 170px;\">传输时间</td>");
+            tdTitle.appendTo(trTitle);
+            tdTitle = $("<td style=\"width: 130px;\">样品编码</td>");
+            tdTitle.appendTo(trTitle);
+            tdTitle = $("<td style=\"width: 149px;\">样品类型</td>");
+            tdTitle.appendTo(trTitle);
+            tdTitle = $("<td style=\"width: 139px;\">传输状态</td>");
+            tdTitle.appendTo(trTitle);
+
+            for (var i = 0; i < datas.length; i++) {
+                //创建内容
+                var tr = $("<tr class=\"trSampleContent\"></tr>");
+                tr.appendTo(table);
+                var td = $("<td>" + datas[i].UpdateTime + "</td>");
+                td.appendTo(tr);
+                td = $("<td>" + datas[i].Code + "</td>");
+                td.appendTo(tr);
+                td = $("<td>" + datas[i].SamType + "</td>");
+                td.appendTo(tr);
+                td = $("<td>" + datas[i].Status + "</td>");
+                td.appendTo(tr);
+            }
+            $("#sampletable").append("</table>");
+        }
+
+        // 加载异常信息
+        function LoadHitchs(datas) {
+            $("#createtable").empty();
+            var table = $("<table class=\"table\" border=\"1\">");
+            table.appendTo($("#createtable"));
+            //创建表头
+            var trTitle = $("<tr class=\"trTitle\"></tr>");
+            trTitle.appendTo(table);
+            var tdTitle = $("<td style=\"width: 180px;\">设备名称</td>");
+            tdTitle.appendTo(trTitle);
+            tdTitle = $("<td style=\"width: 140px;\">异常时间</td>");
+            tdTitle.appendTo(trTitle);
+            tdTitle = $("<td>异常内容</td>");
+            tdTitle.appendTo(trTitle);
+
+            for (var i = 0; i < datas.length; i++) {
+                //创建内容
+                tr = $("<tr class=\"trContent\"></tr>");
+                tr.appendTo(table);
+                var td = $("<td>" + datas[i].MachineCode + "</td>");
+                td.appendTo(tr);
+                td = $("<td>" + datas[i].HitchTime + "</td>");
+                td.appendTo(tr);
+                td = $("<td>" + datas[i].HitchDescribe + "</td>");
+                td.appendTo(tr);
+            }
+            $("#createtable").append("</table>");
+        }
+
+        function ShowHitchs(param) {
+            var res = AutoCupboardV8Cef.GetHitchs(param);
+            LoadHitchs(eval(res));
+            ShowLayerFrom("异常信息", $("#createtable"));
+        }
+
+        function ShowLayerFrom(strtitle, domObj) {
+            $.layer({
+                type: 1,
+                title: strtitle,
+                btns: 0,
+                area: ['800px', '420px'],
+                border: [1, 0.3, '#000'],
+                page: {
+                    dom: domObj
+                }, close: function (index) {
+                    // 层右上角关闭按钮的点击事件触发回调函数
+                    //alert("close");
+                }, end: function () {
+                    // 层被彻底关闭后执行的回调函数
+                }
+            });
+        }
+     
+    </script>
+    <style type="text/css">
+        html, body
+        {
+            margin: 0px;
+            padding: 0px;
+            font-family: 微软雅黑;
+        }
+        .div-root
+        {
+            position: relative;
+            margin: 0px auto;
+            width: 100%;
+            overflow: hidden;
+            text-align: center;
+        }
+        .divMain
+        {
+            position: absolute;
+            top: 580px;
+            left: 1170px;
+            width: 660px;
+            height: 315px;
+            overflow: hidden;
+            border: 1px solid #5C6065;
+        }
+        .button1
+        {
+            position: absolute;
+            width: 70px;
+            height: 23px;
+            font-family: 微软雅黑;
+            font-size: 14px;
+            cursor: pointer;
+            vertical-align: middle;
+        }
+        
+        .button1:hover
+        {
+            background-color: #00CED1;
+            border-color: #00CED1;
+            color: White;
+        }
+        
+        /*异常table样式*/
+        .table
+        {
+            border-collapse: collapse;
+            border: 1px solid #5C6065;
+            width: 100%;
+        }
+        
+        .table td
+        {
+            border: 1px solid #5C6065;
+        }
+        
+        .trTitle
+        {
+            background-color: #2C3E48;
+            text-align: center;
+            font-size: 20px;
+            color: White;
+            height: 40px;
+        }
+        .trContent
+        {
+            text-align: center;
+            height: 30px;
+        }
+        
+        /*出样table样式*/
+        .SampleTable
+        {
+            border-collapse: collapse;
+            border: 1px solid #5C6065;
+            width: 100%;
+        }
+        .SampleTable td
+        {
+            border: 1px solid #5C6065;
+        }
+        
+        .trSampleTitle
+        {
+            background-color: #2C3E48;
+            text-align: center;
+            font-size: 17px;
+            font-family: 微软雅黑;
+            color: White;
+            height: 36px;
+        }
+        .trSampleContent
+        {
+            text-align: center;
+            height: 34px;
+            color: White;
+        }
+    </style>
+</head>
+<body onload="initpage()" style="background-color: #231F20;" onselectstart="return false;">
+    <div class="div-root" id="divCanvas">
+        <div class="divMain" id="divMain">
+            <div id="sampletableTitle" style="position: absolute; width: 100%; height: 37px;
+                z-index: 999; top: 0px; left: 0px;">
+                <table class="SampleTable" border="1">
+                    <tr class="trSampleTitle">
+                        <td style="width: 170px;">
+                            传输时间
+                        </td>
+                        <td style="width: 130px;">
+                            样品编码
+                        </td>
+                        <td style="width: 149px;">
+                            样品类型
+                        </td>
+                        <td style="width: 139px;">
+                            传输状态
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="sampletable" style="width: 100%; height: 100%; overflow: auto;">
+                <table class="SampleTable" border="1">
+                    <tr class="trSampleTitle">
+                        <td style="width: 170px;">
+                            传输时间
+                        </td>
+                        <td style="width: 130px;">
+                            样品编码
+                        </td>
+                        <td style="width: 149px;">
+                            样品类型
+                        </td>
+                        <td style="width: 139px;">
+                            传输状态
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div style="position: absolute; top: 503px; left: 350px;">
+            <input type="button" value="异常信息" class="button1" onclick="ShowHitchs('#1CYG')" />
+        </div>
+        <div style="position: absolute; top: 503px; left: 850px;">
+            <input type="button" value="异常信息" class="button1" onclick="ShowHitchs('#2CYG')" />
+        </div>
+        <div style="position: absolute; top: 503px; left: 1500px;">
+            <input type="button" value="异常信息" class="button1" onclick="ShowHitchs('#1QD')" />
+        </div>
+        <div id="div1-1" style="position: absolute; top: 614px; left: 78px; width: 96px;height: 250px;">
+            <div style="background-color: #A6A8AB; height: 100%;">
+            </div>
+            <div style="background-color: #EC1C24; height: 0px;">
+            </div>
+            <div style="background-color: #00A551; height: 0px">
+            </div>
+        </div>
+        <div id="div1-2" style="position: absolute; top: 614px; left: 179px; width: 96px;height: 250px;">
+            <div style="background-color: #A6A8AB; height: 100%;">
+            </div>
+            <div style="background-color: #EC1C24; height: 0px;">
+            </div>
+            <div style="background-color: #00A551; height: 0px">
+            </div>
+        </div>
+        <div id="div1-3" style="position: absolute; top: 614px; left: 280px; width: 96px;height: 250px;">
+            <div style="background-color: #A6A8AB; height: 100%;">
+            </div>
+            <div style="background-color: #EC1C24; height: 0px;">
+            </div>
+            <div style="background-color: #00A551; height: 0px">
+            </div>
+        </div>
+        <div id="div1-4" style="position: absolute; top: 614px; left: 382px; width: 96px;height: 250px;">
+            <div style="background-color: #A6A8AB; height: 100%;">
+            </div>
+            <div style="background-color: #EC1C24; height: 0px;">
+            </div>
+            <div style="background-color: #00A551; height: 0px">
+            </div>
+        </div>
+        <div id="div1-5" style="position: absolute; top: 614px; left: 484px; width: 96px;height: 250px;">
+            <div style="background-color: #A6A8AB; height: 100%;">
+            </div>
+            <div style="background-color: #EC1C24; height: 0px;">
+            </div>
+            <div style="background-color: #00A551; height: 0px">
+            </div>
+        </div>
+        <div id="div2-1" style="position: absolute; top: 614px; left: 624px; width: 96px;height: 250px;">
+            <div style="background-color: #A6A8AB; height: 100%;">
+            </div>
+            <div style="background-color: #EC1C24; height: 0px;">
+            </div>
+            <div style="background-color: #00A551; height: 0px">
+            </div>
+        </div>
+        <div id="div2-2" style="position: absolute; top: 614px; left: 725px; width: 96px;height: 250px;">
+            <div style="background-color: #A6A8AB; height: 100%;">
+            </div>
+            <div style="background-color: #EC1C24; height: 0px;">
+            </div>
+            <div style="background-color: #00A551; height: 0px">
+            </div>
+        </div>
+        <div id="div2-3" style="position: absolute; top: 614px; left: 827px; width: 96px;height: 250px;">
+            <div style="background-color: #A6A8AB; height: 100%;">
+            </div>
+            <div style="background-color: #EC1C24; height: 0px;">
+            </div>
+            <div style="background-color: #00A551; height: 0px">
+            </div>
+        </div>
+        <div id="div2-4" style="position: absolute; top: 614px; left: 929px; width: 96px;height: 250px;">
+            <div style="background-color: #A6A8AB; height: 100%;">
+            </div>
+            <div style="background-color: #EC1C24; height: 0px;">
+            </div>
+            <div style="background-color: #00A551; height: 0px">
+            </div>
+        </div>
+        <div id="div2-5" style="position: absolute; top: 614px; left: 1031px; width: 96px;height: 250px;">
+            <div style="background-color: #A6A8AB; height: 100%;">
+            </div>
+            <div style="background-color: #EC1C24; height: 0px;">
+            </div>
+            <div style="background-color: #00A551; height: 0px">
+            </div>
+        </div>
+        <embed id="svgCanvas1" src="Resources/AutoCupboardPneumaticTransfer03.svg" type="image/svg+xml" />
+    </div>
+    <div id="createtable" style="width: 800px; height: 385px; display: none; overflow: auto;">
+    </div>
+</body>
+</html>

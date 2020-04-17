@@ -58,6 +58,7 @@ namespace CMCS.Monitor.Win.Frms.Sys
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			this.timer_EquipmentStatus = new System.Windows.Forms.Timer(this.components);
 			this.timer_MsgTime = new System.Windows.Forms.Timer(this.components);
+			this.btnOpenAutoCupboard = new DevComponents.DotNetBar.ButtonX();
 			this.panelEx1.SuspendLayout();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.panel_Buttons.SuspendLayout();
@@ -188,7 +189,7 @@ namespace CMCS.Monitor.Win.Frms.Sys
 			this.lblSystemName.Name = "lblSystemName";
 			this.lblSystemName.Size = new System.Drawing.Size(380, 47);
 			this.lblSystemName.TabIndex = 1;
-			this.lblSystemName.Text = "武汉博晟集中管控平台";
+			this.lblSystemName.Text = "华电重工集中管控平台";
 			// 
 			// buttonX6
 			// 
@@ -196,7 +197,7 @@ namespace CMCS.Monitor.Win.Frms.Sys
 			this.buttonX6.Anchor = System.Windows.Forms.AnchorStyles.Left;
 			this.buttonX6.AutoExpandOnClick = true;
 			this.buttonX6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.buttonX6.Location = new System.Drawing.Point(356, 2);
+			this.buttonX6.Location = new System.Drawing.Point(117, 2);
 			this.buttonX6.Name = "buttonX6";
 			this.buttonX6.Size = new System.Drawing.Size(108, 31);
 			this.buttonX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -204,7 +205,6 @@ namespace CMCS.Monitor.Win.Frms.Sys
             this.btnOpenTruckWeighter});
 			this.buttonX6.TabIndex = 10;
 			this.buttonX6.Text = "计 量 管 控";
-			this.buttonX6.Visible = false;
 			// 
 			// btnOpenTruckWeighter
 			// 
@@ -239,6 +239,7 @@ namespace CMCS.Monitor.Win.Frms.Sys
 			// 
 			this.panel_Buttons.CanvasColor = System.Drawing.SystemColors.Control;
 			this.panel_Buttons.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+			this.panel_Buttons.Controls.Add(this.btnOpenAutoCupboard);
 			this.panel_Buttons.Controls.Add(this.btnOpenAutoMaker);
 			this.panel_Buttons.Controls.Add(this.btnOpenCarSampler);
 			this.panel_Buttons.Controls.Add(this.btnOpenMainPage);
@@ -260,7 +261,7 @@ namespace CMCS.Monitor.Win.Frms.Sys
 			this.btnOpenAutoMaker.Anchor = System.Windows.Forms.AnchorStyles.Left;
 			this.btnOpenAutoMaker.AutoExpandOnClick = true;
 			this.btnOpenAutoMaker.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnOpenAutoMaker.Location = new System.Drawing.Point(231, 2);
+			this.btnOpenAutoMaker.Location = new System.Drawing.Point(345, 2);
 			this.btnOpenAutoMaker.Name = "btnOpenAutoMaker";
 			this.btnOpenAutoMaker.Size = new System.Drawing.Size(119, 31);
 			this.btnOpenAutoMaker.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -274,7 +275,7 @@ namespace CMCS.Monitor.Win.Frms.Sys
 			this.btnOpenCarSampler.Anchor = System.Windows.Forms.AnchorStyles.Left;
 			this.btnOpenCarSampler.AutoExpandOnClick = true;
 			this.btnOpenCarSampler.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnOpenCarSampler.Location = new System.Drawing.Point(117, 2);
+			this.btnOpenCarSampler.Location = new System.Drawing.Point(231, 2);
 			this.btnOpenCarSampler.Name = "btnOpenCarSampler";
 			this.btnOpenCarSampler.Size = new System.Drawing.Size(108, 31);
 			this.btnOpenCarSampler.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -362,6 +363,20 @@ namespace CMCS.Monitor.Win.Frms.Sys
 			this.timer_MsgTime.Interval = 1000;
 			this.timer_MsgTime.Tick += new System.EventHandler(this.timer_MsgTime_Tick);
 			// 
+			// btnOpenAutoCupboard
+			// 
+			this.btnOpenAutoCupboard.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.btnOpenAutoCupboard.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.btnOpenAutoCupboard.AutoExpandOnClick = true;
+			this.btnOpenAutoCupboard.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnOpenAutoCupboard.Location = new System.Drawing.Point(470, 2);
+			this.btnOpenAutoCupboard.Name = "btnOpenAutoCupboard";
+			this.btnOpenAutoCupboard.Size = new System.Drawing.Size(119, 31);
+			this.btnOpenAutoCupboard.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+			this.btnOpenAutoCupboard.TabIndex = 13;
+			this.btnOpenAutoCupboard.Text = "全自动存样柜";
+			this.btnOpenAutoCupboard.Click += new System.EventHandler(this.btnOpenAutoCupboard_Click);
+			// 
 			// FrmMainFrame
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -376,7 +391,7 @@ namespace CMCS.Monitor.Win.Frms.Sys
 			this.MinimumSize = new System.Drawing.Size(1598, 816);
 			this.Name = "FrmMainFrame";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "武汉博晟燃料集中管控系统";
+			this.Text = "华电重工燃料集中管控系统";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
 			this.Load += new System.EventHandler(this.Form1_Load);
@@ -419,6 +434,7 @@ namespace CMCS.Monitor.Win.Frms.Sys
         private DevComponents.DotNetBar.ButtonItem btnOpenTruckWeighter;
 		private DevComponents.DotNetBar.ButtonX btnOpenCarSampler;
 		private DevComponents.DotNetBar.ButtonX btnOpenAutoMaker;
+		private DevComponents.DotNetBar.ButtonX btnOpenAutoCupboard;
 	}
 }
 
